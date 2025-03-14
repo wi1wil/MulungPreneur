@@ -19,11 +19,21 @@ public class MovementScript : MonoBehaviour
     void Update()
     {
         rb.velocity = moveInput * movementSpeed;
-        animator.SetBool("isWalking", moveInput != Vector2.zero);
     }
 
     public void Move(InputAction.CallbackContext context)
     {
+        animator.SetBool("isWalking", true);
+
+        if(context.canceled)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetFloat("LastInputX", moveInput.x);
+            animator.SetFloat("LastInputY", moveInput.y);
+        }
+
         moveInput = context.ReadValue<Vector2>();
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
     }
 }
