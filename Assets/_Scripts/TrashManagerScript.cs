@@ -13,7 +13,7 @@ public class TrashManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // This is a test
+        // This is a test update on the branch
     }
 
     // Update is called once per frame
