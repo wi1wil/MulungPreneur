@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class SaveData
+public class SaveDataScript
 {
     public Vector3 playerPosition;
     public string mapBoundary;

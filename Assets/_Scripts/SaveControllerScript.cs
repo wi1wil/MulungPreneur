@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using Cinemachine;
 
-public class SaveController : MonoBehaviour
+public class SaveControllerScript : MonoBehaviour
 {   
     private string saveLocation;
 
@@ -17,7 +17,7 @@ public class SaveController : MonoBehaviour
 
     public void SaveGame()
     {
-        SaveData saveData = new SaveData
+        SaveDataScript saveData = new SaveDataScript
         {
             playerPosition = GameObject.Find("Player").transform.position,
             mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.name
@@ -31,7 +31,7 @@ public class SaveController : MonoBehaviour
     {
         if (File.Exists(saveLocation))
         {
-            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
+            SaveDataScript saveData = JsonUtility.FromJson<SaveDataScript>(File.ReadAllText(saveLocation));
 
             GameObject.Find("Player").transform.position = saveData.playerPosition;
             GameObject.FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
