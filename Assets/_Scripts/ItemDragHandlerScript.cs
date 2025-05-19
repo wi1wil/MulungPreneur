@@ -33,16 +33,16 @@ public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHand
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
-        InventorySlotScript dropSlot = eventData.pointerEnter?.GetComponent<InventorySlotScript>();
+        Slot dropSlot = eventData.pointerEnter?.GetComponent<Slot>();
         if (dropSlot == null)
         {
             GameObject item = eventData.pointerEnter;
             if(item != null)
             {
-                dropSlot = item.GetComponentInParent<InventorySlotScript>();
+                dropSlot = item.GetComponentInParent<Slot>();
             }
         }
-        InventorySlotScript originalSlot = originalParent.GetComponent<InventorySlotScript>();
+        Slot originalSlot = originalParent.GetComponent<Slot>();
 
         if (dropSlot != null)
         {
