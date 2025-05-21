@@ -28,6 +28,25 @@ public class InventoryManagerScript : MonoBehaviour
         // }
     }
 
+    public bool AddItem(GameObject itemPrefab)
+    {
+        // Check if inventory is has empty slot
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                GameObject newItem = Instantiate(itemPrefab, slotTransform);
+                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                slot.currentItem = newItem;
+                return true;
+            }
+        }
+
+        Debug.Log("Inventory is full");
+        return false;
+    }
+
     public List<InventorySaveData> getInventoryItem()
     {
         List<InventorySaveData> invData = new List<InventorySaveData>();
@@ -39,7 +58,7 @@ public class InventoryManagerScript : MonoBehaviour
                 Item item = slot.currentItem.GetComponent<Item>();
                 invData.Add(new InventorySaveData { itemID = item.id, slotIndex = slot.transform.GetSiblingIndex() });
                 Debug.Log("Item ID: " + item.id + ", Slot Index: " + slot.transform.GetSiblingIndex());
-            }   
+            }
         }
         return invData;
     }
