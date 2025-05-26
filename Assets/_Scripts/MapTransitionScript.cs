@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MapTransition : MonoBehaviour
 {
-    [SerializeField] private PolygonCollider2D gameplayBounds;
+    [SerializeField] private PolygonCollider2D insertedBounds;
     [SerializeField] private BoxCollider2D G_WaypointObj;
     [SerializeField] private Direction direction;
     [SerializeField] private float offset;
@@ -21,8 +21,8 @@ public class MapTransition : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            confiner.m_BoundingShape2D = gameplayBounds;
-            G_WaypointObj.isTrigger = false;
+            confiner.m_BoundingShape2D = insertedBounds;
+            // G_WaypointObj.isTrigger = false;
 
             UpdatePlayerPosition(collision.gameObject);
             Debug.Log("Player exited the Tutorial bounds.");
