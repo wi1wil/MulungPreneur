@@ -42,9 +42,11 @@ public class PlayerItemPickUpScript : MonoBehaviour
             currentFillCircle.fillAmount = holdTimer / holdDuration;
             if (holdTimer >= holdDuration)
             {
+                Item item = nearestItem.GetComponent<Item>();
                 bool itemAdded = inventoryManager.AddItem(nearestItem);
                 if(itemAdded)
                 {
+                    item.PickUp();
                     Destroy(nearestItem);
                     ResetHold();
                 }

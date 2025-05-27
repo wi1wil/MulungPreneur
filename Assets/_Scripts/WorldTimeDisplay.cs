@@ -9,6 +9,7 @@ public class WorldTimeDisplay : MonoBehaviour
 {
     [SerializeField] private WorldTime _worldTime;
     [SerializeField] private TextMeshProUGUI _timeText;
+    [SerializeField] private TextMeshProUGUI _dayText;
 
     private void Awake()
     {
@@ -24,5 +25,6 @@ public class WorldTimeDisplay : MonoBehaviour
     private void OnWorldTimeChanged(object sender, TimeSpan newTime)
     {
         _timeText.SetText(newTime.ToString(@"hh\:mm"));
+        _dayText.SetText($"DAY - {_worldTime._currentDay}");
     }
 }
