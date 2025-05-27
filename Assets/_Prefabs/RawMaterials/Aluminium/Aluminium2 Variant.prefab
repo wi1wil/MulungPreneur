@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aluminium2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: Name
+      value: Pepsi
+      objectReference: {fileID: 0}
     - target: {fileID: 3700684672073544496, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -116,7 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028b2bde9cdf76b47808dc62b3da4de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
+  Name: CocaCola
 --- !u!58 &-1574893599534795432
 CircleCollider2D:
   m_ObjectHideFlags: 0
