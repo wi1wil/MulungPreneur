@@ -8,11 +8,13 @@ public class SaveControllerScript : MonoBehaviour
 {   
     private string saveLocation;
     private InventoryManagerScript inventoryManager;
+    private WorldTime worldTime;
 
     void Start()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         inventoryManager = FindObjectOfType<InventoryManagerScript>();
+        worldTime = FindObjectOfType<WorldTime>();
 
         LoadGame();
     }
@@ -23,8 +25,11 @@ public class SaveControllerScript : MonoBehaviour
         {
             playerPosition = GameObject.Find("Player").transform.position,
             mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.name,
-            inventorySaveData = inventoryManager.getInventoryItem()
+            inventorySaveData = inventoryManager.getInventoryItem(),
+            currentDay = worldTime.getCurrentDay(),
+            currentTimeTicks = worldTime.getCurrentTimeTicks()
         };
+
 
         string json = JsonUtility.ToJson(saveData, true);
         Debug.Log("Saving JSON: " + json);
@@ -43,13 +48,30 @@ public class SaveControllerScript : MonoBehaviour
             GameObject.Find("Player").transform.position = saveData.playerPosition;
             GameObject.FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
             inventoryManager.setInventoryItem(saveData.inventorySaveData);
+            worldTime.setWorldTime(saveData.currentDay, saveData.currentTimeTicks);
+            worldTime.StartWorldTime();
 
             Debug.Log("Game Loaded");
         }
         else
         {
             SaveGame();
+            worldTime.StartWorldTime();
+            inventoryManager.setInventorySize();
             Debug.Log("No save file found, creating a new one.");
+        }
+    }
+
+    public void DeleteSave()
+    {
+        if (File.Exists(saveLocation))
+        {
+            File.Delete(saveLocation);
+            Debug.Log("Save file deleted.");
+        }
+        else
+        {
+            Debug.Log("No save file to delete.");
         }
     }
 }

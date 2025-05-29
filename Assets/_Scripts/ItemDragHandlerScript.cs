@@ -1,17 +1,23 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemDragHandlerScript : MonoBehaviour,
+    IBeginDragHandler,
+    IDragHandler,
+    IEndDragHandler,
+    IPointerClickHandler
 {
     Transform originalParent;
     CanvasGroup canvasGroup;
 
     public float minDropDis = 2f;
     public float maxDropDis = 3f;
+    private InventoryManagerScript inventoryManager;
 
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        inventoryManager = InventoryManagerScript.Instance;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -42,22 +48,46 @@ public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHand
             }
         }
         Slot originalSlot = originalParent.GetComponent<Slot>();
+        if (dropSlot == originalSlot)
+        {
+            transform.SetParent(originalParent);
+            GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            return;
+        }
 
+        // If the drop slot is not null, we can proceed with the logic
         if (dropSlot != null)
         {
             if (dropSlot.currentItem != null)
             {
-                dropSlot.currentItem.transform.SetParent(originalSlot.transform);
-                originalSlot.currentItem = dropSlot.currentItem;
-                dropSlot.currentItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                Item draggedItem = GetComponent<Item>();
+                Item targetItem = dropSlot.currentItem.GetComponent<Item>();
+
+                if (draggedItem.id == targetItem.id)
+                {
+                    targetItem.AddToStack(draggedItem.Quantity);
+                    originalSlot.currentItem = null;
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    //Slot has an item - swap items
+                    dropSlot.currentItem.transform.SetParent(originalSlot.transform);
+                    originalSlot.currentItem = dropSlot.currentItem;
+                    dropSlot.currentItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                    transform.SetParent(dropSlot.transform);
+                    dropSlot.currentItem = gameObject;
+                    GetComponent<RectTransform>().anchoredPosition = Vector2.zero; //Center
+                }
             }
             else
             {
                 originalSlot.currentItem = null;
+                transform.SetParent(dropSlot.transform);
+                dropSlot.currentItem = gameObject;
+                GetComponent<RectTransform>().anchoredPosition = Vector2.zero; //Center
             }
-
-            transform.SetParent(dropSlot.transform);
-            dropSlot.currentItem = gameObject;
         }
         else
         {
@@ -69,9 +99,9 @@ public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHand
             else
             {
                 transform.SetParent(originalParent);
+                GetComponent<RectTransform>().anchoredPosition = Vector2.zero; //Center
             }
         }
-        GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
     }
 
     bool isWithinInventory(Vector2 mousePosition)
@@ -82,7 +112,21 @@ public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHand
 
     void DropItem(Slot originalSlot)
     {
-        originalSlot.currentItem = null;
+        Item item = GetComponent<Item>();
+        int quantity = item.Quantity;
+        if (quantity > 1)
+        {
+            item.RemoveFromStack();
+
+            transform.SetParent(originalParent);
+            GetComponent<RectTransform>().anchoredPosition = Vector2.zero; // Center the item in the original slot
+
+            quantity = 1;
+        }
+        else
+        {
+            originalSlot.currentItem = null;
+        }
 
         Transform playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
         if (playerTransform == null)
@@ -93,8 +137,52 @@ public class ItemDragHandlerScript : MonoBehaviour, IBeginDragHandler, IDragHand
 
         Vector2 dropOffset = Random.insideUnitCircle.normalized * Random.Range(minDropDis, maxDropDis);
         Vector2 dropPosition = (Vector2)playerTransform.position + dropOffset;
-        Instantiate(gameObject, dropPosition, Quaternion.identity);
-        Destroy(gameObject);
+
+        GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity);
+        Item droppedItem = dropItem.GetComponent<Item>();
+        droppedItem.Quantity = 1;
+
+        if (quantity <= 1 && originalSlot.currentItem == null)
+        {
+            Destroy(gameObject);
+        }
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            SplitStack();
+        }
+    }
+
+    private void SplitStack()
+    {
+        Item item = GetComponent<Item>();
+        if (item == null || item.Quantity <= 1)
+        {
+            return; // Cannot split if item is null or quantity is 1 or less
+        }
+
+        int splitAmount = item.Quantity / 2;
+        if (splitAmount <= 0) return;
+        item.RemoveFromStack(splitAmount);
+        GameObject newItem = item.CloneItem(splitAmount);
+
+        if (inventoryManager == null || newItem == null) return;
+        foreach (Transform slotTransform in inventoryManager.inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                slot.currentItem = newItem;
+                newItem.transform.SetParent(slot.transform);
+                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero; // Center the new item in the slot
+                return;
+            }
+        }
+
+        item.AddToStack(splitAmount); // If no empty slot found, add back to the original item
+        Destroy(newItem); // Destroy the new item since it couldn't be placed in the inventory
+    }
 }

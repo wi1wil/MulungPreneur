@@ -1,25 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.Profiling;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrashManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] trashPrefabs;
-    [SerializeField] private int trashCount;
-    [SerializeField] private float spawnRate;
-    private Collider2D mapBounds; 
+    [SerializeField] private Collider2D mapBounds;
+    public int trashCount;
+    public int maxTrash;
+    public float spawnRate;
+    public float timer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // This is a test update on the branch 
-        // This is a test stash for testing 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        trashCount = 0;
+        foreach (var trash in GameObject.FindGameObjectsWithTag("Item"))
+        {
+            if (mapBounds.OverlapPoint(trash.transform.position))
+            {
+                trashCount++;
+            }
+        }
+
+        if (trashCount < maxTrash)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                spawnTrash();
+                timer = spawnRate;
+            }
+        }
+    }
+
+    public void spawnTrash()
+    {
+        Vector2 randomPos = new Vector2(Random.Range(mapBounds.bounds.min.x, mapBounds.bounds.max.x), Random.Range(mapBounds.bounds.min.y, mapBounds.bounds.max.y));
+        int index = Random.Range(0, trashPrefabs.Length);
+        Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
     }
 }

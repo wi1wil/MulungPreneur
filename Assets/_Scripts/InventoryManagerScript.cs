@@ -11,40 +11,91 @@ public class InventoryManagerScript : MonoBehaviour
     public GameObject slotPrefab;
     public int inventorySize;
     public GameObject[] itemPrefabs;
+    public int maxItemStack = 64; // Maximum items per stack
+
+    public static InventoryManagerScript Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     void Start()
     {
         itemDictionary = FindObjectOfType<ItemDictionaryScript>();
+        
+    }
 
-        // for (int i = 0; i < inventorySize; i++)
-        // {
-        //     Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-        //     if (i < itemPrefabs.Length)
-        //     {
-        //         GameObject item = Instantiate(itemPrefabs[i], slot.transform);
-        //         item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        //         slot.currentItem = item;
-        //     }
-        // }
+    public void setInventorySize()
+    {
+        for (int i = 0; i < inventorySize; i++)
+        {
+            Instantiate(slotPrefab, inventoryPanel.transform);
+        }
     }
 
     public bool AddItem(GameObject itemPrefab)
     {
-        // Check if inventory is has empty slot
+        Item item = itemPrefab.GetComponent<Item>();
+        if (item == null) return false;
+
+        int quantityToAdd = item.Quantity;
+
+        // Try to stack into existing slots
         foreach (Transform slotTransform in inventoryPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
-            if (slot != null && slot.currentItem == null)
+            if (slot != null && slot.currentItem != null)
             {
-                GameObject newItem = Instantiate(itemPrefab, slotTransform);
-                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-                slot.currentItem = newItem;
-                return true;
+                Item slotItem = slot.currentItem.GetComponent<Item>();
+                if (slotItem != null && slotItem.id == item.id && slotItem.Quantity < maxItemStack)
+                {
+                    int spaceLeft = maxItemStack - slotItem.Quantity;
+                    int addAmount = Mathf.Min(spaceLeft, quantityToAdd);
+                    slotItem.AddToStack(addAmount);
+                    quantityToAdd -= addAmount;
+                    if (quantityToAdd <= 0)
+                        return true;
+                }
             }
         }
 
-        Debug.Log("Inventory is full");
-        return false;
+        // Add new stacks for remaining quantity
+        while (quantityToAdd > 0)
+        {
+            // Find empty slot
+            Transform emptySlot = null;
+            foreach (Transform slotTransform in inventoryPanel.transform)
+            {
+                Slot slot = slotTransform.GetComponent<Slot>();
+                if (slot != null && slot.currentItem == null)
+                {
+                    emptySlot = slotTransform;
+                    break;
+                }
+            }
+            if (emptySlot == null)
+            {
+                Debug.Log("Inventory is full");
+                return false;
+            }
+
+            int addAmount = Mathf.Min(maxItemStack, quantityToAdd);
+            GameObject newItem = Instantiate(itemPrefab, emptySlot);
+            newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            Item newItemComponent = newItem.GetComponent<Item>();
+            newItemComponent.Quantity = addAmount;
+            newItemComponent.UpdateQuantity();
+            emptySlot.GetComponent<Slot>().currentItem = newItem;
+            quantityToAdd -= addAmount;
+        }
+
+        return true;
     }
 
     public List<InventorySaveData> getInventoryItem()
@@ -56,8 +107,13 @@ public class InventoryManagerScript : MonoBehaviour
             if (slot.currentItem != null)
             {
                 Item item = slot.currentItem.GetComponent<Item>();
-                invData.Add(new InventorySaveData { itemID = item.id, slotIndex = slot.transform.GetSiblingIndex() });
-                Debug.Log("Item ID: " + item.id + ", Slot Index: " + slot.transform.GetSiblingIndex());
+                invData.Add(new InventorySaveData
+                {
+                    itemID = item.id,
+                    slotIndex = slot.transform.GetSiblingIndex(),
+                    quantity = item.Quantity
+                });
+                Debug.Log("Item ID: " + item.id + ", Slot Index: " + slot.transform.GetSiblingIndex() + ", Quantity: " + item.Quantity);
             }
         }
         return invData;
@@ -88,6 +144,14 @@ public class InventoryManagerScript : MonoBehaviour
                 {
                     GameObject item = Instantiate(itemPrefab, slot.transform);
                     item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                    Item itemComponent = item.GetComponent<Item>(); 
+                    if (itemComponent != null)
+                    {
+                        itemComponent.Quantity = data.quantity;
+                        itemComponent.UpdateQuantity();
+                    }
+
                     slot.currentItem = item;
                 }
             }

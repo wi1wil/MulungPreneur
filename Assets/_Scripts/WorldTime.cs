@@ -11,10 +11,25 @@ public class WorldTime : MonoBehaviour
     private float _minuteLength => _dayLength / WorldTimeConstraints.MinutesInDay; // 1440 minutes in a day
 
     public int _currentDay { get; private set; } = 1; // Start at day 1
+    
+    public int getCurrentDay() => _currentDay;
+    public long getCurrentTimeTicks() => _currentTime.Ticks;
 
     void Start()
     {
+        // Do not start the coroutine here.
+        // The save/load system will call StartWorldTime() after loading.
+    }
+
+    public void StartWorldTime()
+    {
         StartCoroutine(AddMinutes());
+    }
+
+    public void setWorldTime(int day, long timeTicks)
+    {
+        _currentDay = day;
+        _currentTime = new TimeSpan(timeTicks);
     }
 
     private IEnumerator AddMinutes()
