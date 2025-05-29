@@ -65,6 +65,14 @@ public class ItemDragHandlerScript : MonoBehaviour,
 
                 if (draggedItem.id == targetItem.id)
                 {
+                    int maxStack = 64;
+                    if (targetItem.Quantity >= maxStack)
+                    {
+                        // Snap back if target stack is full
+                        transform.SetParent(originalParent);
+                        GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                        return;
+                    }
                     targetItem.AddToStack(draggedItem.Quantity);
                     originalSlot.currentItem = null;
                     Destroy(gameObject);
