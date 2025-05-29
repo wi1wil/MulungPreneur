@@ -18,7 +18,13 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
+        if (PauseControllerScript.isGamePaused)
+        {
+            rb.velocity = Vector2.zero; // Stop movement when the game is paused
+            return;
+        }
         rb.velocity = moveInput * movementSpeed;
+        animator.SetBool("isWalking", rb.velocity.magnitude > 0);
     }
 
     public void Move(InputAction.CallbackContext context)

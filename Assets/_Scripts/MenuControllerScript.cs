@@ -21,6 +21,11 @@ public class MenuControllerScript : MonoBehaviour
 
     public void ToggleMenu()
     {
+        if(!menuCanvas.activeSelf && PauseControllerScript.isGamePaused)
+        {
+            return; // Do not toggle if the menu is already open and the game is paused
+        }
         menuCanvas.SetActive(!menuCanvas.activeSelf);
+        PauseControllerScript.setPaused(menuCanvas.activeSelf);
     }
 }
