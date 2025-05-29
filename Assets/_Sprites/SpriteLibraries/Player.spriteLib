@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basic Charakter Spritesheet_0
+      m_Hash: 165788595
+      m_Sprite: {fileID: 1271220744, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1271220744, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_1
+      m_Hash: 1055296293
+      m_Sprite: {fileID: -875634178, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -875634178, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basic Charakter Spritesheet_2
+      m_Hash: 670030495
+      m_Sprite: {fileID: 1429260784, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1429260784, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_3
+      m_Hash: 283699721
+      m_Sprite: {fileID: 1635761234, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1635761234, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_4
+      m_Hash: 244088746
+      m_Sprite: {fileID: -1912809871, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1912809871, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_5
+      m_Hash: 965431100
+      m_Sprite: {fileID: 528812401, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 528812401, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_6
+      m_Hash: 545398406
+      m_Sprite: {fileID: -929116782, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -929116782, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_7
+      m_Hash: 394604048
+      m_Sprite: {fileID: -955431345, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -955431345, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_8
+      m_Hash: 121254785
+      m_Sprite: {fileID: -2101050809, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2101050809, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_9
+      m_Hash: 809304855
+      m_Sprite: {fileID: -559118285, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -559118285, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_10
+      m_Hash: 1063382509
+      m_Sprite: {fileID: -1187374768, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1187374768, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_11
+      m_Hash: 140959099
+      m_Sprite: {fileID: 57722698, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 57722698, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_12
+      m_Hash: 292523201
+      m_Sprite: {fileID: 778770127, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 778770127, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_13
+      m_Hash: 644398167
+      m_Sprite: {fileID: -97853350, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -97853350, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_14
+      m_Hash: 940321268
+      m_Sprite: {fileID: 935674253, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 935674253, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    - m_Name: Basic Charakter Spritesheet_15
+      m_Hash: 252385634
+      m_Sprite: {fileID: 1313000865, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1313000865, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 14
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638841482806270577
+  m_Version: 1

@@ -6,6 +6,7 @@ public class TrashManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] trashPrefabs;
     [SerializeField] private Collider2D mapBounds;
+    [SerializeField] private GameObject trashObjects;
     public int trashCount;
     public int maxTrash;
     public float spawnRate;
@@ -37,6 +38,10 @@ public class TrashManagerScript : MonoBehaviour
     {
         Vector2 randomPos = new Vector2(Random.Range(mapBounds.bounds.min.x, mapBounds.bounds.max.x), Random.Range(mapBounds.bounds.min.y, mapBounds.bounds.max.y));
         int index = Random.Range(0, trashPrefabs.Length);
-        Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
+        GameObject spawned = Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
+        if (trashObjects != null)
+        {
+            spawned.transform.SetParent(trashObjects.transform);
+        }
     }
 }
