@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 116006212}
   - component: {fileID: 116006213}
   - component: {fileID: 116006215}
-  - component: {fileID: 116006214}
+  - component: {fileID: 116006216}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -719,13 +719,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1904855199
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1271220744, guid: 5407c3c5299d71d40bc67bb96117cf53, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1472436191, guid: 0e353ee88506356458d0f09d71c80e00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -970,22 +970,6 @@ MonoBehaviour:
   isHolding: 0
   pickUpRange: 1
   mainCanvas: {fileID: 1999980036}
---- !u!114 &116006214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116006205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CategoryHash: 0.009161512
-  m_labelHash: 5.434329e-33
-  m_SpriteKey: 0
-  m_SpriteHash: 700624923
 --- !u!114 &116006215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +984,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: e79e7fcd52b9d234299c31170949605f, type: 3}
+--- !u!114 &116006216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116006205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0.009161512
+  m_labelHash: 1.3375524e-30
+  m_SpriteKey: 0
+  m_SpriteHash: 962547233
 --- !u!1 &154295183
 GameObject:
   m_ObjectHideFlags: 0
@@ -16942,7 +16942,7 @@ Tilemap:
       - {fileID: -1843754024, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: 448042604, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: 685550577, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: -1, z: 0}
@@ -16966,7 +16966,7 @@ Tilemap:
       - {fileID: 1313661273, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: -1464362177, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: 2134654908, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: -1, z: 0}
@@ -17014,7 +17014,7 @@ Tilemap:
       - {fileID: 554356141, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: 332416973, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
       - {fileID: -1857925066, guid: abb1bcbc66eb71f40afc1534429062df, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: 0, z: 0}
