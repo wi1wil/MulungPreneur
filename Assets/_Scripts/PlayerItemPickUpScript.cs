@@ -93,10 +93,4 @@ public class PlayerItemPickUpScript : MonoBehaviour
         }
         holdTimer = 0f;
     }
-
-    void OnDrawGizmosSelected()
-   {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, pickUpRange);
-    }
 }

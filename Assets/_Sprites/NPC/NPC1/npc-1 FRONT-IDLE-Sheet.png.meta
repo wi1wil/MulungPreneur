@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5407c3c5299d71d40bc67bb96117cf53
+guid: 5f5fd7e77e914754a87c7592350754da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -123,265 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfdc7548e906d5e4f9435bd2c3da3bac
-      internalID: 1271220744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b98a3ac6256cf946a4d3b566ec43c10
-      internalID: -875634178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a3d911ee23ddd246b0ccadae8ead16f
-      internalID: 1429260784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ffb3e4352f086641bc335b996ea97ec
-      internalID: 1635761234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20728a8a5386d0c4ba279da99d5a9239
-      internalID: -1912809871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ef2a60e975f27645aabd88c701cbc31
-      internalID: 528812401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35a06fe52d269eb4b9f241c306ddb65c
-      internalID: -929116782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a0a0c06f3408434886ca95fde6e34e3
-      internalID: -955431345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ebbd66dca822c44492fa44c8bdc4214
-      internalID: -2101050809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01fc4207161b2ec449434a7e6616e343
-      internalID: -559118285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddd6514facbd9bd4d9d8a51f211bc3eb
-      internalID: -1187374768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a8620f14d9b91244b2982bbb07bf9d4
-      internalID: 57722698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_12
+      name: npc-1 FRONT-IDLE-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ac2334dba55d44f86093fa86a12582
-      internalID: 778770127
+      spriteID: 45df240421e9b284395fddb80aae8dd1
+      internalID: -2066448823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_13
+      name: npc-1 FRONT-IDLE-Sheet_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 23
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4345ee68d98b01d42bab5151133478ab
-      internalID: -97853350
+      spriteID: ff712979c07bc184497e919af3f95c2c
+      internalID: 520602244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_14
+      name: npc-1 FRONT-IDLE-Sheet_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 46
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 695207ee0ef3ff34895e9b07b6c1335a
-      internalID: 935674253
+      spriteID: 37358964ae05feb4d9a7abdb76d23a41
+      internalID: 1421791699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_15
+      name: npc-1 FRONT-IDLE-Sheet_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 69
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,8 +200,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c130a9b83498c0e49a29172236ea0df8
-      internalID: 1313000865
+      spriteID: 6e9e1462019b86f49ad9ae159064f0bf
+      internalID: -1782099894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc-1 FRONT-IDLE-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6689fed70cc805648815084fbb722ff8
+      internalID: 407287997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc-1 FRONT-IDLE-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5b2e367b22dd746955deab48f264b7
+      internalID: 863221122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc-1 FRONT-IDLE-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7f70f5043ab8547b5a75d206915fa0
+      internalID: 1070173732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc-1 FRONT-IDLE-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c81a382edc3014e9094e6fe6a33372
+      internalID: 299624720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc-1 FRONT-IDLE-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2938090705f8ec4b89bd78c1df52987
+      internalID: -414617482
       vertices: []
       indices: 
       edges: []
@@ -469,22 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic Charakter Spritesheet_0: 1271220744
-      Basic Charakter Spritesheet_1: -875634178
-      Basic Charakter Spritesheet_10: -1187374768
-      Basic Charakter Spritesheet_11: 57722698
-      Basic Charakter Spritesheet_12: 778770127
-      Basic Charakter Spritesheet_13: -97853350
-      Basic Charakter Spritesheet_14: 935674253
-      Basic Charakter Spritesheet_15: 1313000865
-      Basic Charakter Spritesheet_2: 1429260784
-      Basic Charakter Spritesheet_3: 1635761234
-      Basic Charakter Spritesheet_4: -1912809871
-      Basic Charakter Spritesheet_5: 528812401
-      Basic Charakter Spritesheet_6: -929116782
-      Basic Charakter Spritesheet_7: -955431345
-      Basic Charakter Spritesheet_8: -2101050809
-      Basic Charakter Spritesheet_9: -559118285
+      npc-1 FRONT-IDLE-Sheet_0: -2066448823
+      npc-1 FRONT-IDLE-Sheet_1: 520602244
+      npc-1 FRONT-IDLE-Sheet_2: 1421791699
+      npc-1 FRONT-IDLE-Sheet_3: -1782099894
+      npc-1 FRONT-IDLE-Sheet_4: 407287997
+      npc-1 FRONT-IDLE-Sheet_5: 863221122
+      npc-1 FRONT-IDLE-Sheet_6: 1070173732
+      npc-1 FRONT-IDLE-Sheet_7: 299624720
+      npc-1 FRONT-IDLE-Sheet_8: -414617482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
