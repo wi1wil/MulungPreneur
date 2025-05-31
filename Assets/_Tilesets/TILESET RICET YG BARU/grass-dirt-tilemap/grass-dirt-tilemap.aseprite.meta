@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13bc97e39a069d345b649f34543aae6a
+guid: 659bd1d8ede7e2141adb5d7a5436d7ec
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638835202084842966
+  platformSettingsDirtyTick: 638843327277578850
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: grass andflower tileset
+  - name: grass-dirt-tilemap
     originalName: 
-    pivot: {x: 0.49999997, y: -0.02173913}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 74
-      height: 46
-    spriteID: 7cfd1c454f200804dba006bd9bdf6881
+      width: 64
+      height: 64
+    spriteID: 69e8fd1d1f4b40549aa5b1d940500980
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,18 +142,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: grass-flower-1
+  - name: grass-dirt-tilemap_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1
-      y: 35
+      x: 4
+      y: 52
       width: 16
       height: 16
-    spriteID: dcc7813054b71db48b464e0f30d270fd
+    spriteID: b8f43bdf774c81f42ae35e48a91961e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -162,18 +162,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-2
+  - name: grass-dirt-tilemap_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 17
-      y: 35
+      x: 20
+      y: 52
       width: 16
       height: 16
-    spriteID: 4ffe9daf3df431a41945ea69f14cf33c
+    spriteID: 4b9044d89c4ddea468675ab53c48259f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -182,18 +182,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-3
+  - name: grass-dirt-tilemap_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 33
-      y: 35
+      x: 36
+      y: 52
       width: 16
       height: 16
-    spriteID: 6bb362da3a56d7d46a6b2d8e695c3b76
+    spriteID: 5fbb7704bad99034ea832c36b941518e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,18 +202,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tree-TL
+  - name: grass-dirt-tilemap_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 49
-      y: 35
+      x: 52
+      y: 52
       width: 16
       height: 16
-    spriteID: a4bd7903c1695e54cb75cc4009395391
+    spriteID: 41f91a1a7d7c61d4185a0aa39266f50e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -222,18 +222,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tree-TR
+  - name: grass-dirt-tilemap_4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 65
-      y: 35
+      x: 4
+      y: 36
       width: 16
       height: 16
-    spriteID: ac6632769a735bc449f86256492019e6
+    spriteID: 2f3cbc318776f4846b23ea5bd8feb22f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -242,18 +242,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-4
+  - name: grass-dirt-tilemap_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1
-      y: 19
+      x: 20
+      y: 36
       width: 16
       height: 16
-    spriteID: 334c9bf75bec0d54d95cf996ac6ba1d6
+    spriteID: f2ea239fe7384804389b6b11d0d812a7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -262,18 +262,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-5
+  - name: grass-dirt-tilemap_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 17
-      y: 19
+      x: 36
+      y: 36
       width: 16
       height: 16
-    spriteID: 4d9e1147381501a48a7b4bb0200340ab
+    spriteID: bc97a528b20e596448964a5328abd538
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -282,18 +282,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-6
+  - name: grass-dirt-tilemap_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 33
-      y: 19
+      x: 52
+      y: 36
       width: 16
       height: 16
-    spriteID: 8702db0fd35fa924f999a86f908df495
+    spriteID: c380c44a87e22874889c0127565cb131
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -302,18 +302,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tree-BL
+  - name: grass-dirt-tilemap_8
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 49
-      y: 19
+      x: 4
+      y: 20
       width: 16
       height: 16
-    spriteID: 171cb8e35a653534eaf556eae93f0962
+    spriteID: f9635aadb7e8e9b4b8f6a6d458c9c372
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -322,18 +322,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tree-BR
+  - name: grass-dirt-tilemap_9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 65
-      y: 19
+      x: 20
+      y: 20
       width: 16
       height: 16
-    spriteID: 8bea25e827870ac4583b396677509ede
+    spriteID: 3bdb2069c1361a145abfc32be046cb6b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -342,18 +342,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-7
+  - name: grass-dirt-tilemap_10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1
-      y: 3
+      x: 36
+      y: 20
       width: 16
       height: 16
-    spriteID: 707ca34abe339424f8c20131a46ef558
+    spriteID: 41cf187f529aa5748aac4272938c2738
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -362,18 +362,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-8
+  - name: grass-dirt-tilemap_11
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 17
-      y: 3
+      x: 52
+      y: 20
       width: 16
       height: 16
-    spriteID: 7d52c5acafff8fb469797ee5bd22eb4f
+    spriteID: 059a9d5b4c529d7409f3896873081e0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -382,18 +382,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: grass-flower-9
+  - name: grass-dirt-tilemap_12
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 33
-      y: 3
+      x: 4
+      y: 4
       width: 16
       height: 16
-    spriteID: 2f5486bf14714ad46b512f90106a33a3
+    spriteID: 538b91aea71e72e4fb19327fcf14bf0b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -402,18 +402,58 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: bush
+  - name: grass-dirt-tilemap_13
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 49
-      y: 3
+      x: 20
+      y: 4
       width: 16
       height: 16
-    spriteID: f8cf48d6d3094564fb577f941750bbde
+    spriteID: 90dc29923261b3244b4242cdfd36cb6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: grass-dirt-tilemap_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 16
+      height: 16
+    spriteID: 5fb6bc508ab8ece4e9f7f23cb848369e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: grass-dirt-tilemap_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 16
+      height: 16
+    spriteID: 43673ee91ca49494795fc8605162eae0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -424,20 +464,20 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 946133622
-    name: grass andflower tileset
+    guid: 777472127
+    name: grass-dirt-tilemap
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: grass andflower tileset
+    - name: grass-dirt-tilemap
       frameIndex: 0
       cellRect:
-        x: 3
-        y: 1
-        width: 74
-        height: 46
-      spriteId: 7cfd1c454f200804dba006bd9bdf6881
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      spriteId: 69e8fd1d1f4b40549aa5b1d940500980
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -477,7 +517,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  generatePhysicsShape: 1
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 48}
+  canvasSize: {x: 64, y: 64}
