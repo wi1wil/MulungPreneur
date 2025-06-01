@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Ground
+  - WalkInFront
+  - Collision
+  - WalkBehind
+  - Decor
+  - MapTiles
+  - SpawnableArea
   layers:
   - Default
   - TransparentFX
@@ -13,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Map
-  - 
+  - Ground
   - 
   - 
   - 
@@ -41,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: SpawnableArea
+    uniqueID: 2969313037
     locked: 0
   - name: Ground
     uniqueID: 2323339755

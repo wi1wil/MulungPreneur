@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using Unity.Profiling;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class TrashManagerScript : MonoBehaviour
@@ -11,6 +13,7 @@ public class TrashManagerScript : MonoBehaviour
     public int maxTrash;
     public float spawnRate;
     public float timer;
+    public int deleteTime;
 
     void Update()
     {
@@ -37,11 +40,30 @@ public class TrashManagerScript : MonoBehaviour
     public void spawnTrash()
     {
         Vector2 randomPos = new Vector2(Random.Range(mapBounds.bounds.min.x, mapBounds.bounds.max.x), Random.Range(mapBounds.bounds.min.y, mapBounds.bounds.max.y));
+
+        // Check all colliders at the spawn position for tag "Ground"
+        Collider2D[] hits = Physics2D.OverlapPointAll(randomPos);
+        bool foundGround = false;
+        foreach (var hit in hits)
+        {
+            if (hit != null && hit.CompareTag("SpawnableArea"))
+            {
+                foundGround = true;
+                break;
+            }
+        }
+        if (!foundGround)
+        {
+            return;
+        }
+
         int index = Random.Range(0, trashPrefabs.Length);
         GameObject spawned = Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
         if (trashObjects != null)
         {
             spawned.transform.SetParent(trashObjects.transform);
         }
+        
+        Destroy(spawned, deleteTime);
     }
 }
