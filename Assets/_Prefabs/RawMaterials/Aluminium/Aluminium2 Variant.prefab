@@ -13,6 +13,10 @@ PrefabInstance:
       value: Aluminium2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: Name
       value: Pepsi
       objectReference: {fileID: 0}
@@ -100,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1451458622, guid: 05013e4901eef8646ac6e346b6620642, type: 3}
+    - target: {fileID: 4136615288826592183, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6199465944171765804, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_Sprite
       value: 

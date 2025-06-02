@@ -41,13 +41,13 @@ public class TrashManagerScript : MonoBehaviour
     {
         Vector2 randomPos = new Vector2(Random.Range(mapBounds.bounds.min.x, mapBounds.bounds.max.x), Random.Range(mapBounds.bounds.min.y, mapBounds.bounds.max.y));
 
-        // Check all colliders at the spawn position for tag "Ground"
         Collider2D[] hits = Physics2D.OverlapPointAll(randomPos);
         bool foundGround = false;
         foreach (var hit in hits)
         {
             if (hit != null && hit.CompareTag("SpawnableArea"))
             {
+                Debug.Log("Spawned trash at: " + randomPos);
                 foundGround = true;
                 break;
             }
@@ -59,6 +59,7 @@ public class TrashManagerScript : MonoBehaviour
 
         int index = Random.Range(0, trashPrefabs.Length);
         GameObject spawned = Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
+        Debug.Log("Spawned trash: " + spawned.name);
         if (trashObjects != null)
         {
             spawned.transform.SetParent(trashObjects.transform);
