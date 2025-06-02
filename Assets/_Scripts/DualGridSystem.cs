@@ -188,9 +188,9 @@ public class DualGridSystem : MonoBehaviour
     // The tiles on the display tilemap will recalculate themselves based on the placeholder tilemap
     public void RefreshDisplayTilemap()
     {
-        for (int i = -50; i < 50; i++)
+        for (int i = -100; i < 100; i++)
         {
-            for (int j = -50; j < 50; j++)
+            for (int j = -100; j < 100; j++)
             {
                 setDisplayTile(new Vector3Int(i, j, 0));
             }
