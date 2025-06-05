@@ -10,4 +10,5 @@ public class SaveDataScript
     public int currentDay;
     public long currentTimeTicks;
     public List<QuestProgress> questProgressData;
+    public List<string> handinQuestsID;
 }

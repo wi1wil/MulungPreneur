@@ -65,6 +65,7 @@ public class NPCScript : MonoBehaviour, IInteractable
         else if (questState == QuestState.Completed)
         {
             dialogueIndex = dialogueData.questCompetedIndex;
+
         }
 
         isDialogueActive = true;
@@ -82,7 +83,13 @@ public class NPCScript : MonoBehaviour, IInteractable
         if (dialogueData.quest != null)
         {
             string questID = dialogueData.quest.questID;
-            if(QuestManagerScript.Instance.isQuestActive(questID))
+
+            if (QuestManagerScript.Instance.isQuestCompleted(questID) || QuestManagerScript.Instance.isQuestHandedIn(questID))
+            {
+                questState = QuestState.Completed;
+                dialogueIndex = dialogueData.questCompetedIndex;
+            }
+            else if (QuestManagerScript.Instance.isQuestActive(questID))
             {
                 questState = QuestState.InProgress;
             }
@@ -150,6 +157,10 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     public void EndDialogue()
     {
+        if (questState == QuestState.Completed && !QuestManagerScript.Instance.isQuestHandedIn(dialogueData.quest.questID))
+        {
+            HandleQuestComplete(dialogueData.quest);
+        }
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueManager.ShowDialogueUI(false);
@@ -184,5 +195,10 @@ public class NPCScript : MonoBehaviour, IInteractable
     {
         StopAllCoroutines();
         StartCoroutine(TypeLine());
+    }
+
+    void HandleQuestComplete(Quest quest)
+    {
+        QuestManagerScript.Instance.handInQuest(quest.questID);
     }
 }

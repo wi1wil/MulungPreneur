@@ -29,7 +29,8 @@ public class SaveControllerScript : MonoBehaviour
             inventorySaveData = inventoryManager.getInventoryItem(),
             currentDay = worldTime.getCurrentDay(),
             currentTimeTicks = worldTime.getCurrentTimeTicks(),
-            questProgressData = QuestManagerScript.Instance.activateQuests
+            questProgressData = QuestManagerScript.Instance.activateQuests,
+            handinQuestsID = QuestManagerScript.Instance.handinQuests
         };
 
         string json = JsonUtility.ToJson(saveData, true);
@@ -52,7 +53,7 @@ public class SaveControllerScript : MonoBehaviour
             worldTime.setWorldTime(saveData.currentDay, saveData.currentTimeTicks);
             worldTime.StartWorldTime();
             QuestManagerScript.Instance.LoadQuestProgress(saveData.questProgressData);
-            Debug.Log("Loaded quest progress: " + JsonUtility.ToJson(QuestManagerScript.Instance.activateQuests, true));
+            QuestManagerScript.Instance.handinQuests = saveData.handinQuestsID;
 
             Debug.Log("Game Loaded");
         }

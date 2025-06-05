@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class InventoryManagerScript : MonoBehaviour
 {
@@ -181,6 +182,29 @@ public class InventoryManagerScript : MonoBehaviour
                 }
             }
         }
+        InitializeItemCount();
+    }
+
+    public void RemoveItemsFromInv(int itemID, int amountToRemove)
+    {
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            if (amountToRemove <= 0) break;
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot?.currentItem?.GetComponent<Item>() is Item item && item.id == itemID)
+            {
+                int removed = Mathf.Min(amountToRemove, item.Quantity);
+                item.RemoveFromStack(removed);
+                amountToRemove -= removed;
+
+                if (item.Quantity <= 0)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
+                }
+            }
+        }
+        
         InitializeItemCount();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class QuestManagerScript : MonoBehaviour
@@ -8,6 +9,8 @@ public class QuestManagerScript : MonoBehaviour
 
     public List<QuestProgress> activateQuests = new();
     private QuestUIScript questUI;
+
+    public List<string> handinQuests = new();   
 
     private void Awake()
     {
@@ -57,6 +60,63 @@ public class QuestManagerScript : MonoBehaviour
             }
         }
         questUI.UpdateQuestUI();
+    }
+
+    public bool isQuestCompleted(string questID)
+    {
+        QuestProgress quest = activateQuests.Find(q => q.questID == questID);
+        return quest != null && quest.objectives.TrueForAll(o => o.isCompleted);
+    }
+
+    public void handInQuest(string questID)
+    {
+        if (!removeItemsFromInv(questID))
+        {
+            return;
+        }
+
+        QuestProgress quest = activateQuests.Find(q => q.questID == questID);
+        if (quest != null)
+        {
+            handinQuests.Add(questID);
+            activateQuests.Remove(quest);
+            questUI.UpdateQuestUI();
+        }
+       
+    }
+
+    public bool isQuestHandedIn(string questID)
+    {
+        return handinQuests.Contains(questID);
+    }
+
+    public bool removeItemsFromInv(string questID)
+    {
+        QuestProgress quest = activateQuests.Find(q => q.questID == questID);
+        if (quest == null) return false;
+
+        Dictionary<int, int> requiredItems = new();
+        foreach (QuestObjective objective in quest.objectives)
+        {
+            if (objective.type == ObjectiveType.CollectItem && int.TryParse(objective.objectiveID, out int itemId))
+            {
+                requiredItems[itemId] = objective.requiredAmount;
+            }
+        }
+        Dictionary<int, int> itemCount = InventoryManagerScript.Instance.GetItemCount();
+        foreach (var item in requiredItems)
+        {
+            if (itemCount.GetValueOrDefault(item.Key) < item.Value)
+            {
+                return false;
+            }
+        }
+
+        foreach (var itemReq in requiredItems)
+        {
+            InventoryManagerScript.Instance.RemoveItemsFromInv(itemReq.Key, itemReq.Value);
+        }
+        return true;
     }
 
     public void LoadQuestProgress(List<QuestProgress> savedQuests)
