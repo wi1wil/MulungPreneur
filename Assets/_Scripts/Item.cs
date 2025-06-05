@@ -48,7 +48,7 @@ public class Item : MonoBehaviour
         return clone;
     }
 
-    public virtual void PickUp()
+    public virtual void ShowPopup()
     {
         Sprite itemIcon = GetComponent<SpriteRenderer>().sprite;
         if (ItemPopUpController.Instance != null)

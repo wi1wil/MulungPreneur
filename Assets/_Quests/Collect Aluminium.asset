@@ -17,12 +17,11 @@ MonoBehaviour:
   description: 'Must collect 10 of the Coke cans! '
   objectives:
   - objectiveID: 1
-    description: Collect 10 Cokes
+    description: Collect 2 Cokes
     type: 0
-    requiredAmount: 10
+    requiredAmount: 2
     currentAmount: 0
-  - objectiveID: 2
-    description: Collect 10 Pepsi
-    type: 0
-    requiredAmount: 10
-    currentAmount: 0
+  rewards:
+  - rewardType: 0
+    rewardID: 2
+    amount: 32

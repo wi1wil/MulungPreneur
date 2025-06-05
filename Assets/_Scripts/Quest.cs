@@ -11,6 +11,7 @@ public class Quest : ScriptableObject
     public string questName;
     public string description;
     public List<QuestObjective> objectives;
+    public List<QuestRewards> rewards;
 
     public void OnValidate()
     {
@@ -64,3 +65,14 @@ public class QuestProgress
 
     public bool isCompleted => objectives.TrueForAll(o => o.isCompleted);
 }
+
+[System.Serializable]
+public class QuestRewards
+{
+    public RewardType rewardType;
+    public int rewardID;
+    public int amount = 1;
+
+}
+
+public enum RewardType { Item }

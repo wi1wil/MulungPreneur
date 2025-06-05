@@ -46,7 +46,7 @@ public class PlayerItemPickUpScript : MonoBehaviour
                 bool itemAdded = inventoryManager.AddItem(nearestItem);
                 if(itemAdded)
                 {
-                    item.PickUp();
+                    item.ShowPopup();
                     Destroy(nearestItem);
                     ResetHold();
                 }

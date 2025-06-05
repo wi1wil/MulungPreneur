@@ -199,6 +199,8 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     void HandleQuestComplete(Quest quest)
     {
+        // Give Items
+        RewardManagerScript.Instance.GiveRewards(quest);
         QuestManagerScript.Instance.handInQuest(quest.questID);
     }
 }
