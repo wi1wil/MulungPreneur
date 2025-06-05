@@ -21,15 +21,16 @@ public class SaveControllerScript : MonoBehaviour
 
     public void SaveGame()
     {
+        Debug.Log("Saving quest progress: " + JsonUtility.ToJson(QuestManagerScript.Instance.activateQuests, true));
         SaveDataScript saveData = new SaveDataScript
         {
             playerPosition = GameObject.Find("Player").transform.position,
             mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.name,
             inventorySaveData = inventoryManager.getInventoryItem(),
             currentDay = worldTime.getCurrentDay(),
-            currentTimeTicks = worldTime.getCurrentTimeTicks()
+            currentTimeTicks = worldTime.getCurrentTimeTicks(),
+            questProgressData = QuestManagerScript.Instance.activateQuests
         };
-
 
         string json = JsonUtility.ToJson(saveData, true);
         Debug.Log("Saving JSON: " + json);
@@ -50,6 +51,8 @@ public class SaveControllerScript : MonoBehaviour
             inventoryManager.setInventoryItem(saveData.inventorySaveData);
             worldTime.setWorldTime(saveData.currentDay, saveData.currentTimeTicks);
             worldTime.StartWorldTime();
+            QuestManagerScript.Instance.LoadQuestProgress(saveData.questProgressData);
+            Debug.Log("Loaded quest progress: " + JsonUtility.ToJson(QuestManagerScript.Instance.activateQuests, true));
 
             Debug.Log("Game Loaded");
         }

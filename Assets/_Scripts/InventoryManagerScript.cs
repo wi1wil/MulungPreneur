@@ -14,6 +14,8 @@ public class InventoryManagerScript : MonoBehaviour
     public int maxItemStack = 64; // Maximum items per stack
 
     public static InventoryManagerScript Instance { get; private set; }
+    Dictionary<int, int> itemCountCache = new();
+    public event Action onInvChanged;
 
     void Awake()
     {
@@ -28,8 +30,29 @@ public class InventoryManagerScript : MonoBehaviour
     void Start()
     {
         itemDictionary = FindObjectOfType<ItemDictionaryScript>();
-        
+        InitializeItemCount();
     }
+
+    public void InitializeItemCount()
+    {
+        itemCountCache.Clear();
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.currentItem != null)
+            {
+                Item item = slot.currentItem.GetComponent<Item>();
+                if (item != null)
+                {
+                    itemCountCache[item.id] = itemCountCache.GetValueOrDefault(item.id, 0) + item.Quantity;
+                }
+            }
+        }
+
+        onInvChanged?.Invoke();
+    }
+
+    public Dictionary<int, int> GetItemCount() => itemCountCache;
 
     public void setInventorySize()
     {
@@ -58,6 +81,7 @@ public class InventoryManagerScript : MonoBehaviour
                     int spaceLeft = maxItemStack - slotItem.Quantity;
                     int addAmount = Mathf.Min(spaceLeft, quantityToAdd);
                     slotItem.AddToStack(addAmount);
+                    InitializeItemCount();
                     quantityToAdd -= addAmount;
                     if (quantityToAdd <= 0)
                         return true;
@@ -76,6 +100,7 @@ public class InventoryManagerScript : MonoBehaviour
                 if (slot != null && slot.currentItem == null)
                 {
                     emptySlot = slotTransform;
+                    InitializeItemCount();
                     break;
                 }
             }
@@ -145,7 +170,7 @@ public class InventoryManagerScript : MonoBehaviour
                     GameObject item = Instantiate(itemPrefab, slot.transform);
                     item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-                    Item itemComponent = item.GetComponent<Item>(); 
+                    Item itemComponent = item.GetComponent<Item>();
                     if (itemComponent != null)
                     {
                         itemComponent.Quantity = data.quantity;
@@ -156,5 +181,6 @@ public class InventoryManagerScript : MonoBehaviour
                 }
             }
         }
+        InitializeItemCount();
     }
 }

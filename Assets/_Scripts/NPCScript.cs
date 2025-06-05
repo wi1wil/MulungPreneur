@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class NPCScript : MonoBehaviour, IInteractable
 {
@@ -10,6 +11,15 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
+
+    private enum QuestState
+    {
+        NotStarted,
+        InProgress,
+        Completed
+    }
+
+    private QuestState questState = QuestState.NotStarted;
 
     private void Start()
     {
@@ -40,14 +50,47 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     void startDialogue()
     {
+        syncQuestProgress();
+        // Set Dialogue Data
+        Debug.Log($"Starting dialogue with {dialogueData.npcName}");
+        Debug.Log($"Quest State: {questState}");
+        if (questState == QuestState.NotStarted)
+        {
+            dialogueIndex = 0;
+        }
+        else if (questState == QuestState.InProgress)
+        {
+            dialogueIndex = dialogueData.questProgressIndex;
+        }
+        else if (questState == QuestState.Completed)
+        {
+            dialogueIndex = dialogueData.questCompetedIndex;
+        }
+
         isDialogueActive = true;
-        dialogueIndex = 0;
+        // dialogueIndex = 0;
 
         dialogueManager.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueManager.ShowDialogueUI(true);
         PauseControllerScript.setPaused(true);
 
         DisplayCurrentLine();
+    }
+
+    private void syncQuestProgress()
+    {
+        if (dialogueData.quest != null)
+        {
+            string questID = dialogueData.quest.questID;
+            if(QuestManagerScript.Instance.isQuestActive(questID))
+            {
+                questState = QuestState.InProgress;
+            }
+            else
+            {
+                questState = QuestState.NotStarted;
+            }
+        }
     }
 
     IEnumerator TypeLine()
@@ -119,13 +162,19 @@ public class NPCScript : MonoBehaviour, IInteractable
         for (int i = 0; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndices[i];
-            dialogueManager.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+            bool giveQuest = choice.giveQuest[i];
+            dialogueManager.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, giveQuest));
             Debug.Log($"Choice: {choice.choices[i]}, Next Index: {nextIndex}");
         }
     }
 
-    void ChooseOption(int nextIndex)
+    void ChooseOption(int nextIndex, bool giveQuest)
     {
+        if (giveQuest)
+        {
+            QuestManagerScript.Instance.StartQuest(dialogueData.quest);
+            questState = QuestState.InProgress;
+        }
         dialogueIndex = nextIndex;
         dialogueManager.ClearChoices();
         DisplayCurrentLine();

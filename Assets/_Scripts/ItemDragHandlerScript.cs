@@ -23,9 +23,12 @@ public class ItemDragHandlerScript : MonoBehaviour,
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;
-        transform.SetParent(transform.root);
+        // Set parent to the top-level Canvas so the item stays visible while dragging
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas != null)
+            transform.SetParent(canvas.transform);
         canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f;
+        canvasGroup.alpha = 1f;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -154,6 +157,7 @@ public class ItemDragHandlerScript : MonoBehaviour,
         {
             Destroy(gameObject);
         }
+        InventoryManagerScript.Instance.InitializeItemCount();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -169,7 +173,7 @@ public class ItemDragHandlerScript : MonoBehaviour,
         Item item = GetComponent<Item>();
         if (item == null || item.Quantity <= 1)
         {
-            return; // Cannot split if item is null or quantity is 1 or less
+            return;
         }
 
         int splitAmount = item.Quantity / 2;

@@ -19,6 +19,10 @@ public class NPCDialogue : ScriptableObject
     public bool[] endDialogueLines;
     public float autoProgressDelay = 1.5f;
     public DialogueChoice[] choices;
+
+    public int questProgressIndex;
+    public int questCompetedIndex;
+    public Quest quest;
 }
 
 [System.Serializable]
@@ -27,4 +31,5 @@ public class DialogueChoice
     public int dialogueIndex;
     public string[] choices;
     public int[] nextDialogueIndices;
+    public bool[] giveQuest;
 }

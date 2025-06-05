@@ -9,4 +9,5 @@ public class SaveDataScript
     public List<InventorySaveData> inventorySaveData;
     public int currentDay;
     public long currentTimeTicks;
+    public List<QuestProgress> questProgressData;
 }
