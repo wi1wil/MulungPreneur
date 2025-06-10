@@ -8,7 +8,7 @@ public class CloudPrefabScript : MonoBehaviour
 
     public void Start()
     {
-        speed = Random.Range(0.5f, 1.0f);
+        speed = Random.Range(0.2f, 0.5f);
     }
 
     public void Update()
