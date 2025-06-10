@@ -18,15 +18,15 @@ MonoBehaviour:
   voicePitch: 1
   typingSpeed: 0.05
   dialogueLines:
-  - Hello there young man!
+  - Hello there old man!
   - I need your help to gather these materials!
   - in exchange, i'll give you some of my precious coins!
   - Could you please help me?
-  - Howdy! I'll wait for you here!
+  - Great! I'll wait for you here!
   - Oh okay.
   - Hurry up and collect them all!
   - Thank you..
-  - I'll give you the recylced items soon!
+  - I'll give you the recycled items soon!
   autoProgressLines: 010101010000000100
   endDialogueLines: 000000000101010001
   autoProgressDelay: 1.5
