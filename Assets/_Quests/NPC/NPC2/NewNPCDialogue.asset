@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833c6069681d983488f0afc7b77d0b97, type: 3}
+  m_Name: NewNPCDialogue
+  m_EditorClassIdentifier: 
+  npcName: Jordy Tandiano
+  npcPortrait: {fileID: -1185976315, guid: 0e353ee88506356458d0f09d71c80e00, type: 3}
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  typingSpeed: 0.05
+  dialogueLines:
+  - Aku orang gay, kalau kamu gimana?
+  - Kamu mau sepong aku ga?
+  - Oohh yok sepong!
+  - Ih ga seru!
+  - Coba dulu ambilin itu!
+  - Makasih yah
+  autoProgressLines: 010101010101
+  endDialogueLines: 000001010101
+  autoProgressDelay: 1.5
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Aku juga gay!
+    - Ga lah!
+    nextDialogueIndices: 0200000003000000
+    giveQuest: 0100
+  questProgressIndex: 4
+  questCompetedIndex: 5
+  quest: {fileID: 11400000, guid: 0bc5093e3b394864eb7efc59355dcef5, type: 2}
