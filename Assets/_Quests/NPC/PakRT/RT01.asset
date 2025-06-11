@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833c6069681d983488f0afc7b77d0b97, type: 3}
+  m_Name: RT01
+  m_EditorClassIdentifier: 
+  npcName: Pak RT
+  npcPortrait: {fileID: 0}
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  typingSpeed: 0.05
+  dialogueLines:
+  - Di, saya denger-denger ente mau jadi pemulung ye
+  - Ya apapun lah, pokoknya kamu harus bantu saya  nih tolong pungutin plastik dah
+    biar pada cepet bersih deh nanti saya kasih uang
+  - Jangan lama lama ya Di
+  - Wah Cepet juga ente  nih yg tadi saya bilang buat kamu jajan dah.
+  autoProgressLines: 010100
+  endDialogueLines: 000001
+  autoProgressDelay: 1.5
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - eeee iya pak
+    - Pengusaha PAK!
+    nextDialogueIndices: 0100000001000000
+    giveQuest: 0000
+  - dialogueIndex: 1
+    choices:
+    - Siap pak
+    nextDialogueIndices: 02000000
+    giveQuest: 01
+  questProgressIndex: 2
+  questCompetedIndex: 3
+  quest: {fileID: 11400000, guid: 827f03fdfda7d7d41b1b53a49dfa32f5, type: 2}

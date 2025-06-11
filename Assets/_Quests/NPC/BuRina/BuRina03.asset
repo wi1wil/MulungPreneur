@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833c6069681d983488f0afc7b77d0b97, type: 3}
+  m_Name: BuRina03
+  m_EditorClassIdentifier: 
+  npcName: Bu Rina
+  npcPortrait: {fileID: 0}
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  typingSpeed: 0.05
+  dialogueLines:
+  - Adiiiii, ibu perlu bantuan
+  - Pupuk Ibu habis, kamu kan jago tuh ngolahnya tolong ya
+  - Ibu tungguu
+  - Makasih ya Dii, nih buat kamu
+  autoProgressLines: 000000
+  endDialogueLines: 000000
+  autoProgressDelay: 1.5
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - 'siap buuu '
+    nextDialogueIndices: 01000000
+    giveQuest: 00
+  - dialogueIndex: 1
+    choices:
+    - tunggu yah bu
+    nextDialogueIndices: 02000000
+    giveQuest: 01
+  questProgressIndex: 2
+  questCompetedIndex: 3
+  quest: {fileID: 0}
