@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class AudioManagerScript : MonoBehaviour
 
     [Header("----------------------- Audio Slider -----------------------")]
     public AudioMixer audioMixer;
+    //public Slider bgmSlider;
+    //public Slider sfxSlider;
+    //[SerializeField] float currentBgmVolume;
+    //[SerializeField] float currentSfxVolume;
 
     public static AudioManagerScript instance;
 
@@ -44,12 +49,12 @@ public class AudioManagerScript : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
-    public void setBGM(float volume)
-    {
-        audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
-    }
-    public void setSFX(float volume)
-    {
-        audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
-    }
+    //public void setBGM(float volume)
+    //{
+    //    audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
+    //}
+    //public void setSFX(float volume)
+    //{
+    //    audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+    //}
 }

@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
+    public GameObject startMenu;
+    public GameObject optionsMenu;
+
+    public void Awake()
+    {
+        if (!startMenu)
+            startMenu = GameObject.Find("Start Menu");
+        if (!optionsMenu)
+            optionsMenu = GameObject.Find("Options Menu");
+
+        optionsMenu.SetActive(false);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("Main Gameplay");
@@ -13,8 +25,10 @@ public class SceneManagerScript : MonoBehaviour
     {
         Application.Quit();
     }
-    //public void OptionsMenu()
-    //{
 
-    //}
+    public void OpenSettings()
+    {
+        startMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
 }
