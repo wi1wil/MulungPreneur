@@ -1,0 +1,93 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem.XR;
+
+public class VideoSettingsScript : MonoBehaviour
+{
+    public Toggle fullScreenToggle;
+    public TMP_Dropdown resDropDown;
+
+    Resolution[] resolutions;
+    public bool isFullscreen;
+    int selectedResolution;
+    List<Resolution> selectedResolutionList = new List<Resolution>();
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        if (!fullScreenToggle)
+        {
+            fullScreenToggle = GameObject.Find("Fullscreen-Toggle").GetComponent<Toggle>();
+        }
+        if(!resDropDown)
+        {
+            resDropDown = GameObject.Find("Resolution-Dropdown").GetComponent<TMP_Dropdown>();
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("yes");
+        GameObject newCanvas = GameObject.Find("SettingPage");
+
+        if (newCanvas != null)
+        {
+            transform.SetParent(newCanvas.transform, worldPositionStays: false);
+        }
+
+        GameObject menuCanvas = GameObject.FindGameObjectWithTag("MenuCanvas");
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        rectTransform.anchoredPosition = new Vector2(-34, 268);
+        menuCanvas.SetActive(false);
+    }
+
+    private void Start()
+    {
+        isFullscreen = true;
+        resolutions = Screen.resolutions;
+
+        List<string> resolutionStringList = new List<string>();
+        string newRes;
+        foreach (Resolution resolution in resolutions)
+        {
+            newRes = resolution.width.ToString() + " x " + resolution.height.ToString();
+            if(!resolutionStringList.Contains(newRes))
+            {
+                resolutionStringList.Add(newRes);
+                selectedResolutionList.Add(resolution);
+            }
+        }
+
+        resDropDown.AddOptions(resolutionStringList);
+    }
+
+    public void ChangeResolution()
+    {
+        selectedResolution = resDropDown.value;
+        Screen.SetResolution(selectedResolutionList[selectedResolution].width, selectedResolutionList[selectedResolution].height, isFullscreen);
+    }
+
+    public void ChangeFullScreen()
+    {
+        isFullscreen = fullScreenToggle.isOn;
+        Screen.SetResolution(selectedResolutionList[selectedResolution].width, selectedResolutionList[selectedResolution].height, isFullscreen);
+    }
+
+    public void StartGame()
+    {
+        transform.SetParent(null);
+        SceneManager.LoadScene("Main Gameplay");
+    }
+}

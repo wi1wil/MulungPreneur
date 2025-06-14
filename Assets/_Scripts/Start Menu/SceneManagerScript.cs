@@ -17,10 +17,7 @@ public class SceneManagerScript : MonoBehaviour
 
         optionsMenu.SetActive(false);
     }
-    public void StartGame()
-    {
-        SceneManager.LoadScene("Main Gameplay");
-    }
+    
     public void ExitGame()
     {
         Application.Quit();
@@ -30,5 +27,11 @@ public class SceneManagerScript : MonoBehaviour
     {
         startMenu.SetActive(false);
         optionsMenu.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        startMenu.SetActive(true);
+        optionsMenu.SetActive(false);
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Item
   - SpawnableArea
+  - MenuCanvas
+  - SettingsMenu
   layers:
   - Default
   - TransparentFX
