@@ -31,10 +31,4 @@ public class SettingsMainGameplayScript : MonoBehaviour
         if (volumeSettings != null)
             volumeSettings.LoadVolume();
     }
-
-    private void OnDisable()
-    {
-        if (volumeSettings != null)
-            volumeSettings.SaveVolume();
-    }
 }

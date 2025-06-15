@@ -37,6 +37,5 @@ public class SceneManagerScript : MonoBehaviour
     {
         startMenu.SetActive(true);
         optionsMenu.SetActive(false);
-        volumeSettings.SaveVolume();
     }
 }
