@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
     public GameObject startMenu;
     public GameObject optionsMenu;
+    public VolumeSettings volumeSettings;
 
     public void Awake()
     {
@@ -16,6 +18,7 @@ public class SceneManagerScript : MonoBehaviour
             optionsMenu = GameObject.Find("Options Menu");
 
         optionsMenu.SetActive(false);
+        volumeSettings = FindObjectOfType<VolumeSettings>();
     }
     
     public void ExitGame()
@@ -27,11 +30,13 @@ public class SceneManagerScript : MonoBehaviour
     {
         startMenu.SetActive(false);
         optionsMenu.SetActive(true);
+        volumeSettings.LoadVolume();
     }
 
     public void CloseSettings()
     {
         startMenu.SetActive(true);
         optionsMenu.SetActive(false);
+        volumeSettings.SaveVolume();
     }
 }

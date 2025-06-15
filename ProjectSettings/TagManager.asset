@@ -8,6 +8,8 @@ TagManager:
   - SpawnableArea
   - MenuCanvas
   - SettingsMenu
+  - MusicSlider
+  - SoundSlider
   layers:
   - Default
   - TransparentFX

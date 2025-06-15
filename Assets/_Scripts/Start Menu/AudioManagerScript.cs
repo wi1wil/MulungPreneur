@@ -49,12 +49,28 @@ public class AudioManagerScript : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
-    //public void setBGM(float volume)
-    //{
-    //    audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
-    //}
-    //public void setSFX(float volume)
-    //{
-    //    audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
-    //}
+
+    public float GetBgmVolume()
+    {
+        float value;
+        audioMixer.GetFloat("BGM", out value);
+        return Mathf.Pow(10, value / 20f);
+    }
+
+    public float GetSfxVolume()
+    {
+        float value;
+        audioMixer.GetFloat("SFX", out value);
+        return Mathf.Pow(10, value / 20f);
+    }
+
+    public void SetBgmVolume(float volume)
+    {
+        audioMixer.SetFloat("BGM", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20);
+    }
+
+    public void SetSfxVolume(float volume)
+    {
+        audioMixer.SetFloat("SFX", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20);
+    }
 }

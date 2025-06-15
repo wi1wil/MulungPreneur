@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Rendering;
 
 public class SaveControllerScript : MonoBehaviour
 {   
     private string saveLocation;
     private InventoryManagerScript inventoryManager;
     private WorldTime worldTime;
+    private VolumeSettings volumeSettings;
 
     void Start()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         inventoryManager = FindObjectOfType<InventoryManagerScript>();
         worldTime = FindObjectOfType<WorldTime>();
+        volumeSettings = FindObjectOfType<VolumeSettings>();
 
         LoadGame();
     }
@@ -33,6 +36,7 @@ public class SaveControllerScript : MonoBehaviour
             handinQuestsID = QuestManagerScript.Instance.handinQuests
         };
 
+        volumeSettings.LoadVolume();
         string json = JsonUtility.ToJson(saveData, true);
         Debug.Log("Saving JSON: " + json);
         File.WriteAllText(saveLocation, json);
@@ -64,6 +68,7 @@ public class SaveControllerScript : MonoBehaviour
             inventoryManager.setInventorySize();
             Debug.Log("No save file found, creating a new one.");
         }
+        volumeSettings.LoadVolume();
     }
 
     public void DeleteSave()

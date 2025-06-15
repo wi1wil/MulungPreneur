@@ -25,7 +25,7 @@ public class VideoSettingsScript : MonoBehaviour
         {
             fullScreenToggle = GameObject.Find("Fullscreen-Toggle").GetComponent<Toggle>();
         }
-        if(!resDropDown)
+        if (!resDropDown)
         {
             resDropDown = GameObject.Find("Resolution-Dropdown").GetComponent<TMP_Dropdown>();
         }
@@ -67,7 +67,7 @@ public class VideoSettingsScript : MonoBehaviour
         foreach (Resolution resolution in resolutions)
         {
             newRes = resolution.width.ToString() + " x " + resolution.height.ToString();
-            if(!resolutionStringList.Contains(newRes))
+            if (!resolutionStringList.Contains(newRes))
             {
                 resolutionStringList.Add(newRes);
                 selectedResolutionList.Add(resolution);
@@ -94,5 +94,29 @@ public class VideoSettingsScript : MonoBehaviour
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("Main Gameplay");
+    }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetInt("Resolution", selectedResolution);
+        PlayerPrefs.SetInt("FullScreen", isFullscreen ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    
+    public void LoadSettings()
+    {
+        if (PlayerPrefs.HasKey("Resolution"))
+        {
+            selectedResolution = PlayerPrefs.GetInt("Resolution");
+            resDropDown.value = selectedResolution;
+            ChangeResolution();
+        }
+
+        if (PlayerPrefs.HasKey("FullScreen"))
+        {
+            isFullscreen = PlayerPrefs.GetInt("FullScreen") == 1;
+            fullScreenToggle.isOn = isFullscreen;
+            ChangeFullScreen();
+        }
     }
 }

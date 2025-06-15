@@ -20,15 +20,13 @@ public class PlayerItemPickUpScript : MonoBehaviour
 
     bool sfxPlayed = false;
 
-    private void Awake()
-    {
-        if(!audioScript)
-            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
-    }
-
     void Start()
     {
         inventoryManager = FindObjectOfType<InventoryManagerScript>();
+        audioScript = FindObjectOfType<AudioManagerScript>();
+        if (!audioScript)
+        audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+
         mainCamera = Camera.main;
     }
 

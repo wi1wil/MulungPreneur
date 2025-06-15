@@ -15,16 +15,13 @@ public class MovementScript : MonoBehaviour
     readonly float sfxInterval = 0.6f;
     float intervalTimer = 0f;
 
-    private void Awake()
-    {
-        if(!audioScript)
-            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
-    }
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioScript = FindObjectOfType<AudioManagerScript>();
+        if (!audioScript)
+        audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
     }
 
     void Update()
