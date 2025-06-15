@@ -55,7 +55,8 @@ public class VideoSettingsScript : MonoBehaviour
         GameObject menuCanvas = GameObject.Find("Menu (Activate by Tab)");
         RectTransform rectTransform = GetComponent<RectTransform>();
         rectTransform.anchoredPosition = new Vector2(-34, 268);
-        menuCanvas.SetActive(false);
+        if (menuCanvas != null)
+            menuCanvas.SetActive(false);
     }
 
     private void Start()

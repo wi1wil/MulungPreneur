@@ -22,10 +22,6 @@ public class AudioManagerScript : MonoBehaviour
 
     [Header("----------------------- Audio Slider -----------------------")]
     public AudioMixer audioMixer;
-    //public Slider bgmSlider;
-    //public Slider sfxSlider;
-    //[SerializeField] float currentBgmVolume;
-    //[SerializeField] float currentSfxVolume;
 
     public static AudioManagerScript instance;
     VolumeSettings volumeSettings;
@@ -39,6 +35,9 @@ public class AudioManagerScript : MonoBehaviour
         }
         else Destroy(gameObject);
         volumeSettings = FindObjectOfType<VolumeSettings>();
+
+        bgmSource = GameObject.Find("Music").GetComponent<AudioSource>();
+        sfxSource = GameObject.Find("SFX").GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -46,35 +45,14 @@ public class AudioManagerScript : MonoBehaviour
         bgmSource.clip = sunnyBgm;
         bgmSource.loop = true;
         bgmSource.Play();
-        volumeSettings.LoadVolume();
+        bgmSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
+        if (volumeSettings != null)
+            volumeSettings.LoadVolume();
     }
 
     public void PlaySfx(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
-    }
-
-    public float GetBgmVolume()
-    {
-        float value;
-        audioMixer.GetFloat("BGM", out value);
-        return Mathf.Pow(10, value / 20f);
-    }
-
-    public float GetSfxVolume()
-    {
-        float value;
-        audioMixer.GetFloat("SFX", out value);
-        return Mathf.Pow(10, value / 20f);
-    }
-
-    public void SetBgmVolume(float volume)
-    {
-        audioMixer.SetFloat("BGM", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20);
-    }
-
-    public void SetSfxVolume(float volume)
-    {
-        audioMixer.SetFloat("SFX", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20);
     }
 }

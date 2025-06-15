@@ -50,7 +50,6 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
         isPanelActive = true;
         shopPanel.SetActive(true);
         PauseControllerScript.setPaused(true);
-        Debug.Log("Opening shop panel...");
     }
 
     public void CloseShop()
@@ -58,7 +57,6 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
         isPanelActive = false;
         shopPanel.SetActive(false);
         PauseControllerScript.setPaused(false);
-        Debug.Log("Closing shop panel...");
     }
 
     void Update()
