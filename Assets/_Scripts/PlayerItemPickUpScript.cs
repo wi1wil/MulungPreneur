@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerItemPickUpScript : MonoBehaviour
 {
     private InventoryManagerScript inventoryManager;
+    private AudioManagerScript audioScript;
     public float holdDuration = 1f;
     private float holdTimer = 0f;
     public Image fillCirclePrefab;
@@ -16,6 +17,14 @@ public class PlayerItemPickUpScript : MonoBehaviour
     public static event Action OnHoldComplete;
     private Camera mainCamera;
     public Canvas mainCanvas;
+
+    bool sfxPlayed = false;
+
+    private void Awake()
+    {
+        if(!audioScript)
+            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+    }
 
     void Start()
     {
@@ -38,6 +47,10 @@ public class PlayerItemPickUpScript : MonoBehaviour
                 Vector3 screenPos = mainCamera.WorldToScreenPoint(worldPos);
                 currentFillCircle.transform.position = screenPos;
             }
+            
+            if(!sfxPlayed)
+                TrashSFX();
+
             holdTimer += Time.deltaTime;
             currentFillCircle.fillAmount = holdTimer / holdDuration;
             if (holdTimer >= holdDuration)
@@ -51,6 +64,10 @@ public class PlayerItemPickUpScript : MonoBehaviour
                     ResetHold();
                 }
             }
+        }
+        else
+        {
+            sfxPlayed = false;
         }
     }
 
@@ -92,5 +109,11 @@ public class PlayerItemPickUpScript : MonoBehaviour
             currentFillCircle = null;
         }
         holdTimer = 0f;
+    }
+
+    void TrashSFX()
+    {
+        audioScript.PlaySfx(audioScript.pickUpTrash);
+        sfxPlayed = true;
     }
 }

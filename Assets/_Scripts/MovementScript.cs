@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,16 @@ public class MovementScript : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+
+    public AudioManagerScript audioScript;
+    readonly float sfxInterval = 0.6f;
+    float intervalTimer = 0f;
+
+    private void Awake()
+    {
+        if(!audioScript)
+            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+    }
 
     void Start()
     {
@@ -24,7 +35,10 @@ public class MovementScript : MonoBehaviour
             return;
         }
         rb.velocity = moveInput * movementSpeed;
-        animator.SetBool("isWalking", rb.velocity.magnitude > 0);
+
+        WalkSFX();
+
+            animator.SetBool("isWalking", rb.velocity.magnitude > 0);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -41,5 +55,22 @@ public class MovementScript : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
+    }
+
+    void WalkSFX()
+    {
+        if (rb.velocity.x != 0 || rb.velocity.y != 0)
+        {
+            intervalTimer += Time.deltaTime;
+            if (intervalTimer > sfxInterval)
+            {
+                intervalTimer = 0f;
+                audioScript.PlaySfx(audioScript.walkDefault);
+            }
+        }
+        else
+        {
+            intervalTimer = 1f;
+        }
     }
 }

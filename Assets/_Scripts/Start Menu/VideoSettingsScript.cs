@@ -20,7 +20,6 @@ public class VideoSettingsScript : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
 
         if (!fullScreenToggle)
         {
@@ -32,7 +31,12 @@ public class VideoSettingsScript : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -47,7 +51,7 @@ public class VideoSettingsScript : MonoBehaviour
             transform.SetParent(newCanvas.transform, worldPositionStays: false);
         }
 
-        GameObject menuCanvas = GameObject.FindGameObjectWithTag("MenuCanvas");
+        GameObject menuCanvas = GameObject.Find("Menu (Activate by Tab)");
         RectTransform rectTransform = GetComponent<RectTransform>();
         rectTransform.anchoredPosition = new Vector2(-34, 268);
         menuCanvas.SetActive(false);
@@ -88,6 +92,7 @@ public class VideoSettingsScript : MonoBehaviour
     public void StartGame()
     {
         transform.SetParent(null);
+        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("Main Gameplay");
     }
 }
