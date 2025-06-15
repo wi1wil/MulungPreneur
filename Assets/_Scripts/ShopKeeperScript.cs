@@ -7,6 +7,9 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
     private bool isPanelActive;
     [SerializeField] private GameObject shopPanel;
 
+    public Transform shopContentPanel;
+    public GameObject shopMenuPrefab;
+
     public bool canInteract()
     {
         return true;
@@ -48,6 +51,7 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
             return;
 
         isPanelActive = true;
+        PopulateShopUI();
         shopPanel.SetActive(true);
         PauseControllerScript.setPaused(true);
         Debug.Log("Opening shop panel...");
@@ -66,6 +70,32 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
         if (isPanelActive && Input.GetKeyDown(KeyCode.Escape))
         {
             CloseShop();
+        }
+    }
+
+    public void PopulateShopUI()
+    {
+        // Clear existing shop entries
+        foreach (Transform child in shopContentPanel)
+        {
+            Destroy(child.gameObject);
+        }
+
+        var inventoryData = InventoryManagerScript.Instance.getInventoryItem();
+        var itemDict = FindObjectOfType<ItemDictionaryScript>();
+
+        foreach (var data in inventoryData)
+        {
+            GameObject prefab = itemDict.GetItemPrefab(data.itemID);
+            if (prefab == null) continue;
+
+            Item item = prefab.GetComponent<Item>();
+            if (item == null) continue;
+
+            GameObject uiElement = Instantiate(shopMenuPrefab, shopContentPanel);
+            Debug.Log("Item UI Instantiated");
+            ShopItemPrefabScript uiScript = uiElement.GetComponent<ShopItemPrefabScript>();
+            uiScript.Setup(item, data.quantity);
         }
     }
 }

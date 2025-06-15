@@ -10,11 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1661109848800333456, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_Name
-      value: Aluminum-used-1 (4) Variant
+      value: Metal-used-3
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: Name
       value: Worn Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: price
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3700684672073544496, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_Pivot.x
