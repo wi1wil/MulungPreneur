@@ -47,7 +47,7 @@ public class TrashManagerScript : MonoBehaviour
         {
             if (hit != null && hit.CompareTag("SpawnableArea"))
             {
-                Debug.Log("Spawned trash at: " + randomPos);
+                // Debug.Log("Spawned trash at: " + randomPos);
                 foundGround = true;
                 break;
             }
@@ -59,7 +59,7 @@ public class TrashManagerScript : MonoBehaviour
 
         int index = Random.Range(0, trashPrefabs.Length);
         GameObject spawned = Instantiate(trashPrefabs[index], randomPos, Quaternion.identity);
-        Debug.Log("Spawned trash: " + spawned.name);
+        // Debug.Log("Spawned trash: " + spawned.name);
         if (trashObjects != null)
         {
             spawned.transform.SetParent(trashObjects.transform);

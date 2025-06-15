@@ -16,6 +16,7 @@ public class VideoSettingsScript : MonoBehaviour
     public bool isFullscreen;
     int selectedResolution;
     List<Resolution> selectedResolutionList = new List<Resolution>();
+    bool isLoadingSettings = false;
 
     private void Awake()
     {
@@ -75,18 +76,27 @@ public class VideoSettingsScript : MonoBehaviour
         }
 
         resDropDown.AddOptions(resolutionStringList);
+
+        // Load saved settings on start
+        LoadSettings();
     }
 
     public void ChangeResolution()
     {
+        if (isLoadingSettings) return;
         selectedResolution = resDropDown.value;
         Screen.SetResolution(selectedResolutionList[selectedResolution].width, selectedResolutionList[selectedResolution].height, isFullscreen);
+        // Save settings when changed
+        SaveSettings();
     }
 
     public void ChangeFullScreen()
     {
+        if (isLoadingSettings) return;
         isFullscreen = fullScreenToggle.isOn;
         Screen.SetResolution(selectedResolutionList[selectedResolution].width, selectedResolutionList[selectedResolution].height, isFullscreen);
+        // Save settings when changed
+        SaveSettings();
     }
 
     public void StartGame()
@@ -105,18 +115,21 @@ public class VideoSettingsScript : MonoBehaviour
     
     public void LoadSettings()
     {
+        isLoadingSettings = true;
         if (PlayerPrefs.HasKey("Resolution"))
         {
             selectedResolution = PlayerPrefs.GetInt("Resolution");
             resDropDown.value = selectedResolution;
-            ChangeResolution();
         }
 
         if (PlayerPrefs.HasKey("FullScreen"))
         {
             isFullscreen = PlayerPrefs.GetInt("FullScreen") == 1;
             fullScreenToggle.isOn = isFullscreen;
-            ChangeFullScreen();
         }
+
+        // Apply both settings after loading
+        Screen.SetResolution(selectedResolutionList[selectedResolution].width, selectedResolutionList[selectedResolution].height, isFullscreen);
+        isLoadingSettings = false;
     }
 }

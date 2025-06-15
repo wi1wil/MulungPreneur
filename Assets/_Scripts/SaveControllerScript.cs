@@ -11,6 +11,7 @@ public class SaveControllerScript : MonoBehaviour
     private InventoryManagerScript inventoryManager;
     private WorldTime worldTime;
     private VolumeSettings volumeSettings;
+    private VideoSettingsScript videoSettings;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class SaveControllerScript : MonoBehaviour
         inventoryManager = FindObjectOfType<InventoryManagerScript>();
         worldTime = FindObjectOfType<WorldTime>();
         volumeSettings = FindObjectOfType<VolumeSettings>();
+        videoSettings = FindObjectOfType<VideoSettingsScript>();
 
         LoadGame();
     }
@@ -36,6 +38,7 @@ public class SaveControllerScript : MonoBehaviour
             handinQuestsID = QuestManagerScript.Instance.handinQuests
         };
 
+        // videoSettings.SaveSettings();
         volumeSettings.LoadVolume();
         string json = JsonUtility.ToJson(saveData, true);
         Debug.Log("Saving JSON: " + json);
@@ -68,6 +71,7 @@ public class SaveControllerScript : MonoBehaviour
             inventoryManager.setInventorySize();
             Debug.Log("No save file found, creating a new one.");
         }
+        // videoSettings.LoadSettings();
         volumeSettings.LoadVolume();
     }
 
