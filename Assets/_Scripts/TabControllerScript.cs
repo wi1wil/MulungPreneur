@@ -4,9 +4,15 @@ using UnityEngine.UI;
 
 public class TabControllerScript : MonoBehaviour
 {
+    private AudioManagerScript audioScript;
     public Image[] tabImages;
     public GameObject[] pages;
 
+    private void Awake()
+    {
+        if(!audioScript)
+            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+    }
     void Start()
     {
         ActivateTab(0);
@@ -14,6 +20,7 @@ public class TabControllerScript : MonoBehaviour
 
     public void ActivateTab(int tabIndex)
     {
+        audioScript.PlaySfx(audioScript.uiClick);
         for (int i = 0; i < pages.Length; i++)
         {
             pages[i].SetActive(false);
