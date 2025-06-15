@@ -20,4 +20,21 @@ public class SettingsMainGameplayScript : MonoBehaviour
         volumeSettings = FindObjectOfType<VolumeSettings>();
         volumeSettings.LoadVolume();
     }
+
+    void Udate()
+    {
+        volumeSettings.LoadVolume();
+    }
+
+    private void OnEnable()
+    {
+        if (volumeSettings != null)
+            volumeSettings.LoadVolume();
+    }
+
+    private void OnDisable()
+    {
+        if (volumeSettings != null)
+            volumeSettings.SaveVolume();
+    }
 }

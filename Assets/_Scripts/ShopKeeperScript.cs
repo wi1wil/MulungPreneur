@@ -9,7 +9,7 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
 
     public bool canInteract()
     {
-        return !isPanelActive;
+        return true;
     }
 
     public void Interact()
@@ -21,22 +21,32 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
 
         if (isPanelActive)
         {
-            return;
+            CloseShop();
         }
+    }
 
+    public void ToggleShop()
+    {
+        if (isPanelActive)
+        {
+            CloseShop();
+        }
+        else
+        {
+            OpenShop();
+        }
     }
 
     public void OpenShop()
     {
-        if (PauseControllerScript.isGamePaused && !isPanelActive)
-        {
+        if (PauseControllerScript.isGamePaused)
             return;
-        }
-        if (isPanelActive)
-        {
-            CloseShop();
+
+        float maxDistance = 2.5f;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null || Vector2.Distance(transform.position, player.transform.position) > maxDistance)
             return;
-        }
+
         isPanelActive = true;
         shopPanel.SetActive(true);
         PauseControllerScript.setPaused(true);
@@ -49,5 +59,13 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
         shopPanel.SetActive(false);
         PauseControllerScript.setPaused(false);
         Debug.Log("Closing shop panel...");
+    }
+
+    void Update()
+    {
+        if (isPanelActive && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseShop();
+        }
     }
 }

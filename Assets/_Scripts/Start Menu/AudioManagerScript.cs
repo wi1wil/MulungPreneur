@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
@@ -27,15 +28,17 @@ public class AudioManagerScript : MonoBehaviour
     //[SerializeField] float currentSfxVolume;
 
     public static AudioManagerScript instance;
+    VolumeSettings volumeSettings;
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
+        volumeSettings = FindObjectOfType<VolumeSettings>();
     }
 
     private void Start()
@@ -43,6 +46,7 @@ public class AudioManagerScript : MonoBehaviour
         bgmSource.clip = sunnyBgm;
         bgmSource.loop = true;
         bgmSource.Play();
+        volumeSettings.LoadVolume();
     }
 
     public void PlaySfx(AudioClip clip)
