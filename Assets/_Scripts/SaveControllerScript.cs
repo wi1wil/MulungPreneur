@@ -12,6 +12,7 @@ public class SaveControllerScript : MonoBehaviour
     private WorldTime worldTime;
     private VolumeSettings volumeSettings;
     private VideoSettingsScript videoSettings;
+    private PlayerWalletScript playerWalletScript;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class SaveControllerScript : MonoBehaviour
         worldTime = FindObjectOfType<WorldTime>();
         volumeSettings = FindObjectOfType<VolumeSettings>();
         videoSettings = FindObjectOfType<VideoSettingsScript>();
+        playerWalletScript = FindObjectOfType<PlayerWalletScript>();
 
         LoadGame();
     }
@@ -35,7 +37,8 @@ public class SaveControllerScript : MonoBehaviour
             currentDay = worldTime.getCurrentDay(),
             currentTimeTicks = worldTime.getCurrentTimeTicks(),
             questProgressData = QuestManagerScript.Instance.activateQuests,
-            handinQuestsID = QuestManagerScript.Instance.handinQuests
+            handinQuestsID = QuestManagerScript.Instance.handinQuests,
+            playerMoney = playerWalletScript.playerMoney
         };
 
         // videoSettings.SaveSettings();
@@ -61,6 +64,7 @@ public class SaveControllerScript : MonoBehaviour
             worldTime.StartWorldTime();
             QuestManagerScript.Instance.LoadQuestProgress(saveData.questProgressData);
             QuestManagerScript.Instance.handinQuests = saveData.handinQuestsID;
+            playerWalletScript.playerMoney = saveData.playerMoney;
 
             Debug.Log("Game Loaded");
         }

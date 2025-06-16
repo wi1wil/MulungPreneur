@@ -11,4 +11,5 @@ public class SaveDataScript
     public long currentTimeTicks;
     public List<QuestProgress> questProgressData;
     public List<string> handinQuestsID;
+    public int playerMoney;
 }

@@ -8,6 +8,7 @@ public class ShopItemPrefabScript : MonoBehaviour
     public Image itemIcon;
     public Text itemName;
     public Text itemPrice;
+    public Text itemQuantityText;
     public Button sellButton;
 
     private int itemID;
@@ -27,6 +28,7 @@ public class ShopItemPrefabScript : MonoBehaviour
         itemIcon.sprite = item.GetComponent<SpriteRenderer>().sprite;
         itemName.text = item.Name;
         itemPrice.text = item.price.ToString();
+        itemQuantityText.text = "x" + itemQuantity.ToString();
 
         sellButton.onClick.RemoveAllListeners();
         sellButton.onClick.AddListener(() => SellItemOneByOne(item.price));
