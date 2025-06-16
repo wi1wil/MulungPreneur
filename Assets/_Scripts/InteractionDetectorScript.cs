@@ -18,7 +18,7 @@ public class InteractionDetectorScript : MonoBehaviour
         {
             if (ShopKeeperInRange != null)
             {
-                ShopKeeperInRange.ToggleShop();
+                ShopKeeperInRange?.OpenShop();
                 Debug.Log("Shop interaction triggered");
             }
         }

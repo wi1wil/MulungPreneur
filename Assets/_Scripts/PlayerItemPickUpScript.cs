@@ -14,7 +14,6 @@ public class PlayerItemPickUpScript : MonoBehaviour
     public bool isHolding = false;
     public float pickUpRange = 1f;
     private GameObject nearestItem;
-    public static event Action OnHoldComplete;
     private Camera mainCamera;
     public Canvas mainCanvas;
 
