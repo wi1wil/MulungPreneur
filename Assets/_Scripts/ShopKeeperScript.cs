@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShopKeeperScript : MonoBehaviour, IInteractable
@@ -19,31 +20,25 @@ public class ShopKeeperScript : MonoBehaviour, IInteractable
     {
         if (PauseControllerScript.isGamePaused)
         {
+            Debug.Log("Game is paused, cannot interact with Upgrade Keeper.");
             return;
-        }
-
-        if (isPanelActive)
-        {
-            CloseShop();
-        }
-    }
-
-    public void ToggleShop()
-    {
-        if (isPanelActive)
-        {
-            CloseShop();
-        }
-        else
-        {
-            OpenShop();
         }
     }
 
     public void OpenShop()
     {
-        if (PauseControllerScript.isGamePaused)
+        if (isPanelActive)
+        {
+            CloseShop();
             return;
+        }
+
+        if (PauseControllerScript.isGamePaused)
+        {
+            Debug.Log("Game is paused, cannot open Upgrade Keeper shop.");
+            return;
+        }
+        
 
         float maxDistance = 2.5f;
         GameObject player = GameObject.FindGameObjectWithTag("Player");

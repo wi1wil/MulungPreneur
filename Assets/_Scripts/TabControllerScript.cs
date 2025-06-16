@@ -10,7 +10,7 @@ public class TabControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        if(!audioScript)
+        if (!audioScript)
             audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
     }
     void Start()
@@ -28,5 +28,14 @@ public class TabControllerScript : MonoBehaviour
         }
         pages[tabIndex].SetActive(true);
         tabImages[tabIndex].color = Color.white;
+    }
+
+    public void test()
+    {
+        Debug.Log("TabControllerScript is working!");
+        for (int i = 0; i < pages.Length; i++)
+        {
+            Debug.Log($"Page {i} active: {pages[i].activeSelf}");
+        }
     }
 }
