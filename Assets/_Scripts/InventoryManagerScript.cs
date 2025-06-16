@@ -55,11 +55,27 @@ public class InventoryManagerScript : MonoBehaviour
 
     public Dictionary<int, int> GetItemCount() => itemCountCache;
 
-    public void setInventorySize()
+    public void addSlots(int size)
     {
-        for (int i = 0; i < inventorySize; i++)
+        Debug.Log("Adding inventory size: " + size);
+        for (int i = 0; i < size; i++)
         {
             Instantiate(slotPrefab, inventoryPanel.transform);
+            Debug.Log("Slot created: " + i);
+        }
+        inventorySize += size;
+        Debug.Log("New inventory size: " + inventorySize);
+    }
+
+    public void setInventorySize()
+    {
+        Debug.Log("Setting inventory size: " + inventorySize);
+        int currentSlots = inventoryPanel.transform.childCount;
+        int slotsToAdd = inventorySize - currentSlots;
+        for (int i = 0; i < slotsToAdd; i++)
+        {
+            Instantiate(slotPrefab, inventoryPanel.transform);
+            Debug.Log("Slot created: " + (currentSlots + i));
         }
     }
 
@@ -208,3 +224,4 @@ public class InventoryManagerScript : MonoBehaviour
         InitializeItemCount();
     }
 }
+

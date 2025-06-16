@@ -13,6 +13,9 @@ public class SaveControllerScript : MonoBehaviour
     private VolumeSettings volumeSettings;
     private VideoSettingsScript videoSettings;
     private PlayerWalletScript playerWalletScript;
+    private MovementScript playerMovementScript;
+    private PlayerItemPickUpScript playerItemPickUpScript;
+    private Equipment equipmentScript;
 
     void Start()
     {
@@ -22,6 +25,9 @@ public class SaveControllerScript : MonoBehaviour
         volumeSettings = FindObjectOfType<VolumeSettings>();
         videoSettings = FindObjectOfType<VideoSettingsScript>();
         playerWalletScript = FindObjectOfType<PlayerWalletScript>();
+        playerMovementScript = FindObjectOfType<MovementScript>();
+        playerItemPickUpScript = FindObjectOfType<PlayerItemPickUpScript>();
+        equipmentScript = FindObjectOfType<Equipment>();
 
         LoadGame();
     }
@@ -38,7 +44,15 @@ public class SaveControllerScript : MonoBehaviour
             currentTimeTicks = worldTime.getCurrentTimeTicks(),
             questProgressData = QuestManagerScript.Instance.activateQuests,
             handinQuestsID = QuestManagerScript.Instance.handinQuests,
-            playerMoney = playerWalletScript.playerMoney
+            playerMoney = playerWalletScript.playerMoney,
+            bagLevel = equipmentScript.bagLevel,
+            inventorySize = inventoryManager.inventorySize,
+            footwearLevel = equipmentScript.footwearLevel,
+            playerSpeed = playerMovementScript.movementSpeed,
+            glovesLevel = equipmentScript.glovesLevel,
+            pickUpSpeed = playerItemPickUpScript.holdDuration,
+            toolLevel = equipmentScript.pickingToolLevel,
+            pickUpRange = playerItemPickUpScript.pickUpRange
         };
 
         // videoSettings.SaveSettings();
@@ -66,6 +80,20 @@ public class SaveControllerScript : MonoBehaviour
             QuestManagerScript.Instance.handinQuests = saveData.handinQuestsID;
             playerWalletScript.playerMoney = saveData.playerMoney;
 
+            equipmentScript.bagLevel = saveData.bagLevel;
+            equipmentScript.glovesLevel = saveData.glovesLevel;
+            equipmentScript.footwearLevel = saveData.footwearLevel;
+            equipmentScript.pickingToolLevel = saveData.toolLevel;
+            inventoryManager.inventorySize = saveData.inventorySize;
+            inventoryManager.setInventorySize();
+            playerMovementScript.movementSpeed = saveData.playerSpeed;
+            playerItemPickUpScript.holdDuration = saveData.pickUpSpeed;
+            if (playerItemPickUpScript.holdDuration <= 0f)
+                playerItemPickUpScript.holdDuration = 1f;
+            playerItemPickUpScript.pickUpRange = saveData.pickUpRange;
+            playerItemPickUpScript.updatePickUpRange(saveData.pickUpRange);
+            playerItemPickUpScript.updatePickUpSpeed(saveData.pickUpSpeed);
+
             Debug.Log("Game Loaded");
         }
         else
@@ -75,7 +103,6 @@ public class SaveControllerScript : MonoBehaviour
             inventoryManager.setInventorySize();
             Debug.Log("No save file found, creating a new one.");
         }
-        // videoSettings.LoadSettings();
         volumeSettings.LoadVolume();
     }
 

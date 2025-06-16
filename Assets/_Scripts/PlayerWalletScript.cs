@@ -7,10 +7,11 @@ public class PlayerWalletScript : MonoBehaviour
 {
     public int playerMoney = 0;
     [SerializeField] Text walletText;
+    [SerializeField] Text playerWalletText;
 
     private void Awake()
     {
-        if(!walletText)
+        if (!walletText)
             walletText = GameObject.Find("Wallet-Text").GetComponent<Text>();
     }
 
@@ -22,5 +23,6 @@ public class PlayerWalletScript : MonoBehaviour
     private void Update()
     {
         walletText.text = playerMoney.ToString();
+        playerWalletText.text = playerMoney.ToString();
     }
 }

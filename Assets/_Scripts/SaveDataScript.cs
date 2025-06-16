@@ -12,4 +12,16 @@ public class SaveDataScript
     public List<QuestProgress> questProgressData;
     public List<string> handinQuestsID;
     public int playerMoney;
+
+    public int bagLevel;
+    public int inventorySize;
+
+    public int footwearLevel;
+    public float playerSpeed;
+
+    public int glovesLevel;
+    public float pickUpSpeed;
+
+    public int toolLevel;
+    public float pickUpRange;
 }

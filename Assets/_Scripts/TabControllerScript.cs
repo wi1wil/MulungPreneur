@@ -29,13 +29,4 @@ public class TabControllerScript : MonoBehaviour
         pages[tabIndex].SetActive(true);
         tabImages[tabIndex].color = Color.white;
     }
-
-    public void test()
-    {
-        Debug.Log("TabControllerScript is working!");
-        for (int i = 0; i < pages.Length; i++)
-        {
-            Debug.Log($"Page {i} active: {pages[i].activeSelf}");
-        }
-    }
 }

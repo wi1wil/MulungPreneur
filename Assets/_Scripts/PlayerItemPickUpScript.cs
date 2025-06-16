@@ -7,11 +7,11 @@ public class PlayerItemPickUpScript : MonoBehaviour
 {
     private InventoryManagerScript inventoryManager;
     private AudioManagerScript audioScript;
-    public float holdDuration = 1f;
     private float holdTimer = 0f;
     public Image fillCirclePrefab;
     private Image currentFillCircle;
     public bool isHolding = false;
+    public float holdDuration = 1f;
     public float pickUpRange = 1f;
     private GameObject nearestItem;
     private Camera mainCamera;
@@ -95,6 +95,17 @@ public class PlayerItemPickUpScript : MonoBehaviour
         {
             ResetHold();
         }
+    }
+
+    public void updatePickUpRange(float additionRange)
+    {
+        pickUpRange += additionRange;
+    }
+
+    public void updatePickUpSpeed(float additionSpeed)
+    {
+        holdDuration -= additionSpeed;
+        Debug.Log("Updating hold duration: " + holdDuration);
     }
 
     void ResetHold()

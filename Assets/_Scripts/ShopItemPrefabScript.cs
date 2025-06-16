@@ -44,7 +44,11 @@ public class ShopItemPrefabScript : MonoBehaviour
         itemQuantity--;
         if (itemQuantity < 1)
         {
-            Destroy(gameObject); // Remove from UI when none left
+            Destroy(gameObject);
+        }
+        else
+        {
+            itemQuantityText.text = "x" + itemQuantity.ToString();
         }
     }
 }
