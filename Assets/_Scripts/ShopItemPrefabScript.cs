@@ -13,6 +13,13 @@ public class ShopItemPrefabScript : MonoBehaviour
     private int itemID;
     private int itemQuantity;
 
+    private PlayerWalletScript playerWallet;
+
+    private void Awake()
+    {
+        playerWallet = GameObject.Find("GameManager").GetComponent<PlayerWalletScript>();
+    }
+
     public void Setup(Item item, int quantity)
     {
         itemID = item.id;
@@ -22,14 +29,15 @@ public class ShopItemPrefabScript : MonoBehaviour
         itemPrice.text = item.price.ToString();
 
         sellButton.onClick.RemoveAllListeners();
-        sellButton.onClick.AddListener(() => SellItemOneByOne());
+        sellButton.onClick.AddListener(() => SellItemOneByOne(item.price));
     }
 
-    void SellItemOneByOne()
+    void SellItemOneByOne(int itemValue)
     {
         if (itemQuantity <= 0) return;
 
         InventoryManagerScript.Instance.RemoveItemsFromInv(itemID, 1);
+        playerWallet.AddMoneyFromItemSold(itemValue);
 
         itemQuantity--;
         if (itemQuantity < 1)
