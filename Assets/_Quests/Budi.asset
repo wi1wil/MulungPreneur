@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3bd4aca5f192664992c33178d979cf3, type: 3}
-  m_Name: Kampanye RT Bersih
+  m_Name: Budi
   m_EditorClassIdentifier: 
-  questID: K2e8cfe94-3748-452f-a0e2-d9e12f3a59a0
-  questName: Kampanye RT Bersih
-  description: 6 plastik apa aja
+  questID: B13517276-ed2f-4e37-96de-53c10d7ef3d7
+  questName: Budi Si Bully
+  description: 
   objectives:
-  - objectiveID: 
-    description: 'Kumpulin 3 botol plastik '
+  - objectiveID: 34
+    description: Ambil 10 Kayu
     type: 0
-    requiredAmount: 3
+    requiredAmount: 10
     currentAmount: 0
-  - objectiveID: 
-    description: 'Kumpulin 3 kantong plastik '
+  - objectiveID: 66
+    description: Ambil 1 Meja
     type: 0
-    requiredAmount: 3
+    requiredAmount: 1
     currentAmount: 0
-  rewards:
-  - rewardType: 0
-    rewardID: 0
-    amount: 0
+  - objectiveID: 65
+    description: Ambil 2 Kursi
+    type: 0
+    requiredAmount: 2
+    currentAmount: 0
+  rewards: []

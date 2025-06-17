@@ -57,4 +57,4 @@ MonoBehaviour:
     giveQuest: 00
   questProgressIndex: 3
   questCompetedIndex: 6
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 0b9bf076bba1b944aa6037c29ba3a3a1, type: 2}

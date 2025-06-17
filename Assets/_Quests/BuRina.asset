@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bd4aca5f192664992c33178d979cf3, type: 3}
+  m_Name: BuRina
+  m_EditorClassIdentifier: 
+  questID: O74b3cb84-d607-4d96-b9b6-e9457af9ef31
+  questName: Pupuk Kompos
+  description: 
+  objectives:
+  - objectiveID: 25
+    description: Ambil 8 Daun Kering
+    type: 0
+    requiredAmount: 8
+    currentAmount: 0
+  - objectiveID: 23
+    description: Ambil 8 Sisa Makanan
+    type: 0
+    requiredAmount: 8
+    currentAmount: 0
+  - objectiveID: 34
+    description: Ambil 4 Kayu Bekas
+    type: 0
+    requiredAmount: 4
+    currentAmount: 0
+  - objectiveID: 56
+    description: Ambil 2 Pupuk
+    type: 0
+    requiredAmount: 2
+    currentAmount: 0
+  - objectiveID: 55
+    description: Ambil 1 Tanah
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
+  rewards: []
