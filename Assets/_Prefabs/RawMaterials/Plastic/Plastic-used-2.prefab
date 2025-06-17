@@ -13,6 +13,10 @@ PrefabInstance:
       value: Plastic-used-2
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: id
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: Name
       value: Plastic bag
       objectReference: {fileID: 0}

@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  price: 200
+  price: 1000
   Name: Used coke
   Quantity: 1
   quantityText: {fileID: 0}

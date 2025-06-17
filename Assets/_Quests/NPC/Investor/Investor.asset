@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833c6069681d983488f0afc7b77d0b97, type: 3}
+  m_Name: Investor
+  m_EditorClassIdentifier: 
+  npcName: Investor
+  npcPortrait: {fileID: 0}
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  typingSpeed: 0.05
+  dialogueLines:
+  - Di lagi ngapain
+  - Oh oke
+  - 'Kalau ketemu kasih tau saya  '
+  - udah gausah banyak nanya ! buat proyek pribadi
+  - Nah sip , makasih yak nih tambahan +15.000 gausah bilang orang-orang
+  - Ah adalah..... nanti kamu paham
+  autoProgressLines: 000000000000
+  endDialogueLines: 000000000000
+  autoProgressDelay: 1.5
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Sibuk Pak
+    - Mulung Pak
+    nextDialogueIndices: 0100000002000000
+    giveQuest: 0000
+  - dialogueIndex: 2
+    choices:
+    - Buat apa pak?
+    nextDialogueIndices: 03000000
+    giveQuest: 01
+  - dialogueIndex: 4
+    choices:
+    - Tapi ini buat apa pak?
+    nextDialogueIndices: 05000000
+    giveQuest: 00
+  questProgressIndex: 3
+  questCompetedIndex: 4
+  quest: {fileID: 0}

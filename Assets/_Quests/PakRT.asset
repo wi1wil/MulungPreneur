@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bd4aca5f192664992c33178d979cf3, type: 3}
+  m_Name: PakRT
+  m_EditorClassIdentifier: 
+  questID: Kampanye RT Bersih9449bbe3-9f15-412a-9b66-4dabae1dd62f
+  questName: Kampanye RT Bersih
+  description: 
+  objectives:
+  - objectiveID: 
+    description: Ambil 5 botol plastik
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 5 kantong plastik
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 5 mainan plastik
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 5 kaleng
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 sisa makanan
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Kayu Ranting
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 3 daun kering
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Kaleng Makanan
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Kertas Bekas
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Kardus
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Majalah
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  - objectiveID: 
+    description: Ambil 1 Buku
+    type: 0
+    requiredAmount: 0
+    currentAmount: 0
+  rewards: []

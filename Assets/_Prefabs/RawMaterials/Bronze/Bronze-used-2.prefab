@@ -13,12 +13,16 @@ PrefabInstance:
       value: Bronze-used-2
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: id
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: Name
       value: Worn hand bell
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: price
-      value: 500
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 3700684672073544496, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_Pivot.x

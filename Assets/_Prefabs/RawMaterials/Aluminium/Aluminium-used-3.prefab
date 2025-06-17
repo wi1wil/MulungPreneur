@@ -13,12 +13,16 @@ PrefabInstance:
       value: Aluminium-used-3
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+      propertyPath: id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: Name
       value: Used spray can
       objectReference: {fileID: 0}
     - target: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: price
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3350844746841642761, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
       propertyPath: m_IsActive
