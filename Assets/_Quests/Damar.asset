@@ -43,5 +43,14 @@ MonoBehaviour:
     currentAmount: 0
   rewards:
   - rewardType: 0
-    rewardID: 0
-    amount: 0
+    rewardID: 45
+    amount: 1
+  - rewardType: 0
+    rewardID: 46
+    amount: 1
+  - rewardType: 0
+    rewardID: 47
+    amount: 1
+  - rewardType: 0
+    rewardID: 48
+    amount: 1

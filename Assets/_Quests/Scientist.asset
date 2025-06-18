@@ -46,4 +46,7 @@ MonoBehaviour:
     type: 0
     requiredAmount: 3
     currentAmount: 0
-  rewards: []
+  rewards:
+  - rewardType: 0
+    rewardID: 40
+    amount: 1

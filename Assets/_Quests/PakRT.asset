@@ -78,5 +78,8 @@ MonoBehaviour:
     currentAmount: 0
   rewards:
   - rewardType: 0
-    rewardID: 0
-    amount: 0
+    rewardID: 64
+    amount: 1
+  - rewardType: 0
+    rewardID: 63
+    amount: 1

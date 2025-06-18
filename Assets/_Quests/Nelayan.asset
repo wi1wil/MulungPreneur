@@ -33,5 +33,5 @@ MonoBehaviour:
     currentAmount: 0
   rewards:
   - rewardType: 0
-    rewardID: 0
-    amount: 0
+    rewardID: 70
+    amount: 1
