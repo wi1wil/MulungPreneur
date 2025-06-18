@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TabControllerScript : MonoBehaviour
 {
@@ -28,5 +29,10 @@ public class TabControllerScript : MonoBehaviour
         }
         pages[tabIndex].SetActive(true);
         tabImages[tabIndex].color = Color.white;
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("Start Menu");
     }
 }
