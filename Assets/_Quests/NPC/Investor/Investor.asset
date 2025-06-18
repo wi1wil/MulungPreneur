@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Investor
   m_EditorClassIdentifier: 
   npcName: Investor
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -1887569754, guid: 3459e3e13c11c44449cdbf8928203373, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

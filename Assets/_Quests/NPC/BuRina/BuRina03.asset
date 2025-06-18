@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BuRina03
   m_EditorClassIdentifier: 
   npcName: Bu Rina
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 3945144956075905279, guid: 434bdd28772a80645896252a1b713083, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

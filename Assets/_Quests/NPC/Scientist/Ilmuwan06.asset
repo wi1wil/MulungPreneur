@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ilmuwan06
   m_EditorClassIdentifier: 
   npcName: Ilmuwan
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -1238335333, guid: c3f00b7034f40d34793e3eb68a2cea20, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

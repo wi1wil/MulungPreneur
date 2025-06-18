@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Damar
   m_EditorClassIdentifier: 
   npcName: Damar
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 3870401196320861207, guid: a98e4dc925141794f8525e86bdcd8e85, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

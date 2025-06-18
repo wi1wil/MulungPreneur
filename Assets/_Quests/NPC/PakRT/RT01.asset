@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RT01
   m_EditorClassIdentifier: 
   npcName: Pak RT
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -382661462, guid: e6506df2aba762b4fbdaa727295df92b, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

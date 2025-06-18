@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jurnalis05
   m_EditorClassIdentifier: 
   npcName: Jurnalis
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -544026670, guid: 34d6ce8923c4ec7498149a4b1d443851, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Budi02
   m_EditorClassIdentifier: 
   npcName: Budi
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 473362991, guid: 5dac8ae11c912774ea25d339b789f9c0, type: 3}
   voiceSound: {fileID: 0}
   voicePitch: 1
   typingSpeed: 0.05
