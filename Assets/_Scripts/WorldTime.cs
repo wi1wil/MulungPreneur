@@ -5,6 +5,7 @@ using UnityEngine;
 public class WorldTime : MonoBehaviour
 {
     public event EventHandler<TimeSpan> WorldTimeChanged;
+    public event Action<bool> DayNightChanged; // true = isDay, false = isNight
 
     [SerializeField] private float _dayLength; // Length of a day in seconds
     private TimeSpan _currentTime = new TimeSpan(6, 0, 0); // Start at 6AM
@@ -15,11 +16,10 @@ public class WorldTime : MonoBehaviour
     public int getCurrentDay() => _currentDay;
     public long getCurrentTimeTicks() => _currentTime.Ticks;
 
-    void Start()
-    {
-        // Do not start the coroutine here.
-        // The save/load system will call StartWorldTime() after loading.
-    }
+    private bool isDay = true;
+
+    private int dayStartHour = 6;
+    private int nightStartHour = 18;
 
     public void StartWorldTime()
     {
@@ -41,8 +41,22 @@ public class WorldTime : MonoBehaviour
             _currentDay++;
         }
 
+        // Check for day/night transition
+        bool nowIsDay = _currentTime.Hours >= dayStartHour && _currentTime.Hours < nightStartHour;
+        if (nowIsDay != isDay)
+        {
+            isDay = nowIsDay;
+            Debug.Log($"[WorldTime] Day/Night changed. Now isDay: {isDay}");
+            DayNightChanged?.Invoke(isDay);
+        }
+
         WorldTimeChanged?.Invoke(this, _currentTime);
         yield return new WaitForSeconds(_minuteLength);
         StartCoroutine(AddMinutes());
+    }
+
+    public bool IsDaytime()
+    {
+        return isDay;
     }
 }
