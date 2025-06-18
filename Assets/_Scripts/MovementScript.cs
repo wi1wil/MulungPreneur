@@ -35,7 +35,7 @@ public class MovementScript : MonoBehaviour
 
         WalkSFX();
 
-            animator.SetBool("isWalking", rb.velocity.magnitude > 0);
+        animator.SetBool("isWalking", rb.velocity.magnitude > 0);
     }
 
     public void Move(InputAction.CallbackContext context)

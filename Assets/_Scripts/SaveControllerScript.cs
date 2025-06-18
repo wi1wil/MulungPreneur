@@ -17,6 +17,8 @@ public class SaveControllerScript : MonoBehaviour
     private PlayerItemPickUpScript playerItemPickUpScript;
     private Equipment equipmentScript;
 
+    [SerializeField] private float autosaveInterval = 30f; 
+
     void Start()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
@@ -30,6 +32,16 @@ public class SaveControllerScript : MonoBehaviour
         equipmentScript = FindObjectOfType<Equipment>();
 
         LoadGame();
+        StartCoroutine(AutoSaveRoutine());
+    }
+
+    private IEnumerator AutoSaveRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(autosaveInterval);
+            SaveGame();
+        }
     }
 
     public void SaveGame()
@@ -88,11 +100,7 @@ public class SaveControllerScript : MonoBehaviour
             inventoryManager.setInventorySize();
             playerMovementScript.movementSpeed = saveData.playerSpeed;
             playerItemPickUpScript.holdDuration = saveData.pickUpSpeed;
-            if (playerItemPickUpScript.holdDuration <= 0f)
-                playerItemPickUpScript.holdDuration = 1f;
             playerItemPickUpScript.pickUpRange = saveData.pickUpRange;
-            playerItemPickUpScript.updatePickUpRange(saveData.pickUpRange);
-            playerItemPickUpScript.updatePickUpSpeed(saveData.pickUpSpeed);
 
             Debug.Log("Game Loaded");
         }

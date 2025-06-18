@@ -17,14 +17,17 @@ public class PlayerItemPickUpScript : MonoBehaviour
     private Camera mainCamera;
     public Canvas mainCanvas;
 
+    private SaveDataScript saveData;
+
     bool sfxPlayed = false;
 
     void Start()
     {
         inventoryManager = FindObjectOfType<InventoryManagerScript>();
         audioScript = FindObjectOfType<AudioManagerScript>();
+        
         if (!audioScript)
-        audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
 
         mainCamera = Camera.main;
     }
@@ -32,6 +35,7 @@ public class PlayerItemPickUpScript : MonoBehaviour
     void Update()
     {
         FindNearestItem();
+    
         if (nearestItem != null && isHolding)
         {
             if (currentFillCircle == null)
@@ -44,8 +48,8 @@ public class PlayerItemPickUpScript : MonoBehaviour
                 Vector3 screenPos = mainCamera.WorldToScreenPoint(worldPos);
                 currentFillCircle.transform.position = screenPos;
             }
-            
-            if(!sfxPlayed)
+
+            if (!sfxPlayed)
                 TrashSFX();
 
             holdTimer += Time.deltaTime;
@@ -54,7 +58,7 @@ public class PlayerItemPickUpScript : MonoBehaviour
             {
                 Item item = nearestItem.GetComponent<Item>();
                 bool itemAdded = inventoryManager.AddItem(nearestItem);
-                if(itemAdded)
+                if (itemAdded)
                 {
                     item.ShowPopup();
                     Destroy(nearestItem);

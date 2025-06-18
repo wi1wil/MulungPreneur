@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CloudSpawnerPrefab : MonoBehaviour
 {
     public GameObject[] cloudPrefabs;
+    public GameObject cloudParent;
     private float timer = 4f;
 
     public void Update()
@@ -30,9 +31,10 @@ public class CloudSpawnerPrefab : MonoBehaviour
     {
         Vector3 pos = GetSpawnPos();
 
-        GameObject child = Instantiate(cloudPrefabs[index], pos, Quaternion.identity);
+        GameObject newCloud = Instantiate(cloudPrefabs[index], pos, Quaternion.identity);
+        newCloud.transform.SetParent(cloudParent.transform, false);
+        newCloud.transform.localPosition = pos;
 
-        child.transform.parent = this.transform;
     }
 
     Vector3 GetSpawnPos()

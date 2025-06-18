@@ -41,6 +41,18 @@ public class VolumeSettings : MonoBehaviour
             sfxSlider = GameObject.Find("Sound Slider")?.GetComponent<Slider>();
         }
 
+        // Remove previous listeners to avoid stacking
+        if (bgmSlider != null)
+        {
+            bgmSlider.onValueChanged.RemoveListener(delegate { SetMusicVolume(); });
+            bgmSlider.onValueChanged.AddListener(delegate { SetMusicVolume(); });
+        }
+        if (sfxSlider != null)
+        {
+            sfxSlider.onValueChanged.RemoveListener(delegate { SetSFXVolume(); });
+            sfxSlider.onValueChanged.AddListener(delegate { SetSFXVolume(); });
+        }
+
         // Set slider values to saved PlayerPrefs after finding them
         float musicVol = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
         float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 0.5f);

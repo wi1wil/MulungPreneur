@@ -20,8 +20,6 @@ public class VideoSettingsScript : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
         if (!fullScreenToggle)
         {
             fullScreenToggle = GameObject.Find("Fullscreen-Toggle").GetComponent<Toggle>();
@@ -104,7 +102,7 @@ public class VideoSettingsScript : MonoBehaviour
     {
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("Main Gameplay");
+        SceneManager.LoadScene("Gameplay");
     }
 
     public void SaveSettings()
