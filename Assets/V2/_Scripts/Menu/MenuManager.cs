@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private GameObject pauseMenuUI;
 
-    // Update is called once per frame
-    void Update()
+    public void OnOpenMenu(InputAction.CallbackContext context)
     {
-        
+        if (context.performed)
+        {
+            MenuPauseManager.instance.TogglePause();
+
+            if (MenuPauseManager.instance.gamePaused)
+            {
+                playerInput.SwitchCurrentActionMap("UI");
+                if (pauseMenuUI != null) pauseMenuUI.SetActive(true);
+            }
+            else
+            {
+                playerInput.SwitchCurrentActionMap("Player");
+                if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
+            }
+        }
     }
 }

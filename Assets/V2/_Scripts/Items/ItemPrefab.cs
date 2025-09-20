@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPrefab : MonoBehaviour
+public class ItemPrefab : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public ItemsSO itemData;
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        Debug.Log("Picked up");
+        // InventoryManager.instance.AddItem(itemData);
+        Destroy(gameObject);
     }
 }

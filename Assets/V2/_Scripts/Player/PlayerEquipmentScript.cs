@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class PlayerEquipmentScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public EquipmentsSO bags;
+    public EquipmentsSO shoes;
+    public EquipmentsSO gloves;
+    public EquipmentsSO tools;
+
+    private int bagLevel, shoeLevel, gloveLevel, toolLevel;
+
+    private PlayerCurrencyScript playerCurrency;
+
     void Start()
     {
-        
+        playerCurrency = GetComponent<PlayerCurrencyScript>();
+        updateAll();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void updateAll()
     {
-        
+        updateEquipment(bags, bagLevel);
+        updateEquipment(shoes, shoeLevel);
+        updateEquipment(gloves, gloveLevel);
+        updateEquipment(tools, toolLevel);
+    }
+
+    public void updateEquipment(EquipmentsSO equipment, int level)
+    {
+
+    }
+
+    public void upgradeEquipment(EquipmentsSO equipment)
+    {
+
     }
 }

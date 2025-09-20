@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerCurrencyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int playersCurrency = 0;
+    public TMP_Text currencyText;
+
+    public void AddCurrency(int itemValue)
     {
-        
+        playersCurrency += itemValue;
+        updateText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void updateText()
     {
-        
+        currencyText.text = playersCurrency.ToString();
     }
 }

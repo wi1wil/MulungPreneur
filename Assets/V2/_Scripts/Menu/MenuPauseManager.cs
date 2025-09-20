@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuPauseManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static MenuPauseManager instance;
+
+    public bool gamePaused { get; private set; } = false;
+
+    private void Awake()
     {
-        
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TogglePause()
     {
-        
+        gamePaused = !gamePaused;
+
+        if (gamePaused)
+            Pause();
+        else
+            Resume();
+    }
+
+    private void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void Resume()
+    {
+        Time.timeScale = 1f;
     }
 }

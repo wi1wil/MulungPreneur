@@ -39,7 +39,7 @@ public class AudioManagerScript : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
-        volumeSettings = FindObjectOfType<VolumeSettings>();
+        // volumeSettings = FindObjectOfType<VolumeSettings>();
 
         bgmSource = GameObject.Find("Music").GetComponent<AudioSource>();
         sfxSource = GameObject.Find("SFX").GetComponent<AudioSource>();
