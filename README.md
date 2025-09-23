@@ -24,12 +24,21 @@
 <!-- About the game -->
 <table width="100%">
   <tr>
-    <td align="center" valign="top">
-      <h3>📖 About Mulung Preneur</h3>
-      <p>
-        Mulung Preneur is a survival crafting game that raises awareness about pollution and waste 
-        management. You collect recyclable materials, build tools, and survive in a polluted environment.
+    <!-- Left Image -->
+    <td width="30%" align="center" valign="middle" style="padding:15px;">
+      <img src="https://github.com/wi1wil/wi1wil/raw/main/story.png" width="220"/>
+    </td>
+    <!-- Right Text -->
+    <td width="70%" valign="top" style="padding:15px;">
+      <h2>🌍 About </h2>
+      <p style="max-width:700px;">
+        Mulung Preneur is a serious game that raises awareness about pollution and promotes waste management. 
+        Players step into the shoes of Adi, a passionate young man on a mission to reduce waste in his community. 
+        By collecting, sorting, and recycling waste, Adi inspires others to take part in sustainable living and entrepreneurship.
       </p>
+      <a href="https://wi1wil.itch.io/story-project">
+        <img src="https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white" />
+      </a>
     </td>
   </tr>
 </table>
