@@ -203,6 +203,10 @@ MulungPreneur                      # Root folder of the project
     <td><b>Tab</b></td>
   </tr>
   <tr>
+    <td>Open Shop </td>
+    <td><b>V</b></td>
+  </tr>
+  <tr>
     <td>Confirm / Select</td>
     <td><b>Enter</b> / <b>Space</b></td>
   </tr>
