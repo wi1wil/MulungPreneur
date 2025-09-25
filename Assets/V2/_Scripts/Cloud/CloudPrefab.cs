@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class CloudPrefab : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float speed;
+
+    public void Start()
     {
-        
+        speed = Random.Range(0.2f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        this.transform.position -= new Vector3(speed, 0f, 0f);
+
+        CheckForOutOfBounds(gameObject);
+    }
+
+    void CheckForOutOfBounds(GameObject obj)
+    {
+        if(this.transform.position.x < -600f)
+        {
+            Destroy(obj);
+        }
     }
 }
