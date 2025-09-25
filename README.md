@@ -5,16 +5,16 @@
   <tr>
     <!-- Top large gif -->
     <td colspan="2" align="center">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/dog1.gif" width="100%"/>
+      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung1.gif" width="100%"/>
     </td>
   </tr>
   <tr>
     <!-- Bottom two gifs -->
     <td align="center" width="50%">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/dog2.gif" width="100%"/>
+      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung2.gif" width="100%"/>
     </td>
     <td align="center" width="50%">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/dog3.gif" width="100%"/>
+      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung3.gif" width="100%"/>
     </td>
   </tr>
 </table>
