@@ -26,7 +26,7 @@
   <tr>
     <!-- Left Image -->
     <td width="30%" align="center" valign="middle" style="padding:15px;">
-      <img src="https://github.com/wi1wil/wi1wil/raw/main/mupe.png" width="220"/>
+      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mupe.png" width="220"/>
     </td>
     <!-- Right Text -->
     <td width="70%" valign="top" style="padding:15px;">
