@@ -51,7 +51,7 @@ public class AudioManagerScript : MonoBehaviour
         {
             if (worldTime == null)
             {
-                worldTime = FindObjectOfType<WorldTime>();
+                worldTime = FindFirstObjectByType<WorldTime>();
                 worldTime.DayNightChanged += OnDayNightChanged;
             }
         }

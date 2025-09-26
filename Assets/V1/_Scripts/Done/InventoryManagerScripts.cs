@@ -30,7 +30,7 @@ public class InventoryManagerScripts : MonoBehaviour
 
     void Start()
     {
-        itemDictionary = FindObjectOfType<ItemDictionaryScript>();
+        itemDictionary = FindFirstObjectByType<ItemDictionaryScript>();
         InitializeItemCount();
     }
 
@@ -222,6 +222,19 @@ public class InventoryManagerScripts : MonoBehaviour
         }
         
         InitializeItemCount();
+    }
+
+    public bool IsInventoryFull()
+    {
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                return false; 
+            }
+        }
+        return true; 
     }
 }
 

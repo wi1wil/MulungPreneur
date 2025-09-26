@@ -23,8 +23,8 @@ public class PlayerItemPickUpScript : MonoBehaviour
 
     void Start()
     {
-        inventoryManager = FindObjectOfType<InventoryManagerScripts>();
-        audioScript = FindObjectOfType<AudioManagerScript>();
+        inventoryManager = FindFirstObjectByType<InventoryManagerScripts>();
+        audioScript = FindFirstObjectByType<AudioManagerScript>();
         
         if (!audioScript)
             audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();

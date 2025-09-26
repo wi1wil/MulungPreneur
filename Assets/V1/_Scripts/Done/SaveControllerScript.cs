@@ -22,14 +22,14 @@ public class SaveControllerScript : MonoBehaviour
     void Start()
     {
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        inventoryManager = FindObjectOfType<InventoryManagerScripts>();
-        worldTime = FindObjectOfType<WorldTime>();
-        volumeSettings = FindObjectOfType<VolumeSettings>();
-        videoSettings = FindObjectOfType<VideoSettingsScript>();
-        playerWalletScript = FindObjectOfType<PlayerWalletScript>();
-        playerMovementScript = FindObjectOfType<MovementScript>();
-        playerItemPickUpScript = FindObjectOfType<PlayerItemPickUpScript>();
-        equipmentScript = FindObjectOfType<Equipment>();
+        inventoryManager = FindFirstObjectByType<InventoryManagerScripts>();
+        worldTime = FindFirstObjectByType<WorldTime>();
+        volumeSettings = FindFirstObjectByType<VolumeSettings>();
+        videoSettings = FindFirstObjectByType<VideoSettingsScript>();
+        playerWalletScript = FindFirstObjectByType<PlayerWalletScript>();
+        playerMovementScript = FindFirstObjectByType<MovementScript>();
+        playerItemPickUpScript = FindFirstObjectByType<PlayerItemPickUpScript>();
+        equipmentScript = FindFirstObjectByType<Equipment>();
 
         LoadGame();
         StartCoroutine(AutoSaveRoutine());
@@ -50,7 +50,7 @@ public class SaveControllerScript : MonoBehaviour
         SaveDataScript saveData = new SaveDataScript
         {
             playerPosition = GameObject.Find("Player").transform.position,
-            mapBoundary = FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D.name,
+            mapBoundary = FindFirstObjectByType<CinemachineConfiner>().m_BoundingShape2D.name,
             inventorySaveData = inventoryManager.getInventoryItem(),
             currentDay = worldTime.getCurrentDay(),
             currentTimeTicks = worldTime.getCurrentTimeTicks(),
@@ -84,7 +84,7 @@ public class SaveControllerScript : MonoBehaviour
             SaveDataScript saveData = JsonUtility.FromJson<SaveDataScript>(json);
 
             GameObject.Find("Player").transform.position = saveData.playerPosition;
-            GameObject.FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
+            GameObject.FindFirstObjectByType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
             inventoryManager.setInventoryItem(saveData.inventorySaveData);
             worldTime.setWorldTime(saveData.currentDay, saveData.currentTimeTicks);
             worldTime.StartWorldTime();

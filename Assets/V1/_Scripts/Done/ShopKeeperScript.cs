@@ -75,7 +75,7 @@ public class ShopKeeperScript : MonoBehaviour, IInteractables
         }
 
         var inventoryData = InventoryManagerScripts.Instance.getInventoryItem();
-        var itemDict = FindObjectOfType<ItemDictionaryScript>();
+        var itemDict = FindFirstObjectByType<ItemDictionaryScript>();
 
         foreach (var data in inventoryData)
         {

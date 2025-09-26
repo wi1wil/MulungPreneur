@@ -23,7 +23,7 @@ public class QuestManagerScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        questUI = FindObjectOfType<QuestUIScript>();
+        questUI = FindFirstObjectByType<QuestUIScript>();
         InventoryManagerScripts.Instance.onInvChanged += checkInvForQuests;
     }
 

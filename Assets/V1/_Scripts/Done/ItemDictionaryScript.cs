@@ -7,8 +7,11 @@ public class ItemDictionaryScript : MonoBehaviour
     public List<Item> itemPrefabs;
     private Dictionary<int, GameObject> itemDictionary;
 
+    public static ItemDictionaryScript Instance { get; private set; }
+    
     void Awake()
     {
+        Instance = this;
         itemDictionary = new Dictionary<int, GameObject>();
         for (int i = 0; i < itemPrefabs.Count; i++)
         {

@@ -18,7 +18,7 @@ public class SceneManagerScripts : MonoBehaviour
             optionsMenu = GameObject.Find("Options Menu");
 
         optionsMenu.SetActive(false);
-        volumeSettings = FindObjectOfType<VolumeSettings>();
+        volumeSettings = FindFirstObjectByType<VolumeSettings>();
     }
     
     public void ExitGame()

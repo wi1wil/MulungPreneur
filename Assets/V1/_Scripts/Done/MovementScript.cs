@@ -9,6 +9,7 @@ public class MovementScript : MonoBehaviour
     private Animator animator;
 
     public AudioManagerScript audioScript;
+    CrafterInteract crafterInteract;
     readonly float sfxInterval = 0.6f;
     float intervalTimer = 0f;
 
@@ -16,14 +17,15 @@ public class MovementScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        audioScript = FindObjectOfType<AudioManagerScript>();
+        audioScript = FindFirstObjectByType<AudioManagerScript>();
+        crafterInteract = FindFirstObjectByType<CrafterInteract>();
         if (!audioScript)
-        audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
     }
 
     void Update()
     {
-        if (PauseControllerScript.isGamePaused)
+        if (PauseControllerScript.isGamePaused && crafterInteract.craftingUI.activeSelf)
         {
             rb.linearVelocity = Vector2.zero; // Stop movement when the game is paused
             return;
@@ -37,6 +39,8 @@ public class MovementScript : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if(crafterInteract.craftingUI.activeSelf) return;
+        
         animator.SetBool("isWalking", true);
 
         if(context.canceled)

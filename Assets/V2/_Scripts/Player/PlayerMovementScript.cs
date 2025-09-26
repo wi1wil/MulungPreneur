@@ -10,14 +10,14 @@ public class PlayerMovementScript : MonoBehaviour
     private SpriteRenderer sprite;
 
     private Vector2 movement;
-    private AudioManager audio;
+    // private AudioManager audio;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        audio = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        // audio = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void OnMove(InputAction.CallbackContext context)

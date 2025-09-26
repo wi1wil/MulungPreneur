@@ -17,7 +17,7 @@ public class SettingsMainGameplayScript : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.Find("Audio Manager");
-        volumeSettings = FindObjectOfType<VolumeSettings>();
+        volumeSettings = FindFirstObjectByType<VolumeSettings>();
         volumeSettings.LoadVolume();
     }
 

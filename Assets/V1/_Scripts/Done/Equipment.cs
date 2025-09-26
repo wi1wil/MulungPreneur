@@ -81,10 +81,10 @@ public class Equipment : MonoBehaviour
 
     void Start()
     {
-        playerWalletScript = FindObjectOfType<PlayerWalletScript>();
-        inventoryManagerScript = FindObjectOfType<InventoryManagerScripts>();
-        playerItemPickUpScript = FindObjectOfType<PlayerItemPickUpScript>();
-        movementScript = FindObjectOfType<MovementScript>();
+        playerWalletScript = FindFirstObjectByType<PlayerWalletScript>();
+        inventoryManagerScript = FindFirstObjectByType<InventoryManagerScripts>();
+        playerItemPickUpScript = FindFirstObjectByType<PlayerItemPickUpScript>();
+        movementScript = FindFirstObjectByType<MovementScript>();
 
         if (gameObject.activeInHierarchy)
         {
@@ -243,55 +243,73 @@ public class Equipment : MonoBehaviour
     }
 
     public void getEquipment()
-    {
-        bagImage = new List<Image>(GameObject.FindObjectsOfType<Image>());
-        bagImage = bagImage.FindAll(img => img.gameObject.name == "PlayerBag");
+{
+    // Images
+    bagImage = new List<Image>(
+        GameObject.FindObjectsByType<Image>(FindObjectsSortMode.None));
+    bagImage = bagImage.FindAll(img => img.gameObject.name == "PlayerBag");
 
-        bagNameText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        bagNameText = bagNameText.FindAll(txt => txt.gameObject.name == "BagName");
+    // TMP Texts
+    bagNameText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    bagNameText = bagNameText.FindAll(txt => txt.gameObject.name == "BagName");
 
-        bagUpgradeStatusText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        bagUpgradeStatusText = bagUpgradeStatusText.FindAll(txt => txt.gameObject.name == "BagStatus");
+    bagUpgradeStatusText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    bagUpgradeStatusText = bagUpgradeStatusText.FindAll(txt => txt.gameObject.name == "BagStatus");
 
-        bagLevelText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        bagLevelText = bagLevelText.FindAll(txt => txt.gameObject.name == "BagLevel");
+    bagLevelText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    bagLevelText = bagLevelText.FindAll(txt => txt.gameObject.name == "BagLevel");
 
-        footwearImage = new List<Image>(GameObject.FindObjectsOfType<Image>());
-        footwearImage = footwearImage.FindAll(img => img.gameObject.name == "PlayerFootwear");
+    footwearImage = new List<Image>(
+        GameObject.FindObjectsByType<Image>(FindObjectsSortMode.None));
+    footwearImage = footwearImage.FindAll(img => img.gameObject.name == "PlayerFootwear");
 
-        footwearNameText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        footwearNameText = footwearNameText.FindAll(txt => txt.gameObject.name == "FootwearName");
+    footwearNameText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    footwearNameText = footwearNameText.FindAll(txt => txt.gameObject.name == "FootwearName");
 
-        footwearUpgradeStatusText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        footwearUpgradeStatusText = footwearUpgradeStatusText.FindAll(txt => txt.gameObject.name == "FootwearStatus");
+    footwearUpgradeStatusText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    footwearUpgradeStatusText = footwearUpgradeStatusText.FindAll(txt => txt.gameObject.name == "FootwearStatus");
 
-        footwearLevelText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        footwearLevelText = footwearLevelText.FindAll(txt => txt.gameObject.name == "FootwearLevel");
+    footwearLevelText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    footwearLevelText = footwearLevelText.FindAll(txt => txt.gameObject.name == "FootwearLevel");
 
-        pickingToolImage = new List<Image>(GameObject.FindObjectsOfType<Image>());
-        pickingToolImage = pickingToolImage.FindAll(img => img.gameObject.name == "PlayerTool");
+    pickingToolImage = new List<Image>(
+        GameObject.FindObjectsByType<Image>(FindObjectsSortMode.None));
+    pickingToolImage = pickingToolImage.FindAll(img => img.gameObject.name == "PlayerTool");
 
-        pickingToolNameText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        pickingToolNameText = pickingToolNameText.FindAll(txt => txt.gameObject.name == "ToolName");
+    pickingToolNameText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    pickingToolNameText = pickingToolNameText.FindAll(txt => txt.gameObject.name == "ToolName");
 
-        pickingToolUpgradeStatusText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        pickingToolUpgradeStatusText = pickingToolUpgradeStatusText.FindAll(txt => txt.gameObject.name == "ToolStatus");
+    pickingToolUpgradeStatusText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    pickingToolUpgradeStatusText = pickingToolUpgradeStatusText.FindAll(txt => txt.gameObject.name == "ToolStatus");
 
-        pickingToolLevelText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        pickingToolLevelText = pickingToolLevelText.FindAll(txt => txt.gameObject.name == "ToolLevel");
+    pickingToolLevelText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    pickingToolLevelText = pickingToolLevelText.FindAll(txt => txt.gameObject.name == "ToolLevel");
 
-        glovesImage = new List<Image>(GameObject.FindObjectsOfType<Image>());
-        glovesImage = glovesImage.FindAll(img => img.gameObject.name == "PlayerGloves");
+    glovesImage = new List<Image>(
+        GameObject.FindObjectsByType<Image>(FindObjectsSortMode.None));
+    glovesImage = glovesImage.FindAll(img => img.gameObject.name == "PlayerGloves");
 
-        glovesNameText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        glovesNameText = glovesNameText.FindAll(txt => txt.gameObject.name == "GlovesName");
+    glovesNameText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    glovesNameText = glovesNameText.FindAll(txt => txt.gameObject.name == "GlovesName");
 
-        glovesUpgradeStatusText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        glovesUpgradeStatusText = glovesUpgradeStatusText.FindAll(txt => txt.gameObject.name == "GlovesStatus");
+    glovesUpgradeStatusText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    glovesUpgradeStatusText = glovesUpgradeStatusText.FindAll(txt => txt.gameObject.name == "GlovesStatus");
 
-        glovesLevelText = new List<TMP_Text>(GameObject.FindObjectsOfType<TMP_Text>());
-        glovesLevelText = glovesLevelText.FindAll(txt => txt.gameObject.name == "GlovesLevel");
-    }
+    glovesLevelText = new List<TMP_Text>(
+        GameObject.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None));
+    glovesLevelText = glovesLevelText.FindAll(txt => txt.gameObject.name == "GlovesLevel");
+}
 
     
 
