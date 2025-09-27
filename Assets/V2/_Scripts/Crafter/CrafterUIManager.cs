@@ -13,11 +13,9 @@ public class CrafterUIManager : MonoBehaviour
     public GameObject craftItemPrefab;
     public List<RecipesSO> recipes;
 
-    [Header("Crafting UI")]
-    public GameObject recipesPanel;      
-    public GameObject craftingPanel;     
-    public TMP_Text craftingNameText;    
-    public Image progressFill;           
+    [Header("Crafting Progress UI")]
+    public RectTransform progressContent;
+    public GameObject craftingSlotPrefab; // prefab with progress bar + claim button
 
     private List<CrafterItemPrefabs> spawned = new List<CrafterItemPrefabs>();
 
@@ -43,24 +41,14 @@ public class CrafterUIManager : MonoBehaviour
 
     public void OnItemCraftClicked(RecipesSO recipe)
     {
-        // bool started = CrafterManager.Instance.TryCraft(recipe);
-        // if (started)
-        // {
-        //     recipesPanel.SetActive(false);
-        //     craftingPanel.SetActive(true);
-
-        //     craftingNameText.text = recipe.recipeName;
-        //     progressFill.fillAmount = 0f;
-        // }
-        Debug.Log("Crafting: " + recipe.recipeName);
+        CrafterManager.Instance.TryCraft(recipe);
     }
 
-    public void UpdateCraftingProgress(float t) =>
-        progressFill.fillAmount = t;
-
-    public void OnCraftingFinished()
+    public CrafterSlotUI AddCraftingSlot(RecipesSO recipe)
     {
-        craftingPanel.SetActive(false);
-        recipesPanel.SetActive(true);
+        var go = Instantiate(craftingSlotPrefab, progressContent);
+        var slot = go.GetComponent<CrafterSlotUI>();
+        slot.Setup(recipe);
+        return slot;
     }
 }

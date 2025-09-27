@@ -11,8 +11,8 @@ public class TabControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        if (!audioScript)
-            audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
+        // if (!audioScript)
+        //     audioScript = GameObject.Find("Audio Manager").GetComponent<AudioManagerScript>();
     }
     void Start()
     {
@@ -21,7 +21,7 @@ public class TabControllerScript : MonoBehaviour
 
     public void ActivateTab(int tabIndex)
     {
-        audioScript.PlaySfx(audioScript.uiClick);
+        // audioScript.PlaySfx(audioScript.uiClick);
         for (int i = 0; i < pages.Length; i++)
         {
             pages[i].SetActive(false);
