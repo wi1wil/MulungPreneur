@@ -4,7 +4,12 @@ using System.Collections;
 
 public class CrafterManager : MonoBehaviour
 {
-    [SerializeField] private CrafterUIManager uiManager;
+    [Header("References")]
+    [SerializeField] private CrafterUIManager uiManager;   
+    [SerializeField] private RectTransform progressContent;
+    [SerializeField] private GameObject craftingSlotPrefab; 
+
+    private List<CrafterSlotUI> activeSlots = new List<CrafterSlotUI>();
 
     public bool TryCraft(RecipesSO recipe)
     {
@@ -21,19 +26,23 @@ public class CrafterManager : MonoBehaviour
 
     private IEnumerator CraftRoutine(RecipesSO recipe)
     {
-        var slot = uiManager.AddCraftingSlot(recipe);
+        var go = Instantiate(craftingSlotPrefab, progressContent);
+        var slot = go.GetComponent<CrafterSlotUI>();
+        slot.Setup(recipe, this);
+
+        activeSlots.Add(slot);
 
         float timer = 0f;
         while (timer < recipe.craftTime)
         {
             timer += Time.deltaTime;
             float progress = Mathf.Clamp01(timer / recipe.craftTime);
-
             slot.UpdateProgress(progress);
             yield return null;
         }
 
         slot.MarkAsFinished();
+        activeSlots.Remove(slot);
     }
 
     private bool HasEnoughItems(RecipesSO recipe)

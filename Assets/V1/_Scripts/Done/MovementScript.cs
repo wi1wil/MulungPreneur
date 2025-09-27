@@ -25,7 +25,7 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        if (PauseControllerScript.isGamePaused && crafterInteract.craftingUI.activeSelf)
+        if (PauseControllerScript.isGamePaused)
         {
             rb.linearVelocity = Vector2.zero; // Stop movement when the game is paused
             return;
@@ -39,7 +39,6 @@ public class MovementScript : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if(crafterInteract.craftingUI.activeSelf) return;
         
         animator.SetBool("isWalking", true);
 

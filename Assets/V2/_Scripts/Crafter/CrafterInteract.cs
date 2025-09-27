@@ -1,30 +1,27 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CrafterInteract : MonoBehaviour, IInteractables
 {
-    public GameObject craftingUI;
-    
+    [SerializeField] private CrafterManager crafterManager; 
+    [SerializeField] private List<RecipesSO> stationRecipes;
+    [SerializeField] private RectTransform progressContent;
+
     public void Interact()
     {
-        Debug.Log("Interacting with Crafter");
-        openUI();
+        if (CrafterUIManager.Instance != null && CrafterUIManager.Instance.gameObject.activeSelf)
+        {
+            CrafterUIManager.Instance.Close();
+        }
+        else
+        {
+            CrafterUIManager.Instance.Open(crafterManager, stationRecipes, progressContent);
+        }
     }
 
     public bool canInteract()
     {
         Debug.Log("You can interact with the Crafter");
         return true;
-    }
-
-    public void openUI()
-    {
-        if (craftingUI.activeSelf)
-        {
-            craftingUI.SetActive(false);
-        }
-        else
-        {
-            craftingUI.SetActive(true);
-        }
     }
 }
