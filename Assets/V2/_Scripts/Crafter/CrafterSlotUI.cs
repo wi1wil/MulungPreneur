@@ -10,10 +10,13 @@ public class CrafterSlotUI : MonoBehaviour
     public Image itemIcon;
 
     private RecipesSO recipe;
+    private CrafterManager crafter;
 
-    public void Setup(RecipesSO r)
+    public void Setup(RecipesSO r, CrafterManager manager)
     {
         recipe = r;
+        crafter = manager;
+
         craftingNameText.text = "Currently Crafting: " + r.recipeName;
         if (itemIcon != null && r.icon != null)
             itemIcon.sprite = r.icon;
@@ -39,7 +42,7 @@ public class CrafterSlotUI : MonoBehaviour
 
     private void OnClaimClicked()
     {
-        bool success = CrafterManager.Instance.GiveOutput(recipe);
+        bool success = crafter.GiveOutput(recipe);
         if (success)
         {
             Destroy(gameObject); 

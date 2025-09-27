@@ -9,17 +9,20 @@ public class CrafterItemPrefabs : MonoBehaviour
     public Image icon;
     public TMP_Text nameText;
     public Transform requirementsParent;
-    public GameObject requirementPrefab;  
+    public GameObject requirementPrefab;
     public Button craftButton;
 
     private RecipesSO recipe;
+    private CrafterUIManager uiManager;
 
-    public void Setup(RecipesSO r)
+    public void Setup(RecipesSO r, CrafterUIManager manager)
     {
         recipe = r;
+        uiManager = manager;
 
         icon.sprite = r.icon;
         nameText.text = r.recipeName;
+
         foreach (Transform child in requirementsParent)
             Destroy(child.gameObject);
 
@@ -52,7 +55,7 @@ public class CrafterItemPrefabs : MonoBehaviour
 
     private void OnCraftClicked()
     {
-        CrafterUIManager.Instance.OnItemCraftClicked(recipe);
+        uiManager.OnItemCraftClicked(recipe);
     }
 
     public void SetInteractable(bool v) => craftButton.interactable = v;

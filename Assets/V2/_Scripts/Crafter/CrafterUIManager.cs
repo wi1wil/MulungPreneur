@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class CrafterUIManager : MonoBehaviour
 {
-    public static CrafterUIManager Instance;
+     [Header("References")]
+    [SerializeField] private CrafterManager crafterManager;
 
     [Header("Recipe List UI")]
     public RectTransform content; 
@@ -15,11 +16,9 @@ public class CrafterUIManager : MonoBehaviour
 
     [Header("Crafting Progress UI")]
     public RectTransform progressContent;
-    public GameObject craftingSlotPrefab; // prefab with progress bar + claim button
+    public GameObject craftingSlotPrefab;
 
     private List<CrafterItemPrefabs> spawned = new List<CrafterItemPrefabs>();
-
-    void Awake() => Instance = this;
 
     void Start() => Populate();
 
@@ -29,7 +28,7 @@ public class CrafterUIManager : MonoBehaviour
         {
             var go = Instantiate(craftItemPrefab, content);
             var ui = go.GetComponent<CrafterItemPrefabs>();
-            ui.Setup(r);
+            ui.Setup(r, this);
             spawned.Add(ui);
         }
     }
@@ -41,14 +40,14 @@ public class CrafterUIManager : MonoBehaviour
 
     public void OnItemCraftClicked(RecipesSO recipe)
     {
-        CrafterManager.Instance.TryCraft(recipe);
+        crafterManager.TryCraft(recipe);
     }
 
     public CrafterSlotUI AddCraftingSlot(RecipesSO recipe)
     {
         var go = Instantiate(craftingSlotPrefab, progressContent);
         var slot = go.GetComponent<CrafterSlotUI>();
-        slot.Setup(recipe);
+        slot.Setup(recipe, crafterManager);
         return slot;
     }
 }

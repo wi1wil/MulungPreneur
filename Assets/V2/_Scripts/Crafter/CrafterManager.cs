@@ -4,12 +4,7 @@ using System.Collections;
 
 public class CrafterManager : MonoBehaviour
 {
-    public static CrafterManager Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
+    [SerializeField] private CrafterUIManager uiManager;
 
     public bool TryCraft(RecipesSO recipe)
     {
@@ -26,7 +21,7 @@ public class CrafterManager : MonoBehaviour
 
     private IEnumerator CraftRoutine(RecipesSO recipe)
     {
-        var slot = CrafterUIManager.Instance.AddCraftingSlot(recipe);
+        var slot = uiManager.AddCraftingSlot(recipe);
 
         float timer = 0f;
         while (timer < recipe.craftTime)
@@ -35,7 +30,6 @@ public class CrafterManager : MonoBehaviour
             float progress = Mathf.Clamp01(timer / recipe.craftTime);
 
             slot.UpdateProgress(progress);
-
             yield return null;
         }
 
@@ -78,9 +72,9 @@ public class CrafterManager : MonoBehaviour
             item.UpdateQuantity();
 
             InventoryManagerScripts.Instance.AddItem(clone);
-            Destroy(clone); 
+            Destroy(clone);
         }
 
         return true;
-    }   
+    }
 }
