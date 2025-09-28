@@ -130,7 +130,7 @@ MulungPreneur                      # Root folder of the project
     <td align="left">
       <b>Richter C.</b><br/>
       <sub>2nd Programmer & 2nd Game Artist</sub><br/>
-      <p style="margin:0;">Contributed additional programming features and secondary art assets.</p>
+      <p style="margin:0;">Contributed additional programming features and in-game items, and tilemaps art assets.</p>
     </td>
   </tr>
   <tr>
