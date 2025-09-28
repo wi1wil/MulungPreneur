@@ -1,5 +1,3 @@
-<h2>♻️ Mulung Preneur</h2>
-
 <!-- GIFs showcase -->
 <table width="100%">
   <tr>
