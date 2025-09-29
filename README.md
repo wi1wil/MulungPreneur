@@ -118,7 +118,7 @@ MulungPreneur                      # Root folder of the project
     <td align="left">
       <b>Wilson H.</b><br/>
       <sub>Lead Programmer</sub><br/>
-      <p style="margin:0;">Implemented core systems, managers, and overall game logic.</p>
+      <p style="margin:0;">Implemented core systems, managers, and overall game logic. Contributed more than 72+ hours (8 hours x 9 days) on this project.</p>
     </td>
   </tr>
   <tr>
