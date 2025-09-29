@@ -118,7 +118,7 @@ MulungPreneur                      # Root folder of the project
     <td align="left">
       <b>Wilson H.</b><br/>
       <sub>Lead Programmer</sub><br/>
-      <p style="margin:0;">Implemented core systems, managers, and overall game logic. Dedicated more than 48+ hours (8 hours x 4 days) on this project.</p>
+      <p style="margin:0;">Implemented core systems, managers, and overall game logic, dedicating over 48 hours (6 full work days) in development.</p>
     </td>
   </tr>
   <tr>
