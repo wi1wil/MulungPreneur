@@ -3,16 +3,16 @@
   <tr>
     <!-- Top large gif -->
     <td colspan="2" align="center">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung1.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung1.gif" width="100%"/>
     </td>
   </tr>
   <tr>
     <!-- Bottom two gifs -->
     <td align="center" width="50%">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung2.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung2.gif" width="100%"/>
     </td>
     <td align="center" width="50%">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mulung3.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung3.gif" width="100%"/>
     </td>
   </tr>
 </table>
@@ -24,7 +24,7 @@
   <tr>
     <!-- Left Image -->
     <td width="30%" align="center" valign="middle" style="padding:15px;">
-      <img src="https://github.com/wi1wil/MulungPreneur/raw/main/mupe.png" width="220"/>
+      <img src="./Assets/ReadMe/mupe.png" width="100%"/>
     </td>
     <!-- Right Text -->
     <td width="70%" valign="top" style="padding:15px;">
