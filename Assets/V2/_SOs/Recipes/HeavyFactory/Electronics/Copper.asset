@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Copper
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Copper
+  icon: {fileID: 1111838633, guid: 2a8613328d9a6764a8ac9731a94aa926, type: 3}
+  inputs:
+  - item: {fileID: 6019156318520388479, guid: c2b6f717ac0b4b645b143c3de86dd5e3, type: 3}
+    amount: 1
+  - item: {fileID: 1552935890138893368, guid: 40bd0ccda88c52540b689b8314b0bfb4, type: 3}
+    amount: 1
+  - item: {fileID: 8096132093403371504, guid: ebfddb5022b589443a73c52fbaca9d56, type: 3}
+    amount: 1
+  - item: {fileID: 2044275928350321161, guid: a133b55d0f70eda49ada5489825a7aeb, type: 3}
+    amount: 1
+  outputPrefab: {fileID: 1872978909788749086, guid: 5799da1b5a6b61045bbcc3be85cc7103, type: 3}
+  outputAmount: 1
+  craftTime: 35
+  cost: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Recycled Can
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Recycled Can
+  icon: {fileID: 837955646, guid: fe296d875add9854382c23af797c9646, type: 3}
+  inputs:
+  - item: {fileID: 338277101903791456, guid: 48541138ca8d7f74a8e88e73fd8de7df, type: 3}
+    amount: 1
+  - item: {fileID: 2805541903640630803, guid: a5be9d506d3f0e947bf8e576f75a2872, type: 3}
+    amount: 1
+  - item: {fileID: 594439596950199997, guid: 83f7b9ccfd20ee143b99ddebba48ac4a, type: 3}
+    amount: 1
+  outputPrefab: {fileID: 5894722785479711149, guid: 1d389d457c5440745a307faca80996cb, type: 3}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

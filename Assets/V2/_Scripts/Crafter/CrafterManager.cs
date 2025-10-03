@@ -13,6 +13,12 @@ public class CrafterManager : MonoBehaviour
 
     public bool TryCraft(RecipesSO recipe)
     {
+        if(activeSlots.Count >= 3)
+        {
+            Debug.Log("Crafter is busy. Please wait.");
+            return false;
+        }
+        
         if (!HasEnoughItems(recipe))
         {
             Debug.Log("Not enough resources to craft " + recipe.recipeName);

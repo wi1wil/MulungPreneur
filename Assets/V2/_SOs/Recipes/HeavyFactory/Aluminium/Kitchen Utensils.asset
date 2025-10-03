@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Kitchen Utensils
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Kitchen Utensils
+  icon: {fileID: 1955627576, guid: fe296d875add9854382c23af797c9646, type: 3}
+  inputs:
+  - item: {fileID: 6621033354850332935, guid: c20d1e423b3ee2745aff8525789e8d60, type: 3}
+    amount: 1
+  - item: {fileID: 338277101903791456, guid: 48541138ca8d7f74a8e88e73fd8de7df, type: 3}
+    amount: 1
+  outputPrefab: {fileID: 8497319911985251464, guid: 2dfbe65b6f5907642a0e9e0d43b69e6f, type: 3}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

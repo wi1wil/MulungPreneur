@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 5121593738949328321}
   - component: {fileID: 165340879801574967}
   m_Layer: 0
-  m_Name: CraftingItemPrefabs
+  m_Name: ItemRecipePrefabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

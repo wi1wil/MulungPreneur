@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
-  m_Name: Test
+  m_Name: Recycled Paper
   m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
-  recipeName: Test
-  icon: {fileID: -652764125, guid: c06ad5b07351ba04084f17ff3ca41760, type: 3}
-  inputs: []
-  outputPrefab: {fileID: 4398828096419155432, guid: 78e3738ac6b3b07419dbe2f2ce6dc882, type: 3}
+  recipeName: Recycled Paper
+  icon: {fileID: 719668399, guid: a886d0aeeedb0a54e9beffefb8598bfc, type: 3}
+  inputs:
+  - item: {fileID: 2077703914049219233, guid: b5c9fbd09b59e2f4b9656f5a52f1e944, type: 3}
+    amount: 2
+  outputPrefab: {fileID: 4586570716780400878, guid: 10a0ca16437676f4b80453d2261fc05f, type: 3}
   outputAmount: 1
-  craftTime: 5
+  craftTime: 15
   cost: 0

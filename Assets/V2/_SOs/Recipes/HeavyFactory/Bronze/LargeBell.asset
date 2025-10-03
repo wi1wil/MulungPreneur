@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: LargeBell
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Large Bell
+  icon: {fileID: -772027043, guid: 4b86f34db7b63ca4f843058b25cc379d, type: 3}
+  inputs:
+  - item: {fileID: 7480260984715677650, guid: 85e4363375b3b3c488bc8ed7ffb19139, type: 3}
+    amount: 1
+  - item: {fileID: 7810885674712897076, guid: e087c8adebb243d4eb180b0affa62095, type: 3}
+    amount: 2
+  outputPrefab: {fileID: 7045277256559291430, guid: b563d13e3014c93488bc450ef1ea44c1, type: 3}
+  outputAmount: 1
+  craftTime: 55
+  cost: 0

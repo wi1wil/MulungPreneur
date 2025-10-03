@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Necklace
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Necklace
+  icon: {fileID: -1033275147, guid: e41544f7522c59c4c87e8b6354207b73, type: 3}
+  inputs:
+  - item: {fileID: 4196702617872610366, guid: 344aebe6381bed8418d4012a2a3f77d6, type: 3}
+    amount: 4
+  outputPrefab: {fileID: 5460477396628894798, guid: 43743818b1dfa114fafb301d0ec1d200, type: 3}
+  outputAmount: 1
+  craftTime: 45
+  cost: 0

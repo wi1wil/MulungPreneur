@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
-public class CrafterItemPrefabs : MonoBehaviour
+public class ItemRecipePrefabs : MonoBehaviour
 {
     [Header("UI References")]
     public Image icon;

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Paving Block
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Paving Block
+  icon: {fileID: -2066684241, guid: cb8f17aef62c7564caee4f8ca2639994, type: 3}
+  inputs:
+  - item: {fileID: 7619151823404041015, guid: aea011f905b5a5347b13c111c1874077, type: 3}
+    amount: 3
+  - item: {fileID: 6648513590735930268, guid: 879f1989b2d9b544fa6f2e2d52665539, type: 3}
+    amount: 2
+  outputPrefab: {fileID: 6784790939792291584, guid: 0b817a2072e0f9a42aba80f898d992a2, type: 3}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

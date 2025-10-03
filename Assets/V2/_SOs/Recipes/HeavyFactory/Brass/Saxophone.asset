@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Saxophone
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Saxophone
+  icon: {fileID: 207257830, guid: e41544f7522c59c4c87e8b6354207b73, type: 3}
+  inputs:
+  - item: {fileID: 2373416533730070938, guid: c486f9a5ef62c024e90167dcf5ce9a51, type: 3}
+    amount: 1
+  - item: {fileID: 4196702617872610366, guid: 344aebe6381bed8418d4012a2a3f77d6, type: 3}
+    amount: 1
+  outputPrefab: {fileID: 1991828660340564432, guid: 0cf4dc2ee22f04048a8dd5bef29ec344, type: 3}
+  outputAmount: 1
+  craftTime: 45
+  cost: 0

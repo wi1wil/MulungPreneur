@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Recycled Glass
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Window
+  icon: {fileID: -1584288661, guid: 32e13370ae65eb04cad4fed3bbcfa9ba, type: 3}
+  inputs:
+  - item: {fileID: 4340765346827623327, guid: 629a4055455fb914bbcefc60f119953d, type: 3}
+    amount: 2
+  - item: {fileID: 8661517579352625033, guid: 926aa8bcfa579284eb564f7155a5aabb, type: 3}
+    amount: 2
+  outputPrefab: {fileID: 211112634336665046, guid: 33ba8975c5788d0429f856eff2208ed3, type: 3}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bac0eff8c37c43a07e1dfe7f3211a, type: 3}
+  m_Name: Phone Components
+  m_EditorClassIdentifier: Assembly-CSharp::RecipesSO
+  recipeName: Phone Components
+  icon: {fileID: 106916981, guid: 2a8613328d9a6764a8ac9731a94aa926, type: 3}
+  inputs:
+  - item: {fileID: 8096132093403371504, guid: ebfddb5022b589443a73c52fbaca9d56, type: 3}
+    amount: 2
+  - item: {fileID: 1552935890138893368, guid: 40bd0ccda88c52540b689b8314b0bfb4, type: 3}
+    amount: 1
+  outputPrefab: {fileID: 2769260941454695302, guid: 09e209a377f2d3e4dbfeee8a6b9024a1, type: 3}
+  outputAmount: 1
+  craftTime: 35
+  cost: 0
