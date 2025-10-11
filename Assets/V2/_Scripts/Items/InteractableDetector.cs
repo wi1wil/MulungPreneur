@@ -5,57 +5,74 @@ using System.Collections.Generic;
 
 public class InteractableDetector : MonoBehaviour
 {
-    [SerializeField] private GameObject interactionIcon;
-    [SerializeField] private Image holdProgressBar;
-
-    private List<IInteractable> interactablesInRange = new List<IInteractable>();
-    private IInteractable currentTarget;
+    [SerializeField] private GameObject _interactionIcon;
+    [SerializeField] private Image _holdProgressBar;
+    private List<IInteractable> _interactablesInRange = new List<IInteractable>();
+    private IInteractable _currentTarget;
+    private CircleCollider2D _pickUpRange;
+    private float _holdTimer = 0f;
+    private bool _isHolding = false;
 
     public float holdDuration = 1f;
-    private float holdTimer = 0f;
-    private bool isHolding = false;
+    public float pickUpRadius;
 
     void Start()
     {
-        interactionIcon.SetActive(false);
-        holdProgressBar.gameObject.SetActive(false);
+        _interactionIcon.SetActive(false);
+        _holdProgressBar.gameObject.SetActive(false);
+        _pickUpRange = GetComponent<CircleCollider2D>();
+        pickUpRadius = _pickUpRange.radius;
     }
 
     void Update()
     {
-        if (isHolding && currentTarget != null)
+        if (_isHolding && _currentTarget != null)
         {
-            holdTimer += Time.deltaTime;
-            holdProgressBar.fillAmount = holdTimer / holdDuration;
+            _holdTimer += Time.deltaTime;
+            _holdProgressBar.fillAmount = _holdTimer / holdDuration;
 
-            if (holdTimer >= holdDuration)
+            if (_holdTimer >= holdDuration)
             {
-                currentTarget.Interact();
-                isHolding = false;
-                holdTimer = 0f;
-                holdProgressBar.gameObject.SetActive(false);
-                holdProgressBar.fillAmount = 0f;
+                _currentTarget.Interact();
+                _isHolding = false;
+                _holdTimer = 0f;
+                _holdProgressBar.gameObject.SetActive(false);
+                _holdProgressBar.fillAmount = 0f;
             }
         }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (_currentTarget == null) return;
+
+        // If interaction requires hold activate the holding mechanics
+        if (_currentTarget.RequiresHold)
         {
-            if (currentTarget != null)
+            if (context.started)
             {
-                isHolding = true;
-                holdTimer = 0f;
-                holdProgressBar.gameObject.SetActive(true);
+                if (_currentTarget != null)
+                {
+                    _isHolding = true;
+                    _holdTimer = 0f;
+                    _holdProgressBar.gameObject.SetActive(true);
+                }
+            }
+            else if (context.canceled)
+            {
+                _isHolding = false;
+                _holdTimer = 0f;
+                _holdProgressBar.gameObject.SetActive(false);
+                _holdProgressBar.fillAmount = 0f;
             }
         }
-        else if (context.canceled)
+        // Else, just straight to interact
+        else
         {
-            isHolding = false;
-            holdTimer = 0f;
-            holdProgressBar.gameObject.SetActive(false);
-            holdProgressBar.fillAmount = 0f;
+            if(context.performed)
+            {
+                _currentTarget.Interact();
+            }
         }
     }
 
@@ -63,9 +80,9 @@ public class InteractableDetector : MonoBehaviour
     {
         if (other.TryGetComponent(out IInteractable interactable))
         {
-            interactablesInRange.Add(interactable);
-            currentTarget = GetClosestInteractable();
-            interactionIcon.SetActive(true);
+            _interactablesInRange.Add(interactable);
+            _currentTarget = GetClosestInteractable();
+            _interactionIcon.SetActive(true);
         }
     }
 
@@ -73,22 +90,22 @@ public class InteractableDetector : MonoBehaviour
     {
         if (other.TryGetComponent(out IInteractable interactable))
         {
-            interactablesInRange.Remove(interactable);
-            currentTarget = GetClosestInteractable();
+            _interactablesInRange.Remove(interactable);
+            _currentTarget = GetClosestInteractable();
 
-            if (currentTarget == null)
-                interactionIcon.SetActive(false);
+            if (_currentTarget == null)
+                _interactionIcon.SetActive(false);
         }
     }
 
     private IInteractable GetClosestInteractable()
     {
-        if (interactablesInRange.Count == 0) return null;
+        if (_interactablesInRange.Count == 0) return null;
 
         float minDist = float.MaxValue;
         IInteractable closest = null;
 
-        foreach (var i in interactablesInRange)
+        foreach (var i in _interactablesInRange)
         {
             var go = (i as MonoBehaviour).gameObject;
             float dist = Vector2.Distance(transform.position, go.transform.position);

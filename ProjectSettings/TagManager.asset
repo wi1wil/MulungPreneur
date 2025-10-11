@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Item
   - SpawnableArea
@@ -68,3 +68,11 @@ TagManager:
   - name: Decor
     uniqueID: 456522639
     locked: 0
+  - name: PlayerV2
+    uniqueID: 4274740845
+    locked: 0
+  - name: Menu
+    uniqueID: 3683717833
+    locked: 0
+  m_RenderingLayers:
+  - Default

@@ -6,15 +6,15 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject[] cloudPrefabs;
     public GameObject cloudParent;
-    private float timer = 4f;
+    private float _timer = 4f;
 
     public void Update()
     {
-        timer += Time.deltaTime;
+        _timer += Time.deltaTime;
         
-        if(timer > 3f)
+        if(_timer > 3f)
         {
-            timer = 0f;
+            _timer = 0f;
 
             int count = Random.Range(1,3);
             for (int i = 0; i < count; i++)

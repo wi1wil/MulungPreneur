@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class ItemPrefab : MonoBehaviour, IInteractable
 {
+    private SpriteRenderer _icon;
     public ItemsSO itemData;
+    public int quantity = 1;
+
+    public bool RequiresHold => true;
+
+    private void Awake()
+    {
+        _icon = GetComponent<SpriteRenderer>();
+        _icon.sprite = itemData.itemIcon;
+    }
 
     public void Interact()
     {
         Debug.Log("Picked up");
         // InventoryManager.instance.AddItem(itemData);
+        ItemPopUps.Instance.DisplayPopUp(itemData.itemName, itemData.itemIcon);
         Destroy(gameObject);
     }
 }

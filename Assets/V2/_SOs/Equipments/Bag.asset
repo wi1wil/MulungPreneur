@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368a4411906022c46a75454354563d78, type: 3}
+  m_Name: Bag
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentsSO
+  equipmentName:
+  - Plastic Bag
+  - Shopping Bag
+  - School Bag
+  - Backpacking Bag
+  equipmentType: 0
+  equipmentSprites:
+  - {fileID: 1254510566, guid: ddf0d0ad5c1dfae4189fb32ea685e5e6, type: 3}
+  - {fileID: -2074833435, guid: ddf0d0ad5c1dfae4189fb32ea685e5e6, type: 3}
+  - {fileID: -1950458080, guid: ddf0d0ad5c1dfae4189fb32ea685e5e6, type: 3}
+  - {fileID: 445947139, guid: ddf0d0ad5c1dfae4189fb32ea685e5e6, type: 3}
+  equipmentPrices: 50c30000e0930400c0270900804f1200
+  statIncrease: 6

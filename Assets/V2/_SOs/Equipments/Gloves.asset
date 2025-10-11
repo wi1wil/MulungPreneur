@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368a4411906022c46a75454354563d78, type: 3}
+  m_Name: Gloves
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentsSO
+  equipmentName:
+  - None
+  - Plastic Gloves
+  - Rubber Gloves
+  equipmentType: 2
+  equipmentSprites:
+  - {fileID: -221336298, guid: 22028988350c9124a87e6417d5dcc320, type: 3}
+  - {fileID: -996243982, guid: 22028988350c9124a87e6417d5dcc320, type: 3}
+  - {fileID: 351879261, guid: 22028988350c9124a87e6417d5dcc320, type: 3}
+  equipmentPrices: a086010020a1070040420f00
+  statIncrease: 0.25

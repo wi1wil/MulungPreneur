@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private GameObject _pauseMenuUI;
 
     public void OnOpenMenu(InputAction.CallbackContext context)
     {
@@ -14,13 +14,13 @@ public class MenuManager : MonoBehaviour
 
             if (MenuPauseManager.instance.gamePaused)
             {
-                playerInput.SwitchCurrentActionMap("UI");
-                if (pauseMenuUI != null) pauseMenuUI.SetActive(true);
+                _playerInput.SwitchCurrentActionMap("UI");
+                if (_pauseMenuUI != null) _pauseMenuUI.SetActive(true);
             }
             else
             {
-                playerInput.SwitchCurrentActionMap("Player");
-                if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
+                _playerInput.SwitchCurrentActionMap("Player");
+                if (_pauseMenuUI != null) _pauseMenuUI.SetActive(false);
             }
         }
     }

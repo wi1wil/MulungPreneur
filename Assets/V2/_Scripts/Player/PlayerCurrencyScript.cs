@@ -1,19 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerCurrencyScript : MonoBehaviour
 {
-    public int playersCurrency = 0;
-    public TMP_Text currencyText;
+    public int playerCurrency;
+    public Text currencyText;
 
     public void AddCurrency(int itemValue)
     {
-        playersCurrency += itemValue;
-        updateText();
+        playerCurrency += itemValue;
+        UpdateText();
     }
 
-    public void updateText()
+    public void DecreaseCurrency(int amount)
     {
-        currencyText.text = playersCurrency.ToString();
+        playerCurrency -= amount;
+        UpdateText();
+    }
+
+    public void UpdateText()
+    {
+        currencyText.text = playerCurrency.ToString();
     }
 }

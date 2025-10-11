@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CloudPrefab : MonoBehaviour
 {
-    private float speed;
+    private float _speed;
 
     public void Start()
     {
-        speed = Random.Range(0.2f, 1f);
+        _speed = Random.Range(0.2f, 1f);
     }
 
     public void Update()
     {
-        this.transform.position -= new Vector3(speed, 0f, 0f);
+        this.transform.position -= new Vector3(_speed, 0f, 0f);
 
         CheckForOutOfBounds(gameObject);
     }
