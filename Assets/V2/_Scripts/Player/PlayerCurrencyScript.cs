@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class PlayerCurrencyScript : MonoBehaviour
 {
     public int playerCurrency;
-    public Text currencyText;
+    public List<Text> currencyText;
 
     public void AddCurrency(int itemValue)
     {
@@ -21,6 +22,9 @@ public class PlayerCurrencyScript : MonoBehaviour
 
     public void UpdateText()
     {
-        currencyText.text = playerCurrency.ToString();
+        for(int i = 0; i < currencyText.Count; i++)
+        {
+            currencyText[i].text = playerCurrency.ToString();
+        }
     }
 }

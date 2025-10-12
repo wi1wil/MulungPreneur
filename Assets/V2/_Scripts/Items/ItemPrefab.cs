@@ -19,7 +19,7 @@ public class ItemPrefab : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("Picked up");
-        // InventoryManager.instance.AddItem(itemData);
+        InventoryManager.Instance.AddItem(itemData, quantity);
         ItemPopUps.Instance.DisplayPopUp(itemData.itemName, itemData.itemIcon);
         Destroy(gameObject);
     }

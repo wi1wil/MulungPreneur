@@ -19,9 +19,9 @@ public class ItemPopUpUI : MonoBehaviour
     
     private IEnumerator FadeOutAndDestroy(float duration)
     {
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSecondsRealtime(duration);
         float fadeTime = 1f;
-        for (float t = 0; t < fadeTime; t += Time.deltaTime)
+        for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)
         {
             _canvasGroup.alpha = 1f - t / fadeTime;
             yield return null;

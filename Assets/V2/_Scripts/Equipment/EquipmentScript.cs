@@ -60,13 +60,14 @@ public class EquipmentScript : MonoBehaviour
         }
 
         _playerCurrency.DecreaseCurrency(equipment.equipmentPrices[currentLevel]);
+        Debug.Log($"Upgrading {equipment.equipmentName[currentLevel]} for {price} currency");
+        Debug.Log($"Player Currency after upgrade: {_playerCurrency.playerCurrency}");
         currentLevel++;
         SetLevel(equipment, currentLevel);
 
         UpgradeEffect(equipment);
         UpdateAll();
         _ui.UpdateAllUI();
-        Debug.Log($"Upgaded {equipment.equipmentName[currentLevel]} to level {currentLevel}!");
     }
 
     private void UpgradeEffect(EquipmentsSO equipment)
@@ -77,12 +78,15 @@ public class EquipmentScript : MonoBehaviour
                 // Add inventory slots;
                 break;
             case EquipmentType.Footwear:
+                Debug.Log($"Added {equipment.statIncrease} to current {_playerMovement.speed}");
                 _playerMovement.speed += equipment.statIncrease;
                 break;
             case EquipmentType.Gloves:
+                Debug.Log($"Reduced the current {_interactableDetector.holdDuration} to {_interactableDetector.holdDuration - equipment.statIncrease} ");
                 _interactableDetector.holdDuration -= equipment.statIncrease;
                 break;
             case EquipmentType.PickingTool:
+                Debug.Log($"Added the {_interactableDetector.pickUpRadius} by {equipment.statIncrease} = {_interactableDetector.pickUpRadius + equipment.statIncrease}");
                 _interactableDetector.pickUpRadius += equipment.statIncrease;
                 break;
         }
@@ -99,18 +103,11 @@ public class EquipmentScript : MonoBehaviour
 
     public string GetStatus(EquipmentsSO equipment, int currentLevel)
     {
-        if (equipment.equipmentPrices[currentLevel] > _playerCurrency.playerCurrency)
-        {
-            return "Too Broke!";
-        }
-        else if (GetLevel(equipment) == equipment.maxLevel)
-        {
+        if (currentLevel >= equipment.maxLevel - 1)
             return "Max Level!";
-        }
-        else
-        {
-            return "Upgradeable";
-        }
+        if (_playerCurrency.playerCurrency < equipment.equipmentPrices[currentLevel])
+            return "Too Broke!";
+        return "Upgradeable";
     }
 
     private void SetLevel(EquipmentsSO equipment, int newLevel)
@@ -120,4 +117,9 @@ public class EquipmentScript : MonoBehaviour
         else if (equipment == gloves) _gloveLevel = newLevel;
         else if (equipment == tools) _toolLevel = newLevel;
     }
+
+    public void OnBagUpgradeButton() => UpgradeEquipment(bags);
+    public void OnFootwearUpgradeButton() => UpgradeEquipment(footwear);
+    public void OnGlovesUpgradeButton() => UpgradeEquipment(gloves);
+    public void OnToolsUpgradeButton() => UpgradeEquipment(tools);
 }

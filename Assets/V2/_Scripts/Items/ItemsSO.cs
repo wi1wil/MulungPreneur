@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemsSO : ScriptableObject
 {
     [Header("Item Info")]
-    public string itemID;
+    public int itemID;
     public string itemName;
     public string itemDesc;
     public int itemPrice;

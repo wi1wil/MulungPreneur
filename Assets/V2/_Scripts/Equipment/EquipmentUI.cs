@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Globalization;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class EquipmentUI : MonoBehaviour
 {
@@ -10,28 +11,34 @@ public class EquipmentUI : MonoBehaviour
     private PlayerCurrencyScript _playerCurrency;
 
     [Header("Bag UI")]
-    public Image bagImage;
-    public TMP_Text bagName;
-    public TMP_Text bagLevel;
-    public TMP_Text bagStatus;
+    public List<Image> bagImage;
+    public List<TMP_Text> bagName;
+    public List<TMP_Text> bagLevel;
+    public List<TMP_Text> bagStatus;
 
     [Header("Gloves UI")]
-    public Image glovesImage;
-    public TMP_Text glovesName;
-    public TMP_Text glovesLevel;
-    public TMP_Text glovesStatus;
+    public List<Image> glovesImage;
+    public List<TMP_Text> glovesName;
+    public List<TMP_Text> glovesLevel;
+    public List<TMP_Text> glovesStatus;
 
     [Header("Footwear UI")]
-    public Image footwearImage;
-    public TMP_Text footwearName;
-    public TMP_Text footwearLevel;
-    public TMP_Text footwearStatus;
+    public List<Image> footwearImage;
+    public List<TMP_Text> footwearName;
+    public List<TMP_Text> footwearLevel;
+    public List<TMP_Text> footwearStatus;
 
     [Header("Tool UI")]
-    public Image toolImage;
-    public TMP_Text toolName;
-    public TMP_Text toolLevel;
-    public TMP_Text toolStatus;
+    public List<Image> toolImage;
+    public List<TMP_Text> toolName;
+    public List<TMP_Text> toolLevel;
+    public List<TMP_Text> toolStatus;
+
+    [Header("Upgrade Buttons")]
+    public Button upgradeBagButton;
+    public Button upgradeGlovesButton;
+    public Button upgradeFootwearButton;
+    public Button upgradeToolsButton;
 
     void Awake()
     {
@@ -47,20 +54,54 @@ public class EquipmentUI : MonoBehaviour
     public void UpdateAllUI()
     {
         _playerCurrency.UpdateText();
+
+        UpdateUpgradeButtons();
         UpdateUI(_equipmentScript.bags, _equipmentScript, bagImage, bagName, bagLevel, bagStatus);
         UpdateUI(_equipmentScript.gloves, _equipmentScript, glovesImage, glovesName, glovesLevel, glovesStatus);
         UpdateUI(_equipmentScript.footwear, _equipmentScript, footwearImage, footwearName, footwearLevel, footwearStatus);
         UpdateUI(_equipmentScript.tools, _equipmentScript, toolImage, toolName, toolLevel, toolStatus);
+
         Debug.Log("Updated all equipments");
     }
 
-    private void UpdateUI(EquipmentsSO equipmentSO, EquipmentScript equipment, Image icon, TMP_Text nameText, TMP_Text levelText, TMP_Text statusText)
+    public void UpdateUpgradeButtons()
+    {
+        UpdateButtonState(_equipmentScript.bags, _equipmentScript, upgradeBagButton);
+        UpdateButtonState(_equipmentScript.gloves, _equipmentScript, upgradeGlovesButton);
+        UpdateButtonState(_equipmentScript.footwear, _equipmentScript, upgradeFootwearButton);
+        UpdateButtonState(_equipmentScript.tools, _equipmentScript, upgradeToolsButton);
+    }
+
+    private void UpdateButtonState(
+        EquipmentsSO equipmentsSO,
+        EquipmentScript equipmentScript,
+        Button upgradeButton
+        )
+    {
+        if (equipmentsSO == null) return;
+        int level = equipmentScript.GetLevel(equipmentsSO);
+        bool isMaxed = level >= equipmentsSO.maxLevel - 1;
+        bool canAfford = !isMaxed && _playerCurrency.playerCurrency >= equipmentsSO.equipmentPrices[level];
+        upgradeButton.gameObject.SetActive(canAfford);
+    }
+
+    private void UpdateUI(
+        EquipmentsSO equipmentSO,
+        EquipmentScript equipment,
+        List<Image> icon,
+        List<TMP_Text> nameText,
+        List<TMP_Text> levelText,
+        List<TMP_Text> statusText 
+        )
     {
         if (equipmentSO == null) return;
         int currentLevel = equipment.GetLevel(equipmentSO);
-        icon.sprite = equipmentSO.equipmentSprites[currentLevel];
-        nameText.text = equipmentSO.equipmentName[currentLevel];
-        levelText.text = $"Level: {currentLevel + 1}";
-        statusText.text = equipment.GetStatus(equipmentSO, currentLevel);
+        for(int i = 0; i < icon.Count; i++)
+        {
+            icon[i].sprite = equipmentSO.equipmentSprites[currentLevel];
+            nameText[i].text = equipmentSO.equipmentName[currentLevel];
+            levelText[i].text = $"Level: {currentLevel + 1}";
+            statusText[i].text = equipment.GetStatus(equipmentSO, currentLevel);
+        }
     }
 }

@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCShopKeeper : MonoBehaviour
+public class NPCShopKeeper : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool RequiresHold => false;
+    private EquipmentUI _equipmentUI;
+    private ShopUIManager _shopUIManager;
+
+    [SerializeField] private GameObject _shopPanel;
+
+    private void Start()
     {
-        
+        _equipmentUI = FindAnyObjectByType<EquipmentUI>();
+        _shopUIManager = FindAnyObjectByType<ShopUIManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        MenuPauseManager.instance.TogglePause();
+        if (_shopPanel.activeSelf)
+        {
+            _shopPanel.SetActive(false);
+        }
+        else
+        {
+            _shopUIManager.PopulateShopItems(InventoryManager.Instance.GetInventory());
+            _equipmentUI.UpdateAllUI();
+            _shopPanel.SetActive(true);
+        }
     }
 }

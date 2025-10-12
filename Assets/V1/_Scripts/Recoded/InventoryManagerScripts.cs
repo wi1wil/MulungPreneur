@@ -140,16 +140,16 @@ public class InventoryManagerScripts : MonoBehaviour
         return true;
     }
 
-    public List<InventorySaveData> getInventoryItem()
+    public List<InventorySaveDatas> getInventoryItem()
     {
-        List<InventorySaveData> invData = new List<InventorySaveData>();
+        List<InventorySaveDatas> invData = new List<InventorySaveDatas>();
         foreach (Transform slotTransfrom in inventoryPanel.transform)
         {
             Slot slot = slotTransfrom.GetComponent<Slot>();
             if (slot.currentItem != null)
             {
                 Item item = slot.currentItem.GetComponent<Item>();
-                invData.Add(new InventorySaveData
+                invData.Add(new InventorySaveDatas
                 {
                     itemID = item.id,
                     slotIndex = slot.transform.GetSiblingIndex(),
@@ -161,7 +161,7 @@ public class InventoryManagerScripts : MonoBehaviour
         return invData;
     }
 
-    public void setInventoryItem(List<InventorySaveData> inventorySaveData)
+    public void setInventoryItem(List<InventorySaveDatas> inventorySaveData)
     {
         // Clear inventory panel to avoid duplicates 
         foreach (Transform child in inventoryPanel.transform)
@@ -176,7 +176,7 @@ public class InventoryManagerScripts : MonoBehaviour
         }
 
         // Populate slots with saved items
-        foreach (InventorySaveData data in inventorySaveData)
+        foreach (InventorySaveDatas data in inventorySaveData)
         {
             if (data.slotIndex < inventorySize)
             {

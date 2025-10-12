@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3317904879115171203}
   - component: {fileID: 4929422091040706634}
   m_Layer: 5
-  m_Name: Price Text
+  m_Name: Item Price Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 385470668987337196}
   - component: {fileID: 913269487680161937}
   m_Layer: 5
-  m_Name: Item Quanitity Text
+  m_Name: Item Quantity Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -289,9 +289,9 @@ GameObject:
   - component: {fileID: 4661438083008716455}
   - component: {fileID: 4260922661388145764}
   - component: {fileID: 688027776330361198}
-  - component: {fileID: 3919542338088870049}
+  - component: {fileID: -1293007658317765555}
   m_Layer: 5
-  m_Name: Item Panel Template
+  m_Name: ShopItemPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 4101622528481948189, guid: 4a77b20bb5e91c7429a3e2449ac4f829, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3919542338088870049
+--- !u!114 &-1293007658317765555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,12 +368,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5479160762637161270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 485da446f3aad344fa301888d0397133, type: 3}
+  m_Script: {fileID: 11500000, guid: 5873623f6401a6f42a41928f31d277e0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopItemPrefab
   itemIcon: {fileID: 5645789309994646518}
-  itemName: {fileID: 5076534279309216909}
-  itemPrice: {fileID: 4929422091040706634}
+  itemNameText: {fileID: 5076534279309216909}
+  itemPriceText: {fileID: 4929422091040706634}
   itemQuantityText: {fileID: 913269487680161937}
   sellButton: {fileID: 4425769514176582140}
 --- !u!1 &7292972621218798901
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

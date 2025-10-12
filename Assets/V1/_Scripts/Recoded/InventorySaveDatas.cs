@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class InventorySaveData
+public class InventorySaveDatas
 {
     public int itemID;
     public int slotIndex;
