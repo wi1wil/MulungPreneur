@@ -13,7 +13,14 @@ public class ItemPrefab : MonoBehaviour, IInteractable
     private void Awake()
     {
         _icon = GetComponent<SpriteRenderer>();
-        _icon.sprite = itemData.itemIcon;
+    }
+
+    public void Initialize(ItemsSO data, int qty = 1)
+    {
+        itemData = data;
+        quantity = qty;
+        if (_icon != null && itemData != null)
+            _icon.sprite = itemData.itemIcon;
     }
 
     public void Interact()

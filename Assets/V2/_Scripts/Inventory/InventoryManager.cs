@@ -9,13 +9,15 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Inventory Settings")]
     public int maxItemStack = 64;
-    public int inventorySize = 24;
+    public int inventorySize = 6;
 
     private ItemDictionary _itemDictionary;
     private InventoryUIManager _invUI;
 
     private List<ItemStack> _inventory = new();
     public event Action onInvChanged;
+
+    public void InvokeInventoryChanged() => onInvChanged?.Invoke();
 
     void Awake()
     {
@@ -139,12 +141,51 @@ public class InventoryManager : MonoBehaviour
 
     public void InitializeInventory()
     {
-        for (int i = 0; i < inventorySize; i++)
+        // Remove extra slots if inventory has more than inventorySize
+        while (_inventory.Count > inventorySize)
+        {
+            _inventory.RemoveAt(_inventory.Count - 1);
+        }
+
+        // Add missing slots if inventory has less than inventorySize
+        while (_inventory.Count < inventorySize)
         {
             _inventory.Add(new ItemStack(null, 0));
         }
+
         onInvChanged?.Invoke();
     }
 
+    public Dictionary<ItemsSO, int> GetItemCountBySO()
+    {
+        Dictionary<ItemsSO, int> itemCount = new Dictionary<ItemsSO, int>();
+        foreach (ItemStack stack in _inventory)
+        {
+            if (stack.item != null)
+            {
+                if (itemCount.ContainsKey(stack.item))
+                    itemCount[stack.item] += stack.quantity;
+                else
+                    itemCount[stack.item] = stack.quantity;
+            }
+        }
+        return itemCount;
+    }
+
     public IReadOnlyList<ItemStack> GetInventory() => _inventory;
+
+    public bool InventoryFull()
+    {
+        foreach (ItemStack stack in _inventory)
+        {
+            // Slot is empty, inventory is not full
+            if (stack.IsEmpty())
+                return false;
+
+            // Slot still has space to stack more
+            if (stack.quantity < maxItemStack)
+                return false;
+        }
+        return true; // all slots full & maxed out
+    }
 }

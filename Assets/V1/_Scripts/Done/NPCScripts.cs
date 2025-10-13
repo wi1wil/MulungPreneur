@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class NPCScripts : MonoBehaviour, IInteractables
+public class NPCScripts : MonoBehaviour, IInteractable
 {
+    public bool RequiresHold => false;
     public NPCDialogueScripts dialogueData;
     private DialogueManagerScript dialogueManager;
 

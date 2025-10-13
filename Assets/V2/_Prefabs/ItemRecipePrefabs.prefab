@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 5814484075075732466}
   - component: {fileID: 5121593738949328321}
   - component: {fileID: 165340879801574967}
+  - component: {fileID: 6897991501021114078}
   m_Layer: 0
   m_Name: ItemRecipePrefabs
   m_TagString: Untagged
@@ -481,6 +482,23 @@ MonoBehaviour:
   icon: {fileID: 1119641141727578726}
   nameText: {fileID: 1576734626516385167}
   requirementsParent: {fileID: 794551184302686663}
+  requirementPrefab: {fileID: 8242173115228176372, guid: 8c0bc5fc75b34e74d85d40601cf87085, type: 3}
+  craftButton: {fileID: 2069983703987423300}
+--- !u!114 &6897991501021114078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463728669277021026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d827e8efaa87cd046b6e4649a31ce40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrafterItemPrefab
+  icon: {fileID: 1119641141727578726}
+  nameText: {fileID: 1576734626516385167}
+  requirementsParent: {fileID: 8107368714252773167}
   requirementPrefab: {fileID: 8242173115228176372, guid: 8c0bc5fc75b34e74d85d40601cf87085, type: 3}
   craftButton: {fileID: 2069983703987423300}
 --- !u!1 &7230391919468462299

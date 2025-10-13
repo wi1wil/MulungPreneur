@@ -19,7 +19,7 @@ TagManager:
   - UI
   - Map
   - Ground
-  - 
+  - No Light
   - 
   - 
   - 
@@ -62,17 +62,17 @@ TagManager:
   - name: Player
     uniqueID: 1904855199
     locked: 0
-  - name: WalkBehind
-    uniqueID: 1626191397
-    locked: 0
-  - name: Decor
-    uniqueID: 456522639
-    locked: 0
   - name: PlayerV2
     uniqueID: 4274740845
     locked: 0
+  - name: WalkBehind
+    uniqueID: 1626191397
+    locked: 0
   - name: Menu
     uniqueID: 3683717833
+    locked: 0
+  - name: No Light
+    uniqueID: 342297075
     locked: 0
   m_RenderingLayers:
   - Default

@@ -32,10 +32,18 @@ public class InventoryUIManager : MonoBehaviour
     void RefreshUI()
     {
         var inventory = InventoryManager.Instance.GetInventory();
+        if (_slots.Count != inventory.Count)
+        {
+            foreach (var slot in _slots)
+                Destroy(slot.gameObject);
+            _slots.Clear();
+            GenerateUISlots();
+            return;
+        }
+        
         for(int i = 0; i < _slots.Count; i++)
         {
             _slots[i].SetItem(inventory[i]);
         }
     }
-
 }

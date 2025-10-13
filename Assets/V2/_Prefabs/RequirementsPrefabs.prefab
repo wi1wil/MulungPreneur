@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4007135063696333079}
   - component: {fileID: 5166067512727037691}
   - component: {fileID: 5452515656033169085}
+  - component: {fileID: 301576555373463901}
   m_Layer: 0
   m_Name: RequirementsPrefabs
   m_TagString: Untagged
@@ -227,5 +228,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd844ca147b480649aef84d369f3932f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RecipeRequirementsUI
+  icon: {fileID: 5166067512727037691}
+  text: {fileID: 4938736705162239032}
+--- !u!114 &301576555373463901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242173115228176372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd072ff5c5461741b2d0c12edce51d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeReqUI
   icon: {fileID: 5166067512727037691}
   text: {fileID: 4938736705162239032}

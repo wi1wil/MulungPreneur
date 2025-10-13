@@ -19,7 +19,7 @@ public class CrafterUIManager : MonoBehaviour
     [Header("Crafting Slot Prefab")]
     public GameObject craftingSlotPrefab;
 
-    private List<ItemRecipePrefabs> spawned = new List<ItemRecipePrefabs>();
+    private List<CrafterItemPrefabs> spawned = new List<CrafterItemPrefabs>();
 
     void Awake()
     {
@@ -45,7 +45,7 @@ public class CrafterUIManager : MonoBehaviour
         foreach (var r in recipes)
         {
             var go = Instantiate(craftItemPrefab, content);
-            var ui = go.GetComponent<ItemRecipePrefabs>();
+            var ui = go.GetComponent<CrafterItemPrefabs>();
             ui.Setup(r, this);
             spawned.Add(ui);
         }

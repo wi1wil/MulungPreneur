@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 483856993074112511}
   - component: {fileID: 8685520064747380069}
   - component: {fileID: 1930035821423569763}
+  - component: {fileID: 4176832378526397625}
   m_Layer: 0
   m_Name: CraftingProgress
   m_TagString: Untagged
@@ -635,6 +636,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f448aa0f4d24e45970ec12e9fbd075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrafterSlotUI
+  craftingNameText: {fileID: 7820052064588478971}
+  progressFill: {fileID: 7569092559242154168}
+  claimButton: {fileID: 9176952549960446512}
+  itemIcon: {fileID: 4886847740780148042}
+--- !u!114 &4176832378526397625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434421184702218438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a685f8e2cbca254bb412d5cfbc961ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrafterSlotUIV2
   craftingNameText: {fileID: 7820052064588478971}
   progressFill: {fileID: 7569092559242154168}
   claimButton: {fileID: 9176952549960446512}

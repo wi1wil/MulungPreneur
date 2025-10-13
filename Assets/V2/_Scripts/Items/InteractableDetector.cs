@@ -117,4 +117,9 @@ public class InteractableDetector : MonoBehaviour
         }
         return closest;
     }
+
+    public void UpdateCircleRange()
+    {
+        _pickUpRange.radius = pickUpRadius;
+    }
 }
