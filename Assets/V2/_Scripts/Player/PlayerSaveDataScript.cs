@@ -19,4 +19,6 @@ public class PlayerSaveDataScript
 
     // Inventory
     public List<InventorySaveData> inventory = new List<InventorySaveData>();
+    public List<QuestProgression> questProgressData;
+    public List<string> handedInQuests;
 }

@@ -18,13 +18,14 @@ public class NPCShopKeeper : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        MenuPauseManager.instance.TogglePause();
         if (_shopPanel.activeSelf)
         {
+            MenuPauseManager.instance.SetPaused(false);
             _shopPanel.SetActive(false);
         }
         else
         {
+            MenuPauseManager.instance.SetPaused(true);
             _shopUIManager.PopulateShopItems(InventoryManager.Instance.GetInventory());
             _equipmentUI.UpdateAllUI();
             _shopPanel.SetActive(true);

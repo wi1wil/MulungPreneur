@@ -16,6 +16,7 @@ public class CrafterInteractV2 : MonoBehaviour, IInteractable
         }
         else
         {
+            if(CrafterUIManagerV2.Instance == null) Debug.LogWarning("CrafterUIManagerV2 Instance is null!");
             CrafterUIManagerV2.Instance.Open(crafterManager, stationRecipes, progressContent);
         }
     }

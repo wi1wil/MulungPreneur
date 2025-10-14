@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a21e1e4b078b2641ac114f023dca0a8, type: 3}
+  m_Name: Ilmuwan
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Ilmuwan
+  npcPotrait: {fileID: -1238335333, guid: c3f00b7034f40d34793e3eb68a2cea20, type: 3}
+  dialogueLines:
+  - Ah, kamu datang tepat waktu.
+  - Bisa bantu kami dengan mengirimkan  beberapa sampel dari bahan yang sudah kamu
+    olah?
+  - Kami sedang meneliti efektivitas daur ulang.
+  - Oke akan saya kerjakan tapi ini kok bisa cepet ya?
+  - bukannya kamu cuman ke tukang?
+  - Baiklah terima kasih silahkan ambil
+  - Baiklah saya harap kamu jujur
+  - 'Silahkan ambil '
+  autoProgressLines: 0000000000000000
+  endDialogueLines: 0000000000000000
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - halo pak
+    - gimana tuh pak?
+    nextDialogueIndices: 0100000001000000
+    givesQuest: 0000
+  - dialogueIndex: 1
+    choices:
+    - buat apa?
+    nextDialogueIndices: 02000000
+    givesQuest: 01
+  - dialogueIndex: 3
+    choices:
+    - Soalnya saya yang daur ulang pak
+    nextDialogueIndices: 04000000
+    givesQuest: 00
+  - dialogueIndex: 4
+    choices:
+    - eeeee ya gitu lah pak
+    - tentu tidak
+    nextDialogueIndices: 0500000006000000
+    givesQuest: 0000
+  - dialogueIndex: 6
+    choices:
+    - Tenang saja
+    nextDialogueIndices: 07000000
+    givesQuest: 00
+  textSpeed: 0.05
+  autoProgressDelay: 2
+  questInProgressIdx: 2
+  questCompletedIdx: 3
+  quest: {fileID: 11400000, guid: 931d05f465c41bf4eb820e67a6d9b88d, type: 2}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a21e1e4b078b2641ac114f023dca0a8, type: 3}
+  m_Name: Damar
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Damar
+  npcPotrait: {fileID: 3870401196320861207, guid: a98e4dc925141794f8525e86bdcd8e85, type: 3}
+  dialogueLines:
+  - Eh tolong aku dong
+  - Aku butuh barang elektronik banyak nih yang rusak rusak
+  - Gw mau bikin eksperimen biar jago ngoprek
+  - apa aja deh 1 aja gpp
+  - Wah makasih! Besok-besok kalau ada sampah aneh, kabarin gue ya!
+  - Ih nanti balik ya
+  autoProgressLines: 000000000000
+  endDialogueLines: 000000000101
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Iya , Kenapa?
+    nextDialogueIndices: 01000000
+    givesQuest: 
+  - dialogueIndex: 1
+    choices:
+    - Mau buat apa?
+    nextDialogueIndices: 02000000
+    givesQuest: 00
+  - dialogueIndex: 2
+    choices:
+    - Ga ah lagi sibuk
+    - Apa yang dicari?
+    nextDialogueIndices: 0500000003000000
+    givesQuest: 0001
+  textSpeed: 0.05
+  autoProgressDelay: 2
+  questInProgressIdx: 3
+  questCompletedIdx: 4
+  quest: {fileID: 11400000, guid: c721a8c7d3e2c884bb6d7b9796e756c2, type: 2}

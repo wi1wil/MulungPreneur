@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc3bbe010a53e34dbe2c9989ca51fc5, type: 3}
+  m_Name: Damar
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questID: M59d95faa-68ec-4a35-a27a-63c196cf1864
+  questName: Manusia Elektronik
+  objectives:
+  - targetItem: {fileID: 11400000, guid: f99a10b3c7db2974a9855a36e281e939, type: 2}
+    description: Ambil 2 Baterai
+    type: 0
+    requiredAmount: 2
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: c58b4054259fa05498893ef7a17afc41, type: 2}
+    description: Ambil 1 HP Rusak
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: 00a2920f3fcd7c04996de1ef5990ff70, type: 2}
+    description: Ambil 2 Kabel
+    type: 0
+    requiredAmount: 2
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: 3fc9473d2cc292b43bf6399f55f6ac01, type: 2}
+    description: Ambil 1 Kabel Roll
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
+  rewards:
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 7b1383a2452adc74fb8623b7dc9cd636, type: 2}
+    amount: 2
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 4839a8631a0103042b463d2c3839ccb5, type: 2}
+    amount: 2
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 0e5a0340686267c4599cf841d15dc7ba, type: 2}
+    amount: 1

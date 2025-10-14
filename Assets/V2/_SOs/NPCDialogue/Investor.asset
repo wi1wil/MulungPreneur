@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a21e1e4b078b2641ac114f023dca0a8, type: 3}
+  m_Name: Investor
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Investor
+  npcPotrait: {fileID: -1887569754, guid: 3459e3e13c11c44449cdbf8928203373, type: 3}
+  dialogueLines:
+  - Di lagi ngapain
+  - Oh oke
+  - 'Kalau ketemu kasih tau saya  '
+  - udah gausah banyak nanya ! buat proyek pribadi
+  - Nah sip , makasih yak nih tambahan +15.000 gausah bilang orang-orang
+  - Ah adalah..... nanti kamu paham
+  autoProgressLines: 000000000000
+  endDialogueLines: 000000010000
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Sibuk Pak
+    - Mulung Pak
+    nextDialogueIndices: 0100000002000000
+    givesQuest: 0000
+  - dialogueIndex: 2
+    choices:
+    - Buat apa pak?
+    nextDialogueIndices: 03000000
+    givesQuest: 01
+  - dialogueIndex: 4
+    choices:
+    - Tapi ini buat apa pak?
+    nextDialogueIndices: 05000000
+    givesQuest: 00
+  textSpeed: 0.05
+  autoProgressDelay: 2
+  questInProgressIdx: 3
+  questCompletedIdx: 4
+  quest: {fileID: 11400000, guid: 237e227ce3b6e164898dba3a70306ae3, type: 2}

@@ -4,13 +4,14 @@ using TMPro;
 
 public class ShopItemPrefab : MonoBehaviour
 {
+    [Header("UI Elements")]
     public Image itemIcon;
     public Text itemNameText;
     public Text itemPriceText;
     public Text itemQuantityText;
     public Button sellButton;
 
-    private int _itemId;
+    private ItemsSO _itemSO;
     private int _itemQuantity;
     private int _itemPrice;
 
@@ -27,7 +28,7 @@ public class ShopItemPrefab : MonoBehaviour
     {
         if (item == null) return;
 
-        _itemId = item.itemID;
+        _itemSO = item;                 
         _itemQuantity = quantity;
         _itemPrice = item.itemPrice;
 
@@ -44,6 +45,7 @@ public class ShopItemPrefab : MonoBehaviour
     {
         _itemQuantity = quantity;
         itemQuantityText.text = $"x{_itemQuantity}";
+
         if (_itemQuantity <= 0)
         {
             Destroy(gameObject);
@@ -54,12 +56,14 @@ public class ShopItemPrefab : MonoBehaviour
     {
         if (_itemQuantity <= 0) return;
 
-        InventoryManager.Instance.RemoveItem(_itemId, 1);
+        // Remove 1 item using SO reference
+        InventoryManager.Instance.RemoveItem(_itemSO, 1);
         _playerCurrency.AddCurrency(_itemPrice);
 
         _itemQuantity--;
-
         UpdateQuantity(_itemQuantity);
-        _shopUIManager.UpdateItemQuantity(_itemId, _itemQuantity);
+
+        // Update UI in ShopUIManager (also use SO)
+        _shopUIManager.UpdateItemQuantity(_itemSO, _itemQuantity);
     }
 }

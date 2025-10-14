@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a21e1e4b078b2641ac114f023dca0a8, type: 3}
+  m_Name: Nelayan
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Nelayan
+  npcPotrait: {fileID: 1621396217, guid: 0534008a7824eec4196277de5fd12736, type: 3}
+  dialogueLines:
+  - Eh Abdull....
+  - 'Ahhahahahah, itu dia abdiulll '
+  - eh saya mau mintol...
+  - yaudahh nanti balik lagi ya nak
+  - 'eh saya mau mintol ambilin hp saya jatuh gatau dimana '
+  - miskin-miskin gini saya mah tetep ada rezeki
+  - hahaha makasih
+  - nah ini dia yang saya cari hahaha
+  - Ya emang namanya juga hahapepe
+  - Lucu kan saya hahaha, nih ambil 1 pancingan saya
+  autoProgressLines: 00000000000000000000
+  endDialogueLines: 00000001000001000001
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Aku Adii pak
+    nextDialogueIndices: 01000000
+    givesQuest: 00
+  - dialogueIndex: 1
+    choices:
+    - saya duluan ya
+    nextDialogueIndices: 02000000
+    givesQuest: 00
+  - dialogueIndex: 2
+    choices:
+    - duh sibuk pak
+    - butuh apa pak?
+    nextDialogueIndices: 0300000004000000
+    givesQuest: 0000
+  - dialogueIndex: 4
+    choices:
+    - 'duh ribet pak '
+    - bapak punya hape?
+    nextDialogueIndices: 0300000005000000
+    givesQuest: 0000
+  - dialogueIndex: 5
+    choices:
+    - Oke saya cariin
+    nextDialogueIndices: 06000000
+    givesQuest: 01
+  - dialogueIndex: 7
+    choices:
+    - tapi ini dh rusak pak
+    nextDialogueIndices: 08000000
+    givesQuest: 00
+  - dialogueIndex: 8
+    choices:
+    - ??
+    nextDialogueIndices: 09000000
+    givesQuest: 00
+  textSpeed: 0.05
+  autoProgressDelay: 2
+  questInProgressIdx: 6
+  questCompletedIdx: 7
+  quest: {fileID: 11400000, guid: 0004fac8dc225ce40826f1077525f738, type: 2}

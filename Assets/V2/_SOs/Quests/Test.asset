@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc3bbe010a53e34dbe2c9989ca51fc5, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questID: TEst24cc51b7-493a-41d5-855d-c8e4c47ab5ee
+  questName: Test
+  objectives:
+  - targetItem: {fileID: 11400000, guid: 167366d4975c4e1469d1ad2a72cf4111, type: 2}
+    description: Ambil kayu
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
+  rewards:
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 5e85c83d6b0c1b34a8da0cce0b652da5, type: 2}
+    amount: 1
+  - rewardType: 1
+    itemReward: {fileID: 0}
+    amount: 10000

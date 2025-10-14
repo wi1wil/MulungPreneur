@@ -8,20 +8,21 @@ public class MenuManager : MonoBehaviour
 
     public void OnOpenMenu(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            MenuPauseManager.instance.TogglePause();
+        if (!context.performed) return;
+        if (NPCDialogueManager.Instance.dialoguePanel.activeSelf || CrafterUIManagerV2.Instance.gameObject.activeSelf)
+        return;
+        bool shouldPause = !MenuPauseManager.instance.gamePaused;
+        MenuPauseManager.instance.SetPaused(shouldPause);
 
-            if (MenuPauseManager.instance.gamePaused)
-            {
-                _playerInput.SwitchCurrentActionMap("UI");
-                if (_pauseMenuUI != null) _pauseMenuUI.SetActive(true);
-            }
-            else
-            {
-                _playerInput.SwitchCurrentActionMap("Player");
-                if (_pauseMenuUI != null) _pauseMenuUI.SetActive(false);
-            }
+        if (shouldPause)
+        {
+            _playerInput.SwitchCurrentActionMap("UI");
+            if (_pauseMenuUI != null) _pauseMenuUI.SetActive(true);
+        }
+        else
+        {
+            _playerInput.SwitchCurrentActionMap("Player");
+            if (_pauseMenuUI != null) _pauseMenuUI.SetActive(false);
         }
     }
 }

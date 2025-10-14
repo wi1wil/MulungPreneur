@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc3bbe010a53e34dbe2c9989ca51fc5, type: 3}
+  m_Name: Budi
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questID: 31288bd0-9fcf-43b3-9fc3-e6e69437dff6
+  questName: Budi Si Bully
+  objectives:
+  - targetItem: {fileID: 11400000, guid: 167366d4975c4e1469d1ad2a72cf4111, type: 2}
+    description: Ambilah 10 Kayu
+    type: 0
+    requiredAmount: 10
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: 2f6d97241021fe44e905b456799e12f5, type: 2}
+    description: Buat 1 Meja
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: e48a9d2a6cd501249b608bec70441aad, type: 2}
+    description: Buat 2 Kursi
+    type: 0
+    requiredAmount: 2
+    currentAmount: 0
+  rewards:
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: c92473045db8da54f892e1d8fd3c7da3, type: 2}
+    amount: 2
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: de3fb28adac9d874281785fca65dd8b3, type: 2}
+    amount: 2

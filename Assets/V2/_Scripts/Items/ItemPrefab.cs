@@ -13,6 +13,7 @@ public class ItemPrefab : MonoBehaviour, IInteractable
     private void Awake()
     {
         _icon = GetComponent<SpriteRenderer>();
+        Initialize(itemData, quantity);
     }
 
     public void Initialize(ItemsSO data, int qty = 1)

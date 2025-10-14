@@ -66,7 +66,7 @@ public class CrafterManagerV2 : MonoBehaviour
     {
         foreach (var req in recipe.inputs)
         {
-            InventoryManager.Instance.RemoveItem(req.item.itemID, req.amount);
+            InventoryManager.Instance.RemoveItem(req.item, req.amount); 
         }
     }
 

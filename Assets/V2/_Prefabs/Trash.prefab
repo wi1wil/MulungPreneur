@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f50f8e48ff8747b468a66373afac0c11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,5 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152f1597010d7ff4bba473e6e2b8c9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPrefab
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 167366d4975c4e1469d1ad2a72cf4111, type: 2}
   quantity: 1

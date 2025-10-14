@@ -6,9 +6,10 @@ public class ShopUIManager : MonoBehaviour
     [SerializeField] private Transform _shopContentPanel;
     [SerializeField] private GameObject _shopItemPrefab;
 
-    private Dictionary<int, ShopItemPrefab> _spawnedItems = new();
+    // Use ItemsSO as the key instead of int
+    private Dictionary<ItemsSO, ShopItemPrefab> _spawnedItems = new();
 
-    void Start()
+    private void Start()
     {
         InventoryManager.Instance.onInvChanged += RefreshShop;
     }
@@ -28,23 +29,23 @@ public class ShopUIManager : MonoBehaviour
             GameObject uiElement = Instantiate(_shopItemPrefab, _shopContentPanel);
             ShopItemPrefab uiScript = uiElement.GetComponent<ShopItemPrefab>();
             uiScript.Setup(stack.item, stack.quantity);
-            _spawnedItems.Add(stack.item.itemID, uiScript);
+            _spawnedItems.Add(stack.item, uiScript); 
         }
     }
 
-    public void UpdateItemQuantity(int itemId, int newQuantity)
+    public void UpdateItemQuantity(ItemsSO itemSO, int newQuantity)
     {
-        if (_spawnedItems.TryGetValue(itemId, out var uiScript))
+        if (_spawnedItems.TryGetValue(itemSO, out var uiScript))
         {
             uiScript.UpdateQuantity(newQuantity);
             if (newQuantity <= 0)
             {
                 Destroy(uiScript.gameObject);
-                _spawnedItems.Remove(itemId);
+                _spawnedItems.Remove(itemSO);
             }
         }
     }
-    
+
     private void RefreshShop()
     {
         PopulateShopItems(InventoryManager.Instance.GetInventory());

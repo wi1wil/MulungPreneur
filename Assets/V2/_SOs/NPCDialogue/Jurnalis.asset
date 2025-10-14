@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a21e1e4b078b2641ac114f023dca0a8, type: 3}
+  m_Name: Jurnalis
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Jurnalis
+  npcPotrait: {fileID: -544026670, guid: 34d6ce8923c4ec7498149a4b1d443851, type: 3}
+  dialogueLines:
+  - Eh kamu yang gelap sini dlu
+  - Ya pokoknya kamu harus bantu saya secepatnya saya butuh 1 suku cadang
+  - Ah kepo lu cepet dah, pemulung typeshit aja banyak nanya
+  - 'Beh cepet juga kerja lu, cocok jadi enterpreneur '
+  - Ya gitu lah gw duluan yak
+  - Bos gw orang medan, dah dah ni 50
+  - Hadeh kampung, tar juga lu tau
+  - Bos gw orang medan, dah dah ni 50
+  autoProgressLines: 0000000000000000
+  endDialogueLines: 0000010000000001
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Oh iya mas....
+    - Maksud mas!?
+    nextDialogueIndices: 0100000001000000
+    givesQuest: 0000
+  - dialogueIndex: 1
+    choices:
+    - buat apa?
+    nextDialogueIndices: 02000000
+    givesQuest: 01
+  - dialogueIndex: 3
+    choices:
+    - Enterpreneur?
+    nextDialogueIndices: 04000000
+    givesQuest: 00
+  - dialogueIndex: 4
+    choices:
+    - suku cadang buat?
+    - Enterpreneur paan?
+    nextDialogueIndices: 0500000006000000
+    givesQuest: 0000
+  - dialogueIndex: 6
+    choices:
+    - suku cadang buat?
+    nextDialogueIndices: 07000000
+    givesQuest: 00
+  textSpeed: 0.05
+  autoProgressDelay: 2
+  questInProgressIdx: 2
+  questCompletedIdx: 3
+  quest: {fileID: 11400000, guid: 7e79d55bae863504598a11e2656d73c9, type: 2}

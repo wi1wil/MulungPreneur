@@ -78,17 +78,19 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public void RemoveItem(int itemID, int amountToRemove)
+    public void RemoveItem(ItemsSO itemSO, int amountToRemove)
     {
         foreach (ItemStack stack in _inventory)
         {
-            if (stack.item != null && stack.item.itemID == itemID)
+            if (stack.item == itemSO)
             {
                 int removed = stack.Remove(amountToRemove);
                 amountToRemove -= removed;
-                if (amountToRemove <= 0) break;
+                if (amountToRemove <= 0)
+                    break;
             }
         }
+
         onInvChanged?.Invoke();
     }
 

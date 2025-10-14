@@ -17,5 +17,5 @@ MonoBehaviour:
   inputs: []
   outputItem: {fileID: 11400000, guid: e48a9d2a6cd501249b608bec70441aad, type: 2}
   outputAmount: 1
-  craftTime: 45
+  craftTime: 15
   cost: 0

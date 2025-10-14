@@ -55,7 +55,9 @@ public class PlayerSaveManagerScript : MonoBehaviour
             bagLevel = _equipmentScript.GetLevel(_equipmentScript.bags),
             footwearLevel = _equipmentScript.GetLevel(_equipmentScript.footwear),
             gloveLevel = _equipmentScript.GetLevel(_equipmentScript.gloves),
-            toolLevel = _equipmentScript.GetLevel(_equipmentScript.tools)
+            toolLevel = _equipmentScript.GetLevel(_equipmentScript.tools),
+            questProgressData = QuestManager.Instance.activeQuests,
+            handedInQuests = QuestManager.Instance.handInQuestsID
         };
 
         var inventory = InventoryManager.Instance.GetInventory();
@@ -122,6 +124,10 @@ public class PlayerSaveManagerScript : MonoBehaviour
             }
         }
         InventoryManager.Instance.InvokeInventoryChanged();
+
+        // Load quest progress
+        QuestManager.Instance.LoadQuestProgress(playerSaveData.questProgressData);
+        QuestManager.Instance.handInQuestsID = playerSaveData.handedInQuests;
 
         Debug.Log("Game Loaded: " + json);
     }

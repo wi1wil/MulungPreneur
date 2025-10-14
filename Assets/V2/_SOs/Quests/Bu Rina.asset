@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc3bbe010a53e34dbe2c9989ca51fc5, type: 3}
+  m_Name: Bu Rina
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questID: P02807f1b-25a6-4fed-8039-dac42ee6a289
+  questName: Pupuk Kompos
+  objectives:
+  - targetItem: {fileID: 11400000, guid: 478c057fd13c79145bdc4814c050254b, type: 2}
+    description: Ambil 8 Daun Kering
+    type: 0
+    requiredAmount: 8
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: 42fc955891ea9dc4abd31d8e01571511, type: 2}
+    description: Ambil 8 Sisa Makanan
+    type: 0
+    requiredAmount: 8
+    currentAmount: 0
+  - targetItem: {fileID: 11400000, guid: 9523d3cae2ec927418519fdedda93f1d, type: 2}
+    description: Ambil 4 Kayu Bekas
+    type: 0
+    requiredAmount: 4
+    currentAmount: 0
+  rewards:
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 07be3574ff887e94ba054c2b097e42b9, type: 2}
+    amount: 2
+  - rewardType: 0
+    itemReward: {fileID: 11400000, guid: 87cd3d19016869748996e615ca9d1d02, type: 2}
+    amount: 3
+  - rewardType: 1
+    itemReward: {fileID: 0}
+    amount: 15000

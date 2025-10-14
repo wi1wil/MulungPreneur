@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wood Plank
   m_EditorClassIdentifier: Assembly-CSharp::ItemsSO
   itemID: 37
-  itemName: Wood Branch
+  itemName: Wood Plank
   itemPrice: 1000
   itemIcon: {fileID: -825847114, guid: a21c5a669bda9104a82a78fe45df0fc4, type: 3}

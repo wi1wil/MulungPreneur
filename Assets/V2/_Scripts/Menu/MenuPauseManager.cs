@@ -12,11 +12,9 @@ public class MenuPauseManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void TogglePause()
+    public void SetPaused(bool pause)
     {
-        gamePaused = !gamePaused;
-
-        if (gamePaused)
+        if (pause)
             Pause();
         else
             Resume();
@@ -24,11 +22,15 @@ public class MenuPauseManager : MonoBehaviour
 
     private void Pause()
     {
+        if (gamePaused) return;
+        gamePaused = true;
         Time.timeScale = 0f;
     }
 
     private void Resume()
     {
+        if (!gamePaused) return;
+        gamePaused = false;
         Time.timeScale = 1f;
     }
 }
