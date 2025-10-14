@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Plastic Pellets
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: Plastic Pellets
+  icon: {fileID: 1369463917, guid: cb8f17aef62c7564caee4f8ca2639994, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: c92473045db8da54f892e1d8fd3c7da3, type: 2}
+    amount: 2
+  outputItem: {fileID: 11400000, guid: 641cb492e3b0cc44c954593d291dabb8, type: 2}
+  outputAmount: 1
+  craftTime: 15
+  cost: 0

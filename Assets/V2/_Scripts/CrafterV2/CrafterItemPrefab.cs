@@ -34,7 +34,7 @@ public class CrafterItemPrefab : MonoBehaviour
             // Get icon directly from ItemsSO
             Sprite iconSprite = req.item.itemIcon;
 
-            var ui = go.GetComponent<RecipeRequirementsUI>();
+            var ui = go.GetComponent<RecipeReqUI>();
             ui.Setup(iconSprite, req.item.name, req.amount);
         }
 

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -554,7 +554,6 @@ GameObject:
   - component: {fileID: 2931358554452127401}
   - component: {fileID: 483856993074112511}
   - component: {fileID: 8685520064747380069}
-  - component: {fileID: 1930035821423569763}
   - component: {fileID: 4176832378526397625}
   m_Layer: 0
   m_Name: CraftingProgress
@@ -614,8 +613,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 4101622528481948189, guid: 4a77b20bb5e91c7429a3e2449ac4f829, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -624,22 +623,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1930035821423569763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7434421184702218438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f448aa0f4d24e45970ec12e9fbd075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrafterSlotUI
-  craftingNameText: {fileID: 7820052064588478971}
-  progressFill: {fileID: 7569092559242154168}
-  claimButton: {fileID: 9176952549960446512}
-  itemIcon: {fileID: 4886847740780148042}
 --- !u!114 &4176832378526397625
 MonoBehaviour:
   m_ObjectHideFlags: 0

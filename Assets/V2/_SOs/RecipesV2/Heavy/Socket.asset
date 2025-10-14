@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Socket
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: Socket
+  icon: {fileID: 1230187029, guid: 75ffa35e75fa3044384306f02708482c, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: 00a2920f3fcd7c04996de1ef5990ff70, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: bbe0b0cbfe2296c4d880e98ffb45227e, type: 2}
+    amount: 1
+  outputItem: {fileID: 11400000, guid: 87971dc4268e5ca46ba0540411e665c1, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

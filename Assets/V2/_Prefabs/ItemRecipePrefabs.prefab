@@ -397,7 +397,6 @@ GameObject:
   - component: {fileID: 3537628890534163063}
   - component: {fileID: 5814484075075732466}
   - component: {fileID: 5121593738949328321}
-  - component: {fileID: 165340879801574967}
   - component: {fileID: 6897991501021114078}
   m_Layer: 0
   m_Name: ItemRecipePrefabs
@@ -450,15 +449,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2264151, g: 0.18689926, b: 0.18689926, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 4101622528481948189, guid: 4a77b20bb5e91c7429a3e2449ac4f829, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -467,23 +466,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &165340879801574967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6463728669277021026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7574f1377c51a345a8b4da8e35bbd50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrafterItemPrefabs
-  icon: {fileID: 1119641141727578726}
-  nameText: {fileID: 1576734626516385167}
-  requirementsParent: {fileID: 794551184302686663}
-  requirementPrefab: {fileID: 8242173115228176372, guid: 8c0bc5fc75b34e74d85d40601cf87085, type: 3}
-  craftButton: {fileID: 2069983703987423300}
 --- !u!114 &6897991501021114078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrafterItemPrefab
   icon: {fileID: 1119641141727578726}
   nameText: {fileID: 1576734626516385167}
-  requirementsParent: {fileID: 8107368714252773167}
+  requirementsParent: {fileID: 794551184302686663}
   requirementPrefab: {fileID: 8242173115228176372, guid: 8c0bc5fc75b34e74d85d40601cf87085, type: 3}
   craftButton: {fileID: 2069983703987423300}
 --- !u!1 &7230391919468462299

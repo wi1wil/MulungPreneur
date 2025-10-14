@@ -1,26 +1,15 @@
 {
     "playerPos": {
-        "x": 67.00448608398438,
-        "y": -66.26998138427735,
+        "x": 57.59064483642578,
+        "y": -23.155426025390626,
         "z": 0.0
     },
-    "playerCurrency": 10000,
-    "currentDay": 1,
-    "currentTimeTicks": 345000000000,
+    "playerCurrency": 18500,
+    "currentDay": 2,
+    "currentTimeTicks": 38400000000,
     "bagLevel": 0,
     "footwearLevel": 0,
     "gloveLevel": 0,
     "toolLevel": 0,
-    "inventory": [
-        {
-            "itemID": 2,
-            "slotIdx": 2,
-            "quantity": 2
-        },
-        {
-            "itemID": 1,
-            "slotIdx": 3,
-            "quantity": 1
-        }
-    ]
+    "inventory": []
 }

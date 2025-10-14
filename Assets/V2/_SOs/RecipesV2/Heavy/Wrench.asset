@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Wrench
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: Wrench
+  icon: {fileID: 1506541077, guid: a7b9e1715e63c5149a156fb2999f2045, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: 8fba280d45f3d4846971ba42f7c1c0f9, type: 2}
+    amount: 2
+  outputItem: {fileID: 11400000, guid: 8d20cc23b23756449b4d30585d1bde0d, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

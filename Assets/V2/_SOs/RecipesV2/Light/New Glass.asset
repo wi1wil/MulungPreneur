@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: New Glass
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: New Glass
+  icon: {fileID: -1584288661, guid: 32e13370ae65eb04cad4fed3bbcfa9ba, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: b6c51548da6fccd4b99d4cbd827d336b, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 37436b6cc0a4270489aff0e0eb4e7a71, type: 2}
+    amount: 1
+  outputItem: {fileID: 11400000, guid: 4827d45f79845724c99e6d4ddad523e6, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

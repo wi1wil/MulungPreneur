@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Cables
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: Cables
+  icon: {fileID: -1634524388, guid: 2a8613328d9a6764a8ac9731a94aa926, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: c58b4054259fa05498893ef7a17afc41, type: 2}
+    amount: 1
+  outputItem: {fileID: 11400000, guid: 68805ef5e39acd44c84347a5b3f2e287, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

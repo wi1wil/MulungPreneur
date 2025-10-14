@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Cardboards
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: New Cardboards
+  icon: {fileID: 797321187, guid: a886d0aeeedb0a54e9beffefb8598bfc, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: 1434173919a5abe449dae0386d0c1c31, type: 2}
+    amount: 2
+  outputItem: {fileID: 11400000, guid: 92ebd8308c524a44999ae6b205c65425, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0

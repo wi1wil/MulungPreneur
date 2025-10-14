@@ -8,7 +8,6 @@ public class ItemsSO : ScriptableObject
     [Header("Item Info")]
     public int itemID;
     public string itemName;
-    public string itemDesc;
     public int itemPrice;
 
     [Header("Visuals")]

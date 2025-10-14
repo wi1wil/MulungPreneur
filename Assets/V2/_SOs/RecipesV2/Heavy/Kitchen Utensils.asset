@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Kitchen Utensils
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: Cooking Pot
+  icon: {fileID: 1955627576, guid: fe296d875add9854382c23af797c9646, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: 307e1de3eebbf3b43bbf8699ef3ef109, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 8fba280d45f3d4846971ba42f7c1c0f9, type: 2}
+    amount: 2
+  outputItem: {fileID: 11400000, guid: 8a6fd11bdfd55a2468c04a0079d19d70, type: 2}
+  outputAmount: 1
+  craftTime: 50
+  cost: 0

@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eca5636e1cce4b140895259b7ce5cb36, type: 3}
-  m_Name: Coke
+  m_Name: Broken Glass
   m_EditorClassIdentifier: Assembly-CSharp::ItemsSO
-  itemID: 1
-  itemName: Coke
-  itemDesc: A used coke can
-  itemPrice: 1000
-  itemIcon: {fileID: 223742002, guid: 05013e4901eef8646ac6e346b6620642, type: 3}
+  itemID: 4
+  itemName: Broken Glass
+  itemPrice: 2500
+  itemIcon: {fileID: -939433274, guid: 2cb3c7687d202e5408264d1ed5ddd9de, type: 3}

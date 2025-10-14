@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eca5636e1cce4b140895259b7ce5cb36, type: 3}
-  m_Name: Pepsi
+  m_Name: Used Battery
   m_EditorClassIdentifier: Assembly-CSharp::ItemsSO
   itemID: 1
-  itemName: Pepsi
-  itemDesc: A used pepsi can
-  itemPrice: 1000
-  itemIcon: {fileID: -1451458622, guid: 05013e4901eef8646ac6e346b6620642, type: 3}
+  itemName: Used Battery
+  itemPrice: 3000
+  itemIcon: {fileID: -779998234, guid: 499407d735280b047806168ba7f1e68f, type: 3}

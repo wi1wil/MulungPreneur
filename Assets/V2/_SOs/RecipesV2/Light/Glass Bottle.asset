@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651378d0d938d0a42baa9621d167eee6, type: 3}
+  m_Name: Glass Bottle
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeName: New Glass Bottle
+  icon: {fileID: 1069925080, guid: 32e13370ae65eb04cad4fed3bbcfa9ba, type: 3}
+  inputs:
+  - item: {fileID: 11400000, guid: ef903ef1171f8a34fb0169ac8387e6d2, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 37436b6cc0a4270489aff0e0eb4e7a71, type: 2}
+    amount: 2
+  outputItem: {fileID: 11400000, guid: 1c1fccd5747251340a6f3ce0a26f7d64, type: 2}
+  outputAmount: 1
+  craftTime: 30
+  cost: 0
