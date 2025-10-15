@@ -6,6 +6,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _pauseMenuUI;
 
+    private void Start()
+    {
+        _pauseMenuUI?.SetActive(false);
+    }
+
     public void OnOpenMenu(InputAction.CallbackContext context)
     {
         if (!context.performed) return;

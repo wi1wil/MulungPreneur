@@ -11,4 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/V1/_Scenes/Gameplay.unity
     guid: 0a41057c149930d499612ec362c47760
+  - enabled: 1
+    path: Assets/V2/Scene/MulungPreneurV2.unity
+    guid: a9cad52f43e3bac459e1845e9bf59854
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

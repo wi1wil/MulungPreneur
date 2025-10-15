@@ -1,12 +1,12 @@
 {
     "playerPos": {
-        "x": 53.65996551513672,
-        "y": -32.4112434387207,
+        "x": 64.00725555419922,
+        "y": -63.99313735961914,
         "z": 0.0
     },
     "playerCurrency": 19800,
-    "currentDay": 1,
-    "currentTimeTicks": 462000000000,
+    "currentDay": 3,
+    "currentTimeTicks": 100200000000,
     "bagLevel": 0,
     "footwearLevel": 0,
     "gloveLevel": 0,

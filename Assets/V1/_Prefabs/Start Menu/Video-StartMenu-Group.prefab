@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251980932421459880}
-  - component: {fileID: 2256789119374372133}
+  - component: {fileID: 6029783701707081414}
   m_Layer: 5
   m_Name: Video-StartMenu-Group
   m_TagString: Untagged
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchoredPosition: {x: -93.203445, y: 196.0008}
   m_SizeDelta: {x: 768.60693, y: 115.181595}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2256789119374372133
+--- !u!114 &6029783701707081414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,13 +47,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2641907695627288254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2815f65f266a17340a7788f804d5e547, type: 3}
+  m_Script: {fileID: 11500000, guid: d1e91541a378fd046b7cc46375e497c9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  fullScreenToggle: {fileID: 6504690154486069119}
-  resDropDown: {fileID: 4295017613887418901}
-  isFullscreen: 0
-  videoSettingsPrefab: {fileID: 2641907695627288254}
+  m_EditorClassIdentifier: Assembly-CSharp::VideoSetting
+  _resolutionDropdown: {fileID: 4295017613887418901}
+  _fullscreenToggle: {fileID: 6504690154486069119}
 --- !u!1001 &8102986136692627245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,7 +63,15 @@ PrefabInstance:
     - target: {fileID: 3041860279523991634, guid: e113acb321bd79d4ab562f367489d1f3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2256789119374372133}
+      objectReference: {fileID: 6029783701707081414}
+    - target: {fileID: 3041860279523991634, guid: e113acb321bd79d4ab562f367489d1f3, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFullscreenToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041860279523991634, guid: e113acb321bd79d4ab562f367489d1f3, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VideoSetting, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4617823104709081174, guid: e113acb321bd79d4ab562f367489d1f3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -270,7 +276,15 @@ PrefabInstance:
     - target: {fileID: 5238016694350620511, guid: 71f59360ce76255448baab64304f3863, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2256789119374372133}
+      objectReference: {fileID: 6029783701707081414}
+    - target: {fileID: 5238016694350620511, guid: 71f59360ce76255448baab64304f3863, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnResolutionChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238016694350620511, guid: 71f59360ce76255448baab64304f3863, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VideoSetting, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6169991107210436854, guid: 71f59360ce76255448baab64304f3863, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00001335144
@@ -278,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 7235125609051397530, guid: 71f59360ce76255448baab64304f3863, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767273784094621440, guid: 71f59360ce76255448baab64304f3863, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7914290749166408003, guid: 71f59360ce76255448baab64304f3863, type: 3}
       propertyPath: m_AnchorMax.x
@@ -298,6 +316,10 @@ PrefabInstance:
     - target: {fileID: 8293664290649393719, guid: 71f59360ce76255448baab64304f3863, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421220582791369057, guid: 71f59360ce76255448baab64304f3863, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
