@@ -19,18 +19,22 @@
 <!-- GIFs showcase -->
 <table width="100%">
   <tr>
+    <!-- Top large gif -->
     <td colspan="2" align="center">
       <img src="./Assets/ReadMe/mulung1v2.gif" width="100%"/>
     </td>
   </tr>
   <tr>
+    <!-- Bottom two gifs -->
     <td align="center" width="50%">
       <img src="./Assets/ReadMe/mulung2v2.gif" width="100%"/>
     </td>
     <td align="center" width="50%">
       <img src="./Assets/ReadMe/mulung3v2.gif" width="100%"/>
     </td>
+  </tr>
 </table>
+
 
 ---
 
