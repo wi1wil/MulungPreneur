@@ -25,6 +25,7 @@ public class NPCShopKeeper : MonoBehaviour, IInteractable
         }
         else
         {
+            AudioManager.instance.PlayUIClick();
             MenuPauseManager.instance.SetPaused(true);
             _shopUIManager.PopulateShopItems(InventoryManager.Instance.GetInventory());
             _equipmentUI.UpdateAllUI();

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RT
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Pak RT
-  npcPotrait: {fileID: -2066448823, guid: 5f5fd7e77e914754a87c7592350754da, type: 3}
+  npcPotrait: {fileID: 230208221, guid: ecab5d56e2df76d4e86f21b1562db4f7, type: 3}
   dialogueLines:
   - Di, saya denger-denger ente mau jadi pemulung ye
   - Ya apapun lah, pokoknya kamu harus bantu saya  nih tolong pungutin plastik dah

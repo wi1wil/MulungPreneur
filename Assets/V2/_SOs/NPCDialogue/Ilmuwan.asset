@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ilmuwan
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Ilmuwan
-  npcPotrait: {fileID: -1238335333, guid: c3f00b7034f40d34793e3eb68a2cea20, type: 3}
+  npcPotrait: {fileID: 1442176913, guid: c3f00b7034f40d34793e3eb68a2cea20, type: 3}
   dialogueLines:
   - Ah, kamu datang tepat waktu.
   - Bisa bantu kami dengan mengirimkan  beberapa sampel dari bahan yang sudah kamu

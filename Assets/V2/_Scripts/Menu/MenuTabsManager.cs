@@ -13,6 +13,7 @@ public class MenuTabsManager : MonoBehaviour
 
     public void ActivateTab(int tabIndex)
     {
+        AudioManager.instance.PlayUIClick();
         for (int i = 0; i < _pagesGO.Length; i++)
         {
             _pagesGO[i].SetActive(false);

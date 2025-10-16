@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Budi
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Budi
-  npcPotrait: {fileID: 473362991, guid: 5dac8ae11c912774ea25d339b789f9c0, type: 3}
+  npcPotrait: {fileID: -363665885, guid: 5dac8ae11c912774ea25d339b789f9c0, type: 3}
   dialogueLines:
   - 'Woi Pemulung bantu gw sini '
   - Hadeh gausah banyak gaya deh loe, ambilin meja dah 1

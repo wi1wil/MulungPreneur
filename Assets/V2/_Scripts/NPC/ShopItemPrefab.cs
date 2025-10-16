@@ -55,6 +55,7 @@ public class ShopItemPrefab : MonoBehaviour
     private void OnSellButtonClicked()
     {
         if (_itemQuantity <= 0) return;
+        AudioManager.instance.PlaySellingItem();
 
         // Remove 1 item using SO reference
         InventoryManager.Instance.RemoveItem(_itemSO, 1);

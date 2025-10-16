@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nelayan
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Nelayan
-  npcPotrait: {fileID: 1621396217, guid: 0534008a7824eec4196277de5fd12736, type: 3}
+  npcPotrait: {fileID: 595104684, guid: 0534008a7824eec4196277de5fd12736, type: 3}
   dialogueLines:
   - Eh Abdull....
   - 'Ahhahahahah, itu dia abdiulll '

@@ -51,6 +51,7 @@ public class EquipmentScript : MonoBehaviour
     // Upgrade from button
     public void UpgradeEquipment(EquipmentsSO equipment)
     {
+        AudioManager.instance.PlaySellingItem();
         if (equipment == null || _playerCurrency == null) return;
 
         int currentLevel = GetLevel(equipment);

@@ -1,6 +1,4 @@
-using Unity.AppUI.UI;
 using UnityEngine;
-using UnityEngine.SceneManagement;  
 
 public class StartMenu : MonoBehaviour
 {
@@ -20,18 +18,21 @@ public class StartMenu : MonoBehaviour
 
     public void OpenSettings()
     {
+        AudioManager.instance.PlayUIClick();
         _settingsMenu.SetActive(true);
         _mainMenu.SetActive(false);
     }
 
     public void CloseSettings()
     {
+        AudioManager.instance.PlayUIClick();
         _settingsMenu.SetActive(false);
         _mainMenu.SetActive(true);
     }
 
     public void QuitGame()
     {
+        AudioManager.instance.PlayUIClick();
         Debug.Log("QUIT!");
         Application.Quit();
     }

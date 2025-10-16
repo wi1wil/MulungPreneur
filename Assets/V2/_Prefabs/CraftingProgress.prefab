@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Currently Crafting: TABLE TABLE'
+  m_text: 'Currently Crafting: TABLE TABLE TABLE TABLE '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f98e1a912ab8ff047b5442b9d9a5b21f, type: 2}
   m_sharedMaterial: {fileID: 7562766647199769595, guid: f98e1a912ab8ff047b5442b9d9a5b21f, type: 2}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6730514346290390951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -247,8 +247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233.91, y: -0.3287}
-  m_SizeDelta: {x: 744.53, y: 63.1125}
+  m_AnchoredPosition: {x: 339.44, y: -0.3287}
+  m_SizeDelta: {x: 533.48, y: 63.1125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7364804434919864515
 CanvasRenderer:
@@ -366,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41329655, y: 0.32666668}
   m_AnchorMax: {x: 0.873, y: 0.66}
-  m_AnchoredPosition: {x: 2, y: 1}
-  m_SizeDelta: {x: -0.23028564, y: 6}
+  m_AnchoredPosition: {x: 107.526245, y: 1}
+  m_SizeDelta: {x: -211.2828, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &178786666137827742
 CanvasRenderer:
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

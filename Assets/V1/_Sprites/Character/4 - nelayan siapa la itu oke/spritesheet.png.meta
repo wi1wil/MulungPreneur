@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: c3f00b7034f40d34793e3eb68a2cea20
+guid: 0534008a7824eec4196277de5fd12736
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -67,12 +67,12 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,447 +110,469 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_0
+      name: spritesheet_0
       rect:
         serializedVersion: 2
         x: 8
         y: 81
-        width: 17
-        height: 35
+        width: 23
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e507a83e62bd824f8f1157defc31878
-      internalID: -1238335333
+      spriteID: 8906585d4fb933f4aa93762f8bca0a4a
+      internalID: 896986694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_1
+      name: spritesheet_1
       rect:
         serializedVersion: 2
         x: 40
         y: 81
-        width: 17
-        height: 34
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5a885bd62996244ba5227f064658584
-      internalID: 1205968944
+      spriteID: ae2df3277eebe5240b20792019d4d1b4
+      internalID: 595104684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_2
+      name: spritesheet_2
       rect:
         serializedVersion: 2
         x: 72
         y: 81
-        width: 17
-        height: 33
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c07e85bff60ea2047ba3c43807560119
-      internalID: 1359918736
+      spriteID: 72a639af1f6c68a4ca7b76af37d0ef0c
+      internalID: -346407003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_3
+      name: spritesheet_3
       rect:
         serializedVersion: 2
         x: 104
         y: 81
-        width: 17
-        height: 33
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9240da570bdbba3449d5c957975542b3
-      internalID: -270561144
+      spriteID: c2dfea3fae3373c47ab3c1b06466cad8
+      internalID: -76715037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_4
+      name: spritesheet_4
       rect:
         serializedVersion: 2
         x: 136
         y: 81
-        width: 17
-        height: 33
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1905d7e1ca829f145b34c69030f35e5f
-      internalID: -50832917
+      spriteID: 19fd83da7e9df434b8a1a3e9d8ac42a4
+      internalID: -483286488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_5
+      name: spritesheet_5
       rect:
         serializedVersion: 2
         x: 168
         y: 81
-        width: 17
-        height: 34
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7497fc3b3256aeb4aa1af27353e255fd
-      internalID: 1059229695
+      spriteID: eb2d8387dc9111c44b4a16d42130c8df
+      internalID: 55603213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_6
+      name: spritesheet_6
       rect:
         serializedVersion: 2
         x: 200
         y: 81
-        width: 17
-        height: 35
+        width: 23
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daf58ee9bcbbec048b728b823db2d568
-      internalID: -1745072791
+      spriteID: d91359949f673ed409aa98ef2f8321a5
+      internalID: 666961442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_7
+      name: spritesheet_7
       rect:
         serializedVersion: 2
-        x: 8
+        x: 9
         y: 41
-        width: 16
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ad9e2b577d69f44e89fa5737edeb672
-      internalID: 1844810152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 41
-        width: 16
+        width: 14
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94a86a3c33be81c47b451d44b851bf30
-      internalID: -1836218706
+      spriteID: c56d9b65f3480c24294d0d9c8be23e8f
+      internalID: -967466727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_9
+      name: spritesheet_8
       rect:
         serializedVersion: 2
-        x: 72
+        x: 41
         y: 41
-        width: 16
+        width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1813a94ce8fe6b4b804a35762b2d949
-      internalID: 268410570
+      spriteID: f91b05542f7d3c24ca0f0ee033116ac7
+      internalID: 677997694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_10
+      name: spritesheet_9
       rect:
         serializedVersion: 2
-        x: 104
+        x: 73
         y: 41
-        width: 16
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd923636221fb943a87049a13755b81
+      internalID: 629515516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 41
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c82c1bef4e8ac4d8e3d458ff547fa3
+      internalID: 1575317806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 41
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c72375c10a4654e92ccd7783d127af
+      internalID: 1425013290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 41
+        width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 311d18f7fd4002145a2f57db7b18b311
-      internalID: 260422782
+      spriteID: b2d53f10c6162c849916ba05b1ae8300
+      internalID: 1764990205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_11
+      name: spritesheet_13
       rect:
         serializedVersion: 2
-        x: 136
+        x: 201
         y: 41
-        width: 16
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d59912c4ce1da14488acbffa0c90b25
-      internalID: 968544391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 41
-        width: 16
+        width: 14
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a197056e555531479153e733e7fdccd
-      internalID: -1592745445
+      spriteID: 5ba5f7d4a5d2ab243af323af0f51a197
+      internalID: -1561017940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_13
+      name: spritesheet_14
       rect:
         serializedVersion: 2
-        x: 200
-        y: 41
-        width: 16
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f038710a832db046932d8003c3bb8fd
-      internalID: -992398269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 8
+        x: 9
         y: 1
-        width: 16
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e2c5396278616149a658aa47f9ccce0
-      internalID: 154274319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 1
-        width: 16
+        width: 14
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91d9b7a7b11eb4748a4558763c20cf8a
-      internalID: 185881045
+      spriteID: b8386f803f70bcc409ca74986bcca5fc
+      internalID: -288668006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_16
+      name: spritesheet_15
       rect:
         serializedVersion: 2
-        x: 72
+        x: 41
         y: 1
-        width: 16
+        width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c5796fa25721740b43d99969049348
-      internalID: 1359055029
+      spriteID: 0e34ee33f3272b14bb02dc912605fd69
+      internalID: -226230614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_17
+      name: spritesheet_16
       rect:
         serializedVersion: 2
-        x: 104
+        x: 73
         y: 1
-        width: 16
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e6d9d0de6e75d49aaa2e38f6ebdcfa
+      internalID: -1045337858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca223d6319cd77419b7154ca19574d8
+      internalID: -183594659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050843d536879a84dac19ddf6f1009bb
+      internalID: 1876407364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1
+        width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88e09a19051ada344b5a4589d146f294
-      internalID: -1701282591
+      spriteID: 4b5bef075c8ea5f48bd1ff50553711ab
+      internalID: -381156476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ilmuwan idle Sheet_18
+      name: spritesheet_20
       rect:
         serializedVersion: 2
-        x: 136
+        x: 201
         y: 1
-        width: 16
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3813209574161cf44a247ba03d2feb83
-      internalID: -1810617689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 1
-        width: 16
+        width: 14
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d585f6f8214400a428bee311725598a4
-      internalID: -1483643922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ilmuwan idle Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 1
-        width: 16
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37b98f5a6326dde439a13cab77a6b269
-      internalID: 295370385
+      spriteID: 6b5bc2df0691314488c29ae4806ec1a4
+      internalID: -186530306
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -560,28 +582,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ilmuwan idle Sheet_0: -1238335333
-      ilmuwan idle Sheet_1: 1205968944
-      ilmuwan idle Sheet_10: 260422782
-      ilmuwan idle Sheet_11: 968544391
-      ilmuwan idle Sheet_12: -1592745445
-      ilmuwan idle Sheet_13: -992398269
-      ilmuwan idle Sheet_14: 154274319
-      ilmuwan idle Sheet_15: 185881045
-      ilmuwan idle Sheet_16: 1359055029
-      ilmuwan idle Sheet_17: -1701282591
-      ilmuwan idle Sheet_18: -1810617689
-      ilmuwan idle Sheet_19: -1483643922
-      ilmuwan idle Sheet_2: 1359918736
-      ilmuwan idle Sheet_20: 295370385
-      ilmuwan idle Sheet_3: -270561144
-      ilmuwan idle Sheet_4: -50832917
-      ilmuwan idle Sheet_5: 1059229695
-      ilmuwan idle Sheet_6: -1745072791
-      ilmuwan idle Sheet_7: 1844810152
-      ilmuwan idle Sheet_8: -1836218706
-      ilmuwan idle Sheet_9: 268410570
+      spritesheet_0: 896986694
+      spritesheet_1: 595104684
+      spritesheet_10: 1575317806
+      spritesheet_11: 1425013290
+      spritesheet_12: 1764990205
+      spritesheet_13: -1561017940
+      spritesheet_14: -288668006
+      spritesheet_15: -226230614
+      spritesheet_16: -1045337858
+      spritesheet_17: -183594659
+      spritesheet_18: 1876407364
+      spritesheet_19: -381156476
+      spritesheet_2: -346407003
+      spritesheet_20: -186530306
+      spritesheet_3: -76715037
+      spritesheet_4: -483286488
+      spritesheet_5: 55603213
+      spritesheet_6: 666961442
+      spritesheet_7: -967466727
+      spritesheet_8: 677997694
+      spritesheet_9: 629515516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,11 +5,14 @@ public class SwitchScene : MonoBehaviour
 {
     public void LoadGame()
     {
-        SceneManager.LoadScene(2);  // Load the main game scene (index 2)
+        AudioManager.instance.PlayUIClick();
+        SceneManager.LoadScene(1);  // Load the main game scene (index 2)
     }
 
     public void BackToMenu()
     {
+        AudioManager.instance.PlayUIClick();
         SceneManager.LoadScene(0);  // Load the main menu scene (index 0)
+        AudioManager.instance.PlaySunnyBgm();
     }
 }

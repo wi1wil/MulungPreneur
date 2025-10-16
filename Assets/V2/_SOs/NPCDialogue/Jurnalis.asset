@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jurnalis
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Jurnalis
-  npcPotrait: {fileID: -544026670, guid: 34d6ce8923c4ec7498149a4b1d443851, type: 3}
+  npcPotrait: {fileID: -1813234525, guid: 34d6ce8923c4ec7498149a4b1d443851, type: 3}
   dialogueLines:
   - Eh kamu yang gelap sini dlu
   - Ya pokoknya kamu harus bantu saya secepatnya saya butuh 1 suku cadang

@@ -15,9 +15,11 @@ public class MenuManager : MonoBehaviour
     {
         if (!context.performed) return;
         if (NPCDialogueManager.Instance.dialoguePanel.activeSelf || CrafterUIManagerV2.Instance.gameObject.activeSelf)
-        return;
+            return;
+        
         bool shouldPause = !MenuPauseManager.instance.gamePaused;
         MenuPauseManager.instance.SetPaused(shouldPause);
+        AudioManager.instance.PlayUIClick();
 
         if (shouldPause)
         {

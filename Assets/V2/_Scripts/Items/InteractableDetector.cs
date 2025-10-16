@@ -12,6 +12,7 @@ public class InteractableDetector : MonoBehaviour
     private CircleCollider2D _pickUpRange;
     private float _holdTimer = 0f;
     private bool _isHolding = false;
+    private bool _sfxPlayed = false;
 
     public float holdDuration = 1f;
     public float pickUpRadius;
@@ -28,6 +29,12 @@ public class InteractableDetector : MonoBehaviour
     {
         if (_isHolding && _currentTarget != null)
         {
+            if (!_sfxPlayed)
+            {
+                AudioManager.instance.PlayPickUpTrash();
+                _sfxPlayed = true;
+            }
+
             _holdTimer += Time.deltaTime;
             _holdProgressBar.fillAmount = _holdTimer / holdDuration;
 
@@ -38,6 +45,7 @@ public class InteractableDetector : MonoBehaviour
                 _holdTimer = 0f;
                 _holdProgressBar.gameObject.SetActive(false);
                 _holdProgressBar.fillAmount = 0f;
+                _sfxPlayed = false;
             }
         }
     }

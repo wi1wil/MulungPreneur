@@ -27,6 +27,7 @@ public class CrafterManagerV2 : MonoBehaviour
 
         RemoveInputs(recipe);
         StartCoroutine(CraftRoutine(recipe));
+        AudioManager.instance.PlayCraftItem();
         return true;
     }
 

@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using TMPro;
-using System.Globalization;
 
 public class DayNightCycle : MonoBehaviour
 {
@@ -26,6 +25,9 @@ public class DayNightCycle : MonoBehaviour
 
     private float _minuteLength => _dayLengthSeconds / 1440f; // 1440 minutes in a day
 
+    public event Action OnDayTime;
+    public event Action OnNightTime;
+
     private void Start()
     {
         StartCoroutine(UpdateTime());
@@ -46,11 +48,16 @@ public class DayNightCycle : MonoBehaviour
             }
 
             // Check day/night
-            bool nowIsDay = _currentTime.Hours >= dayStartHour && _currentTime.Hours < nightStartHour;
+           bool nowIsDay = _currentTime.Hours >= dayStartHour && _currentTime.Hours < nightStartHour;
             if (nowIsDay != _isDaytime)
             {
                 _isDaytime = nowIsDay;
                 Debug.Log($"[WorldTime] Day/Night changed. Now isDay: {_isDaytime}");
+
+                if (_isDaytime)
+                    OnDayTime?.Invoke();
+                else
+                    OnNightTime?.Invoke();
             }
 
             UpdateUI();

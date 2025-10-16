@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 3459e3e13c11c44449cdbf8928203373
+guid: 5dac8ae11c912774ea25d339b789f9c0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -67,12 +67,12 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,447 +110,623 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: investor idle Sheet_0
+      name: spritesheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 81
-        width: 17
-        height: 32
+        x: 6
+        y: 121
+        width: 18
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b890f46add70a8842a7eb91ce4f1e644
-      internalID: -1887569754
+      spriteID: fe5a8d9505ca7474292758b82265aeac
+      internalID: -363665885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_1
+      name: spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 121
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304455c64e4287e4d8c26563dda979ca
+      internalID: 637717951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 121
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ddf06ed79e5604ebb5eb1a081362fa
+      internalID: 418253208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 121
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9145ab6ba0aed43a8dceba8fb4bc9c
+      internalID: 1153610177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 121
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5a68581d5f67c44b20e4b4d8efe391
+      internalID: -1873796283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 121
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8257934a0d85078499b96614b92415b9
+      internalID: -1280298250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5f97970478c50448681c4c71eb8a29
+      internalID: 2080247911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 81
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64265092ac892a43b0aa348a215031f
+      internalID: 1184515201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_8
       rect:
         serializedVersion: 2
         x: 40
         y: 81
-        width: 16
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde903f0c2e98949a38ee5e38549db6
+      internalID: -31573774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 81
+        width: 14
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c6617810a55474886dba9cbb210e12
-      internalID: 1808284231
+      spriteID: 34f2b07e08b60004986efbd3a3a2d45a
+      internalID: 1091061168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_2
+      name: spritesheet_10
       rect:
         serializedVersion: 2
-        x: 71
+        x: 104
         y: 81
-        width: 16
-        height: 30
+        width: 14
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61246d3cf564d06449104fa09e90d40d
-      internalID: -687112980
+      spriteID: f8243d0e8f3e3944fa3e5467d9d86de8
+      internalID: 906330893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_3
+      name: spritesheet_11
       rect:
         serializedVersion: 2
-        x: 103
+        x: 136
         y: 81
-        width: 16
-        height: 30
+        width: 14
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f46bf6304e2d1ee49afae60c7b241deb
-      internalID: 1519498077
+      spriteID: 25ed6da57cb6d32459fb4f0df116aa83
+      internalID: -1278231437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 81
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a01ee4b8eed7b445982227c806995cb
-      internalID: 898683323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_5
+      name: spritesheet_12
       rect:
         serializedVersion: 2
         x: 168
         y: 81
-        width: 16
-        height: 31
+        width: 14
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e3036b98f40f6409d479534ff3a233
-      internalID: -67102404
+      spriteID: c30230b64d51ac146a954251d9711a10
+      internalID: 1118241627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_6
+      name: spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 81
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967a0b66f756b5e4c97e20a43faf3f65
+      internalID: 1346011861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09cf7c172128df408cd536d73a7082e
+      internalID: -1418706492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 41
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c010db20891804744a148ce512ea562a
+      internalID: -993827215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 41
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caf5da3c5b68e44eb7e9c8e85f55bfb
+      internalID: 1142018179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 41
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8d11988b8cb8740b7b11a1d0131c75
+      internalID: -148359011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 41
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8e9f1eab608dc429c94d7e58a244b2
+      internalID: -992217410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 41
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f514c610ba193974ea13873b99c132f2
+      internalID: -447417561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_20
       rect:
         serializedVersion: 2
         x: 199
-        y: 81
-        width: 17
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d5f582103688fa4c9ee783401f7f99b
-      internalID: -1517455564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 9
         y: 41
-        width: 14
+        width: 18
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d6aee98e1db5284ab5f3442f47f6654
-      internalID: -1018460756
+      spriteID: 7083cc919dd68e44ab9eeff1ecf46c7c
+      internalID: -1931438866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_8
+      name: spritesheet_21
       rect:
         serializedVersion: 2
-        x: 41
-        y: 41
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c77e8763c4fc537449235b823f640559
-      internalID: -648297097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 41
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f61b765c3050a242b953611189064cd
-      internalID: 1378493487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 41
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fb8dd6b6ebb20642af988ba3a09e780
-      internalID: -472062708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 41
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb48a4ba1e9aa7342a7cf8847531eabf
-      internalID: -1877386689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 41
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbc86486f3081e14888942f1fda9827b
-      internalID: 231484401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 41
-        width: 14
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 034c895bcf6540c4bafb0803cff71204
-      internalID: 1851612727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: investor idle Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 9
+        x: 10
         y: 1
         width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3c17cfd15c4284e817515dee8b1491
-      internalID: 501134844
+      spriteID: db43454095ff02e41a8f049797dafa62
+      internalID: -1292022636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_15
+      name: spritesheet_22
       rect:
         serializedVersion: 2
-        x: 41
+        x: 42
         y: 1
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cdf4021368eb6b4e9db9a064e8107fd
-      internalID: 1475512801
+      spriteID: 014da641d6e0e9244b58a4bedfae4a26
+      internalID: -986241868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_16
+      name: spritesheet_23
       rect:
         serializedVersion: 2
-        x: 73
+        x: 74
         y: 1
         width: 14
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ebbca43f86a40b40972c3680b8b4a05
-      internalID: 1413850281
+      spriteID: bcc6caeff46ed774cab5a90cc45bfae5
+      internalID: 1809209456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_17
+      name: spritesheet_24
       rect:
         serializedVersion: 2
-        x: 105
+        x: 106
         y: 1
         width: 14
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfdbe056cc94b64f93d9f209123cec5
-      internalID: 1371125411
+      spriteID: 45181bf71b6627a43b480f3b5b15fa82
+      internalID: 1345125359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_18
+      name: spritesheet_25
       rect:
         serializedVersion: 2
-        x: 137
+        x: 138
         y: 1
         width: 14
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89872cdbd765ffa40aee0c40a9c004f4
-      internalID: -22469705
+      spriteID: 1d51908cbe90a0f4aa2dba30f7c56e26
+      internalID: 796089275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_19
+      name: spritesheet_26
       rect:
         serializedVersion: 2
-        x: 169
+        x: 170
         y: 1
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba9e7fe41622cc743b902be150d34c0b
-      internalID: -1909626620
+      spriteID: 10541dc9b7a3a754f8c48b51b41a89d2
+      internalID: -1394435082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: investor idle Sheet_20
+      name: spritesheet_27
       rect:
         serializedVersion: 2
-        x: 201
+        x: 202
         y: 1
         width: 14
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf151653e1e16846965d9978f8f5112
-      internalID: 1934351286
+      spriteID: 5a956e5593fe5424399ea4d1c3fe0316
+      internalID: -1335294253
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -560,28 +736,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      investor idle Sheet_0: -1887569754
-      investor idle Sheet_1: 1808284231
-      investor idle Sheet_10: -472062708
-      investor idle Sheet_11: -1877386689
-      investor idle Sheet_12: 231484401
-      investor idle Sheet_13: 1851612727
-      investor idle Sheet_14: 501134844
-      investor idle Sheet_15: 1475512801
-      investor idle Sheet_16: 1413850281
-      investor idle Sheet_17: 1371125411
-      investor idle Sheet_18: -22469705
-      investor idle Sheet_19: -1909626620
-      investor idle Sheet_2: -687112980
-      investor idle Sheet_20: 1934351286
-      investor idle Sheet_3: 1519498077
-      investor idle Sheet_4: 898683323
-      investor idle Sheet_5: -67102404
-      investor idle Sheet_6: -1517455564
-      investor idle Sheet_7: -1018460756
-      investor idle Sheet_8: -648297097
-      investor idle Sheet_9: 1378493487
+      spritesheet_0: -363665885
+      spritesheet_1: 637717951
+      spritesheet_10: 906330893
+      spritesheet_11: -1278231437
+      spritesheet_12: 1118241627
+      spritesheet_13: 1346011861
+      spritesheet_14: -1418706492
+      spritesheet_15: -993827215
+      spritesheet_16: 1142018179
+      spritesheet_17: -148359011
+      spritesheet_18: -992217410
+      spritesheet_19: -447417561
+      spritesheet_2: 418253208
+      spritesheet_20: -1931438866
+      spritesheet_21: -1292022636
+      spritesheet_22: -986241868
+      spritesheet_23: 1809209456
+      spritesheet_24: 1345125359
+      spritesheet_25: 796089275
+      spritesheet_26: -1394435082
+      spritesheet_27: -1335294253
+      spritesheet_3: 1153610177
+      spritesheet_4: -1873796283
+      spritesheet_5: -1280298250
+      spritesheet_6: 2080247911
+      spritesheet_7: 1184515201
+      spritesheet_8: -31573774
+      spritesheet_9: 1091061168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

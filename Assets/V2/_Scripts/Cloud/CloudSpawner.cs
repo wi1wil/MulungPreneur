@@ -4,41 +4,41 @@ using UnityEngine;
 
 public class CloudSpawner : MonoBehaviour
 {
+    [Header("Cloud Prefabs")]
     public GameObject[] cloudPrefabs;
-    public GameObject cloudParent;
-    private float _timer = 4f;
 
-    public void Update()
+    [Header("Spawn Settings")]
+    public Transform[] spawnPoints;
+    public GameObject cloudParent;
+    public float spawnInterval = 3f;
+    public float offsetRange = 10f;
+
+    private float _timer;
+
+    private void Update()
     {
         _timer += Time.deltaTime;
-        
-        if(_timer > 3f)
+
+        if (_timer > spawnInterval)
         {
             _timer = 0f;
 
-            int count = Random.Range(1,3);
+            int count = Random.Range(1, 3);
             for (int i = 0; i < count; i++)
             {
-                int index = Random.Range(0, cloudPrefabs.Length);
-                SpawnPrefab(index);
+                int prefabIndex = Random.Range(0, cloudPrefabs.Length);
+                int spawnIndex = Random.Range(0, spawnPoints.Length);
+                SpawnCloud(prefabIndex, spawnIndex);
             }
         }
     }
 
-    void SpawnPrefab(int index)
+    private void SpawnCloud(int prefabIndex, int spawnIndex)
     {
-        Vector3 pos = GetSpawnPos();
+        Transform spawn = spawnPoints[spawnIndex];
 
-        GameObject newCloud = Instantiate(cloudPrefabs[index], pos, Quaternion.identity);
-        newCloud.transform.SetParent(cloudParent.transform, false);
-        newCloud.transform.localPosition = pos;
+        Vector3 spawnPos = spawn.position + new Vector3(Random.Range(-offsetRange, offsetRange), Random.Range(-offsetRange, offsetRange), 0f);
 
-    }
-
-    Vector3 GetSpawnPos()
-    {
-        float range = Random.Range(600f, 1000f);
-
-        return new Vector3(this.transform.position.x, range, this.transform.position.z);
+        GameObject newCloud = Instantiate(cloudPrefabs[prefabIndex], spawnPos, Quaternion.identity, cloudParent.transform);
     }
 }

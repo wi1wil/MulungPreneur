@@ -1,90 +1,56 @@
 {
     "playerPos": {
-        "x": 64.00725555419922,
-        "y": -63.99313735961914,
+        "x": 52.61484909057617,
+        "y": -2.825287342071533,
         "z": 0.0
     },
-    "playerCurrency": 19800,
-    "currentDay": 3,
-    "currentTimeTicks": 100200000000,
-    "bagLevel": 0,
-    "footwearLevel": 0,
-    "gloveLevel": 0,
-    "toolLevel": 0,
+    "playerCurrency": 7619999,
+    "currentDay": 1,
+    "currentTimeTicks": 838200000000,
+    "bagLevel": 3,
+    "footwearLevel": 3,
+    "gloveLevel": 2,
+    "toolLevel": 2,
     "inventory": [
         {
-            "itemID": 8,
+            "itemID": 35,
             "slotIdx": 0,
             "quantity": 1
         },
         {
-            "itemID": 16,
+            "itemID": 36,
             "slotIdx": 1,
-            "quantity": 1
+            "quantity": 2
         },
         {
-            "itemID": 17,
+            "itemID": 37,
             "slotIdx": 2,
             "quantity": 1
         },
         {
-            "itemID": 36,
-            "slotIdx": 4,
+            "itemID": 12,
+            "slotIdx": 3,
             "quantity": 1
         }
     ],
     "questProgressData": [
         {
             "questSO": {
-                "instanceID": 62756
+                "instanceID": 63260
             },
             "objectives": [
                 {
                     "targetItem": {
-                        "instanceID": 64668
-                    },
-                    "description": "Ambil 8 Daun Kering",
-                    "type": 0,
-                    "requiredAmount": 8,
-                    "currentAmount": 0
-                },
-                {
-                    "targetItem": {
-                        "instanceID": 64632
-                    },
-                    "description": "Ambil 8 Sisa Makanan",
-                    "type": 0,
-                    "requiredAmount": 8,
-                    "currentAmount": 0
-                },
-                {
-                    "targetItem": {
-                        "instanceID": 65840
-                    },
-                    "description": "Ambil 4 Kayu Bekas",
-                    "type": 0,
-                    "requiredAmount": 4,
-                    "currentAmount": 0
-                }
-            ]
-        },
-        {
-            "questSO": {
-                "instanceID": 63242
-            },
-            "objectives": [
-                {
-                    "targetItem": {
-                        "instanceID": 62244
+                        "instanceID": 62262
                     },
                     "description": "Ambilah 10 Kayu",
                     "type": 0,
                     "requiredAmount": 10,
-                    "currentAmount": 1
+                    "currentAmount": 2
                 },
                 {
                     "targetItem": {
-                        "instanceID": 66040
+                        "instanceID": 66102
                     },
                     "description": "Buat 1 Meja",
                     "type": 0,
@@ -93,45 +59,11 @@
                 },
                 {
                     "targetItem": {
-                        "instanceID": 63626
+                        "instanceID": 63644
                     },
                     "description": "Buat 2 Kursi",
                     "type": 0,
                     "requiredAmount": 2,
-                    "currentAmount": 0
-                }
-            ]
-        },
-        {
-            "questSO": {
-                "instanceID": 66630
-            },
-            "objectives": [
-                {
-                    "targetItem": {
-                        "instanceID": 64472
-                    },
-                    "description": "Ambil 1 Hp Bekas",
-                    "type": 0,
-                    "requiredAmount": 1,
-                    "currentAmount": 0
-                },
-                {
-                    "targetItem": {
-                        "instanceID": 66542
-                    },
-                    "description": "Ambil 1 Kabel",
-                    "type": 0,
-                    "requiredAmount": 1,
-                    "currentAmount": 0
-                },
-                {
-                    "targetItem": {
-                        "instanceID": 66354
-                    },
-                    "description": "Ambil 1 Jam tangan",
-                    "type": 0,
-                    "requiredAmount": 1,
                     "currentAmount": 0
                 }
             ]

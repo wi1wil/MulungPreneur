@@ -1,7 +1,3 @@
-using JetBrains.Annotations;
-using Unity.Profiling;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class TrashManagerScript : MonoBehaviour

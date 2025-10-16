@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Damar
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Damar
-  npcPotrait: {fileID: 3870401196320861207, guid: a98e4dc925141794f8525e86bdcd8e85, type: 3}
+  npcPotrait: {fileID: 8682511228991465879, guid: a98e4dc925141794f8525e86bdcd8e85, type: 3}
   dialogueLines:
   - Eh tolong aku dong
   - Aku butuh barang elektronik banyak nih yang rusak rusak

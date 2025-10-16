@@ -29,6 +29,7 @@ public class CloudSpawnerPrefab : MonoBehaviour
 
     void SpawnPrefab(int index)
     {
+        Debug.Log("Spawn Cloud Prefab");
         Vector3 pos = GetSpawnPos();
 
         GameObject newCloud = Instantiate(cloudPrefabs[index], pos, Quaternion.identity);
@@ -39,8 +40,8 @@ public class CloudSpawnerPrefab : MonoBehaviour
 
     Vector3 GetSpawnPos()
     {
-        float range = Random.Range(600f, 1000f);
+        float range = Random.Range(50f, 450f);
 
-        return new Vector3(this.transform.position.x, range, this.transform.position.z);
+        return new Vector3(transform.position.x, range, transform.position.z);
     }
 }

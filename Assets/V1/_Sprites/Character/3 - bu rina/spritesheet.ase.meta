@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638857961167821350
+  platformSettingsDirtyTick: 638962414079855358
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -149,7 +149,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: npc-3 idle-Sheet.aseprite_0
+  - name: spritesheet_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -161,7 +161,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 33
-    spriteID: ebbb52f4a3b531e40b893629a4cef693
+    spriteID: df6d6a5c870ada44b892bde3a7d946cd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_1
+  - name: spritesheet_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -182,7 +182,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 32
-    spriteID: b7e652641e5e1ab4fb6370536da6c82b
+    spriteID: f0ff0e570bfa6414693eef8e173a69cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +191,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_2
+  - name: spritesheet_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -203,7 +203,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 31
-    spriteID: 9f9cdcb0f5d93d346bd0aa4470f7220a
+    spriteID: a6596c42c61dd5648b1a513d73eba5b6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_3
+  - name: spritesheet_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -224,7 +224,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 31
-    spriteID: edbe7b73aedecf64b8dac07b0272e6f1
+    spriteID: ee90ade089f42204787920812bdd690e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -233,7 +233,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_4
+  - name: spritesheet_4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -245,7 +245,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 31
-    spriteID: ec2a52e00af27004fae1fb2388549d53
+    spriteID: 55e4054230109f04db3623476d569914
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -254,7 +254,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_5
+  - name: spritesheet_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -266,7 +266,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 32
-    spriteID: b8de1d22304760b4d90edf49bfff0cd8
+    spriteID: 20e79462092430d42bec5abf0ed0e3d0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -275,7 +275,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_6
+  - name: spritesheet_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -287,7 +287,7 @@ ScriptedImporter:
       y: 83
       width: 17
       height: 33
-    spriteID: 737b171387b7c0b4f9aff339a048e40e
+    spriteID: e1ae41986e60ec64dbdf05f10ce68061
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -296,7 +296,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_7
+  - name: spritesheet_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -308,7 +308,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 31
-    spriteID: cefd8ed649bd7b24fb97b494fca60130
+    spriteID: 513b009030ca8e84b8e541f6f53a56e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -317,7 +317,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_8
+  - name: spritesheet_8
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -329,7 +329,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 30
-    spriteID: e13b39be7d39b3e4ca452df9beab1122
+    spriteID: dfc91628e6b73434bac996cda8810a84
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -338,7 +338,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_9
+  - name: spritesheet_9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -350,7 +350,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 29
-    spriteID: bff9ba8fe931d2e42bd3a1fb186e5827
+    spriteID: 40d8ac04f64cace469be297c92fc848a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -359,7 +359,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_10
+  - name: spritesheet_10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -371,7 +371,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 29
-    spriteID: bde9448790f83c14db23089a0e079113
+    spriteID: 803615c981fcd424d8974e2c404e088a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -380,7 +380,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_11
+  - name: spritesheet_11
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 29
-    spriteID: 8a94c069858968944843aac328b6130b
+    spriteID: 13a850876bc76704f83d029a51ed44e7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -401,7 +401,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_12
+  - name: spritesheet_12
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -413,7 +413,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 30
-    spriteID: bf83e22667b843245a221298f1b95eb8
+    spriteID: ae251851101555340bd5aabe810a6c40
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -422,7 +422,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_13
+  - name: spritesheet_13
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -434,7 +434,7 @@ ScriptedImporter:
       y: 43
       width: 14
       height: 31
-    spriteID: a623bb3c4a565dd4abd73c8247ee7f88
+    spriteID: adba3221188fc9341b9712c08f803c27
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -443,7 +443,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_14
+  - name: spritesheet_14
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -455,7 +455,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 31
-    spriteID: d6e73fd545a85c745bbde17b6c8f2097
+    spriteID: 277609393dc01af4da613aec8e5cea1a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -464,7 +464,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_15
+  - name: spritesheet_15
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -476,7 +476,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 30
-    spriteID: 0e6635212b1893e4aa158d0caa25e002
+    spriteID: 7b6a4f89c0d83e448bfd3c7379bc5457
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -485,7 +485,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_16
+  - name: spritesheet_16
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -497,7 +497,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 29
-    spriteID: a4af9d127e9d12b40ab6a8a625d22ee0
+    spriteID: 7a811014d3049ea47aa457418854640d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -506,7 +506,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_17
+  - name: spritesheet_17
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -518,7 +518,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 29
-    spriteID: 856b92badb95c6d43a5ea05023721add
+    spriteID: d831036cf82e91d43b3ffd7f82e13f44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -527,7 +527,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_18
+  - name: spritesheet_18
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -539,7 +539,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 29
-    spriteID: 6ed155645a9284a478ec6ed2366c2fb6
+    spriteID: bca55494d3a15114c8e631f4c8d2c647
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -548,7 +548,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_19
+  - name: spritesheet_19
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -560,7 +560,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 30
-    spriteID: 45daafc72c4aa7a419b2cf80d9f7084f
+    spriteID: a3f25a05491fe3846afbb455149495bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -569,7 +569,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: npc-3 idle-Sheet.aseprite_20
+  - name: spritesheet_20
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -581,7 +581,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 31
-    spriteID: 235aa7684d4708d4ca82bb2e7fe09cdf
+    spriteID: 9fb3cd2372d138c4bb48d31474708736
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -604,7 +604,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: npc-3 idle-Sheet.aseprite
+    - name: spritesheet
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:

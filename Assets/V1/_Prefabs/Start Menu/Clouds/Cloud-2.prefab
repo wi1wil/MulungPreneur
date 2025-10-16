@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7495934476306538551}
   - component: {fileID: 435369974120557437}
   - component: {fileID: 1319423913941534761}
-  - component: {fileID: 7437068380516688316}
+  - component: {fileID: 3543825466151131498}
   m_Layer: 5
   m_Name: Cloud-2
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7437068380516688316
+--- !u!114 &3543825466151131498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,4 +87,4 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 331216838145e5d449f5c2df2d93edcd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudPrefabScript

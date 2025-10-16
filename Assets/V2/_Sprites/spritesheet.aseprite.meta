@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a98e4dc925141794f8525e86bdcd8e85
+guid: ee3037c9ad1aad84184c7d47e348cf6a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638857964287963141
+  platformSettingsDirtyTick: 638962449735656328
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Layer 1
+  - name: shokiper-idle-sheet
     originalName: 
-    pivot: {x: 0.5048077, y: -0.03125}
+    pivot: {x: 0.5024154, y: -0.23076925}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 208
-      height: 32
-    spriteID: cc4737b978ce7cb4bb189221255b1366
+      width: 207
+      height: 26
+    spriteID: e4a9c3a1664da1e40a291f45e4d390bf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,9 +147,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -3, y: 3}
+    uvTransform: {x: -4, y: -2}
   spriteSheetImportData:
-  - name: Dmar idle -Sheet_0
+  - name: spritesheet_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -159,9 +159,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 32
-    spriteID: 10a9447edae79aa44894679c78cf058b
+      width: 15
+      height: 26
+    spriteID: 8e6b423013cdc9946b474a7fb9584f19
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_1
+  - name: spritesheet_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -180,9 +180,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 36
       y: 4
-      width: 16
-      height: 31
-    spriteID: c7c919d2e48085f4e8f7168f148d7847
+      width: 15
+      height: 24
+    spriteID: a5567ba55101a6c448994563dfc57c47
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +191,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_2
+  - name: spritesheet_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -201,9 +201,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 68
       y: 4
-      width: 16
-      height: 30
-    spriteID: 6546501ffde85ae41af86f996d7d345e
+      width: 15
+      height: 22
+    spriteID: ae501b642a43ef640b788f2e5c10bc02
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_3
+  - name: spritesheet_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -222,9 +222,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 100
       y: 4
-      width: 16
-      height: 30
-    spriteID: 48c84c26acdffec44ac7f617a638e681
+      width: 15
+      height: 22
+    spriteID: ae9227772935acf43ab4706bdd744a20
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -233,7 +233,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_4
+  - name: spritesheet_4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -243,9 +243,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 132
       y: 4
-      width: 16
-      height: 30
-    spriteID: d17560f57cf8d214ea4031ec9da47c32
+      width: 15
+      height: 22
+    spriteID: 861b802e07d0c6d49bd8ca5625a950ee
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -254,7 +254,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_5
+  - name: spritesheet_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -264,9 +264,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 164
       y: 4
-      width: 16
-      height: 31
-    spriteID: d8f7106f742bf5b47b41f979c7542f2b
+      width: 15
+      height: 24
+    spriteID: 2dbf6390c10b6ba42806662cd97c6165
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -275,7 +275,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Dmar idle -Sheet_6
+  - name: spritesheet_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -285,9 +285,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 196
       y: 4
-      width: 16
-      height: 32
-    spriteID: 259c05b7561f7c0448169d3750ef024b
+      width: 15
+      height: 26
+    spriteID: d465024c26e85b647b644f79f6b78f3d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,17 +300,17 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3979599858
+      value0: 638726336
       value1: 0
       value2: 0
       value3: 0
-    guid: -315367438
-    name: Dmar idle -Sheet
+    guid: 0
+    name: shokiper-idle-sheet
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Dmar idle -Sheet
+    - name: spritesheet
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -318,7 +318,7 @@ ScriptedImporter:
         y: 0
         width: 224
         height: 40
-      spriteId: c60a59304c894a04492a163d4bc34c41
+      spriteId: e4a9c3a1664da1e40a291f45e4d390bf
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -328,7 +328,7 @@ ScriptedImporter:
   - name: DefaultTexturePlatform
     overridden: 0
     ignorePlatformSupport: 0
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -340,19 +340,7 @@ ScriptedImporter:
   - name: Standalone
     overridden: 0
     ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0

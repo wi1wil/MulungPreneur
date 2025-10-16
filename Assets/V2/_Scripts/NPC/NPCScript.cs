@@ -159,9 +159,11 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     public void ChooseOption(int nextDialogueIdx, bool givesQuest)
     {
+        AudioManager.instance.PlayUIClick();
         if(givesQuest)
         {
             QuestManager.Instance.AcceptQuest(dialogueData.quest);
+            AudioManager.instance.PlayQuestCompleted();
             _questState = QuestState.InProgress;
         }
         _dialogueIdx = nextDialogueIdx;
@@ -192,6 +194,7 @@ public class NPCScript : MonoBehaviour, IInteractable
     
     public void HandleQuestCompletion(QuestSO questSO)
     {
+        AudioManager.instance.PlayQuestCompleted();
         RewardManager.Instance.GiveReward(questSO);
         QuestManager.Instance.HandInQuest(questSO.questID);
     }

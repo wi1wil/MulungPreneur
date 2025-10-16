@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Investor
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Investor
-  npcPotrait: {fileID: -1887569754, guid: 3459e3e13c11c44449cdbf8928203373, type: 3}
+  npcPotrait: {fileID: 1336018203, guid: 3459e3e13c11c44449cdbf8928203373, type: 3}
   dialogueLines:
   - Di lagi ngapain
   - Oh oke

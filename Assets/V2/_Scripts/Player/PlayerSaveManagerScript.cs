@@ -141,4 +141,10 @@ public class PlayerSaveManagerScript : MonoBehaviour
             Debug.Log("Save file deleted.");
         }
     }
+
+    // private void OnApplicationQuit()
+    // {
+    //     SaveGame();
+    //     Debug.Log("Game saved on exit.");
+    // }
 }
