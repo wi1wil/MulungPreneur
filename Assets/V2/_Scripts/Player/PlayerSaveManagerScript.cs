@@ -24,11 +24,11 @@ public class PlayerSaveManagerScript : MonoBehaviour
 
     void Start()
     {
-        // saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-        saveLocation = @"D:\PersonalD\UnityProjects\MulungPreneur\SaveLocation\saveData.json";
-        string folderPath = Path.GetDirectoryName(saveLocation);
-        if (!Directory.Exists(folderPath))
-            Directory.CreateDirectory(folderPath);
+        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+        // saveLocation = @"D:\PersonalD\UnityProjects\MulungPreneur\SaveLocation\saveData.json";
+        // string folderPath = Path.GetDirectoryName(saveLocation);
+        // if (!Directory.Exists(folderPath))
+        //     Directory.CreateDirectory(folderPath);
 
         LoadGame();
         StartCoroutine(AutoSaveRoutine());
@@ -142,9 +142,9 @@ public class PlayerSaveManagerScript : MonoBehaviour
         }
     }
 
-    // private void OnApplicationQuit()
-    // {
-    //     SaveGame();
-    //     Debug.Log("Game saved on exit.");
-    // }
+    private void OnApplicationQuit()
+    {
+        SaveGame();
+        Debug.Log("Game saved on exit.");
+    }
 }
