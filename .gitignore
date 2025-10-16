@@ -76,3 +76,6 @@ crashlytics-build.properties
 
 # Ignore Visual Studio config file
 .vsconfig
+
+# Ignore Save Location
+/SaveLocation/
