@@ -20,15 +20,15 @@
 <table width="100%">
   <tr>
     <td colspan="2" align="center">
-      <img src="./Assets/ReadMe/mulung1.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung1v2.gif" width="100%"/>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="./Assets/ReadMe/mulung2.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung2v2.gif" width="100%"/>
     </td>
     <td align="center" width="50%">
-      <img src="./Assets/ReadMe/mulung3.gif" width="100%"/>
+      <img src="./Assets/ReadMe/mulung3v2.gif" width="100%"/>
     </td>
 </table>
 
@@ -330,15 +330,11 @@ MulungPreneur                      # Root folder of the project
   </tr>
   <tr>
     <td>Open Menu / Pause</td>
-    <td><b>Esc</b></td>
+    <td><b>Tab</b></td>
   </tr>
   <tr>
     <td>Open Inventory </td>
     <td><b>Tab</b></td>
-  </tr>
-  <tr>
-    <td>Open Shop </td>
-    <td><b>V</b></td>
   </tr>
   <tr>
     <td>Confirm / Select</td>
