@@ -1,8 +1,8 @@
-# 🌱 MulungPreneur — V2 Update  
-> **Version 2.0 — Major System Revamp (October 2025)**  
+# 🌱 MulungPreneur — V1.5 Update  
+> **Version 1.5.0 — Major System Revamp (October 2025)**  
 
-### 🆕 What’s New in V2
-- ⚙️ Complete project restructuring into modular folders (`V1`, `V2`)
+### 🆕 What’s New in V1.5
+- ⚙️ Complete project restructuring into modular folders (`V1`, `V1.5`)
 - 💾 Brand-new save data system using ScriptableObjects  
 - 🧰 Rebuilt crafting & inventory architecture (SO-based, scalable)
 - 🌇 Revamped lighting & day-night system using URP  
@@ -62,7 +62,7 @@
 
 ---
 
-<h2>📜 Version 2 - Scripts</h2>
+<h2>📜 Version 1.5 - Scripts</h2>
 <table>
   <tr>
     <th>Script</th>
