@@ -44,7 +44,7 @@
 
 ---
 
-<h2>📜 Version 1.5 - Scripts</h2>
+<h2>📜 Scripts</h2>
 <table>
   <tr>
     <th>Script</th>
@@ -84,7 +84,7 @@ MulungPreneur
 └── Assets
     └── V2
         ├── Animation
-        │   └── (Animation clips and controllers for V2 characters and objects)
+        │   └── (Animation clips and controllers for revamped characters and objects)
         ├── Scene
         │   └── (Unity scenes for menus, gameplay, and environments)
         └── _Scripts
