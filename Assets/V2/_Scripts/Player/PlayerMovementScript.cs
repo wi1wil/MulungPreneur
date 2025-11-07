@@ -22,23 +22,34 @@ public class PlayerMovementScript : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        _movement = context.ReadValue<Vector2>();
+        Vector2 input = context.ReadValue<Vector2>();
 
         if (context.performed)
         {
+            _movement = input;
+
+            // Update facing direction while moving
+            if (_movement.sqrMagnitude > 0.01f)
+            {
+                _anim.SetFloat("InputX", _movement.x);
+                _anim.SetFloat("InputY", _movement.y);
+            }
+
             _anim.SetBool("isWalking", true);
         }
-
-        if (context.canceled)
+        else if (context.canceled)
         {
-            _anim.SetBool("isWalking", false);
-            _anim.SetFloat("LastInputX", _movement.x);
-            _anim.SetFloat("LastInputY", _movement.y);
-            _walkTimer = 0f; // reset timer when stop
-        }
+            // Only store last direction if the player was moving
+            if (_movement.sqrMagnitude > 0.01f)
+            {
+                _anim.SetFloat("LastInputX", _movement.x);
+                _anim.SetFloat("LastInputY", _movement.y);
+            }
 
-        _anim.SetFloat("InputX", _movement.x);
-        _anim.SetFloat("InputY", _movement.y);
+            _movement = Vector2.zero;
+            _anim.SetBool("isWalking", false);
+            _walkTimer = 0f;
+        }
     }
 
     void FixedUpdate()

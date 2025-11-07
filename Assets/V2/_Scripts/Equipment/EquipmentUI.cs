@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class EquipmentUI : MonoBehaviour
 {
@@ -48,6 +47,7 @@ public class EquipmentUI : MonoBehaviour
 
     void Start()
     {
+        InventoryManager.Instance.onInvChanged += UpdateAllUI;
         UpdateAllUI();
     }
 

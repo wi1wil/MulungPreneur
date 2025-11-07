@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour
     {
         AudioManager.instance.PlayUIClick();
         SceneManager.LoadScene(1);  // Load the main game scene (index 2)
+        MenuPauseManager.instance.SetPaused(false);
     }
 
     public void BackToMenu()
@@ -14,5 +15,6 @@ public class SwitchScene : MonoBehaviour
         AudioManager.instance.PlayUIClick();
         SceneManager.LoadScene(0);  // Load the main menu scene (index 0)
         AudioManager.instance.PlaySunnyBgm();
+        MenuPauseManager.instance.SetPaused(false);
     }
 }

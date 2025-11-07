@@ -27,6 +27,14 @@ public class InteractableDetector : MonoBehaviour
 
     void Update()
     {
+        // If current target got destroyed (null MonoBehaviour reference)
+        if (_currentTarget != null && (_currentTarget as MonoBehaviour) == null)
+        {
+            ResetInteractionUI();
+            _currentTarget = GetClosestInteractable();
+        }
+
+        // Holding progress logic
         if (_isHolding && _currentTarget != null)
         {
             if (!_sfxPlayed)
@@ -41,6 +49,11 @@ public class InteractableDetector : MonoBehaviour
             if (_holdTimer >= holdDuration)
             {
                 _currentTarget.Interact();
+
+                // Stop interaction and reset state
+                if (_currentTarget is ItemPrefab item)
+                    item.SetInteracting(false);
+
                 _isHolding = false;
                 _holdTimer = 0f;
                 _holdProgressBar.gameObject.SetActive(false);
@@ -54,17 +67,17 @@ public class InteractableDetector : MonoBehaviour
     {
         if (_currentTarget == null) return;
 
-        // If interaction requires hold activate the holding mechanics
+        // For interactables requiring hold
         if (_currentTarget.RequiresHold)
         {
             if (context.started)
             {
-                if (_currentTarget != null)
-                {
-                    _isHolding = true;
-                    _holdTimer = 0f;
-                    _holdProgressBar.gameObject.SetActive(true);
-                }
+                _isHolding = true;
+                _holdTimer = 0f;
+                _holdProgressBar.gameObject.SetActive(true);
+
+                if (_currentTarget is ItemPrefab item)
+                    item.SetInteracting(true);
             }
             else if (context.canceled)
             {
@@ -72,15 +85,16 @@ public class InteractableDetector : MonoBehaviour
                 _holdTimer = 0f;
                 _holdProgressBar.gameObject.SetActive(false);
                 _holdProgressBar.fillAmount = 0f;
+
+                if (_currentTarget is ItemPrefab item)
+                    item.SetInteracting(false);
             }
         }
-        // Else, just straight to interact
+        // Instant interaction
         else
         {
-            if(context.performed)
-            {
+            if (context.performed)
                 _currentTarget.Interact();
-            }
         }
     }
 
@@ -115,6 +129,8 @@ public class InteractableDetector : MonoBehaviour
 
         foreach (var i in _interactablesInRange)
         {
+            if (i == null) continue; // Skip destroyed objects
+
             var go = (i as MonoBehaviour).gameObject;
             float dist = Vector2.Distance(transform.position, go.transform.position);
             if (dist < minDist)
@@ -129,5 +145,15 @@ public class InteractableDetector : MonoBehaviour
     public void UpdateCircleRange()
     {
         _pickUpRange.radius = pickUpRadius;
+    }
+
+    private void ResetInteractionUI()
+    {
+        _isHolding = false;
+        _holdTimer = 0f;
+        _holdProgressBar.gameObject.SetActive(false);
+        _holdProgressBar.fillAmount = 0f;
+        _interactionIcon.SetActive(false);
+        _sfxPlayed = false;
     }
 }

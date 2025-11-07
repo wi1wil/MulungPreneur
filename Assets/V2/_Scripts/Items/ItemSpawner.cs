@@ -80,6 +80,45 @@ public class ItemSpawner : MonoBehaviour
             spawned.transform.SetParent(trashContainer.transform);
 
         // Destroy after time
-        Destroy(spawned, deleteTime);
+        StartCoroutine(FlickerBeforeDestroy(spawned, deleteTime));
+    }
+
+    private IEnumerator FlickerBeforeDestroy(GameObject obj, float totalLifetime)
+    {
+        float flickerDuration = 3f;
+        float flickerSpeed = 0.15f;
+
+        yield return new WaitForSeconds(totalLifetime - flickerDuration);
+
+        SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
+        ItemPrefab item = obj.GetComponent<ItemPrefab>();
+        if (sr == null) yield break;
+
+        float elapsed = 0f;
+        while (elapsed < flickerDuration)
+        {
+            // If being interacted with, pause flickering
+            if (item != null && item.IsBeingInteractedWith)
+            {
+                sr.enabled = true;
+                yield return null;
+                continue;
+            }
+
+            sr.enabled = !sr.enabled;
+            yield return new WaitForSeconds(flickerSpeed);
+            elapsed += flickerSpeed;
+        }
+
+        sr.enabled = true;
+
+        // Wait for interaction to end before actually destroying
+        if (item != null)
+        {
+            while (item.IsBeingInteractedWith)
+                yield return null;
+        }
+
+        Destroy(obj);
     }
 }

@@ -10,6 +10,13 @@ public class ItemPrefab : MonoBehaviour, IInteractable
 
     public bool RequiresHold => true;
 
+    public bool IsBeingInteractedWith { get; private set; }
+
+    public void SetInteracting(bool state)
+    {
+        IsBeingInteractedWith = state;
+    }
+
     private void Awake()
     {
         _icon = GetComponent<SpriteRenderer>();
