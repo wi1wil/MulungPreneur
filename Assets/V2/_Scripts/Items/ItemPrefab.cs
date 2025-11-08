@@ -33,9 +33,17 @@ public class ItemPrefab : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Picked up");
-        InventoryManager.Instance.AddItem(itemData, quantity);
-        ItemPopUps.Instance.DisplayPopUp(itemData.itemName, itemData.itemIcon);
-        Destroy(gameObject);
+        bool added = InventoryManager.Instance.AddItem(itemData, quantity);
+
+        if (added)
+        {
+            Debug.Log("Picked up");
+            ItemPopUps.Instance.DisplayPopUp(itemData.itemName, itemData.itemIcon);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("Inventory full — cannot pick up item!");
+        }
     }
 }

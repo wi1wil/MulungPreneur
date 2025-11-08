@@ -20,6 +20,7 @@ public class DualGridSystem : MonoBehaviour
     // Provide references to each tilemap in the inspector
     public Tilemap placeholderTilemap;
     public Tilemap displayTilemap;
+    public Tilemap displayMinimap;
 
     // Provide the placeholder tiles in the inspector
     public Tile grassPlaceholderTile;
@@ -182,6 +183,7 @@ public class DualGridSystem : MonoBehaviour
         {
             Vector3Int newPos = pos + NEIGHBOURS[i];
             displayTilemap.SetTile(newPos, calculateDisplayTile(newPos));
+            displayMinimap.SetTile(newPos, calculateDisplayTile(newPos));
         }
     }
 

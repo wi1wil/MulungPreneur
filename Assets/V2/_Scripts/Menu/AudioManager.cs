@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip _walkDefault;
     [SerializeField] private AudioClip _sellingItem;
     [SerializeField] private AudioClip _questCompleted;
+    [SerializeField] private AudioClip _invFull;
 
     [Header(" ------------------------------ References ------------------------------")]
     [SerializeField] private DayNightCycle _dayNightCycle;
@@ -120,4 +121,5 @@ public class AudioManager : MonoBehaviour
     public void PlayWalkSFX() => _sfxSource.PlayOneShot(_walkDefault);
     public void PlaySellingItem() => _sfxSource.PlayOneShot(_sellingItem);
     public void PlayQuestCompleted() => _sfxSource.PlayOneShot(_questCompleted);
+    public void PlayInvFull() => _sfxSource.PlayOneShot(_invFull);
 }

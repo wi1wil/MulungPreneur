@@ -35,14 +35,10 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void OnCloseMenu(InputAction.CallbackContext context)
+    public void CloseMenu()
     {
-        if (!context.performed) return;
-        if (!MenuPauseManager.instance.gamePaused) return;
-
         MenuPauseManager.instance.SetPaused(false);
         AudioManager.instance.PlayUIClick();
-
         _playerInput.SwitchCurrentActionMap("Player");
         if (_pauseMenuUI != null) _pauseMenuUI.SetActive(false);
     }

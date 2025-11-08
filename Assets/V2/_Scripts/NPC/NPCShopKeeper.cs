@@ -20,21 +20,22 @@ public class NPCShopKeeper : MonoBehaviour, IInteractable
     {
         if (_shopPanel.activeSelf)
         {
-            MenuPauseManager.instance.SetPaused(false);
-            _shopPanel.SetActive(false);
+            Close();
         }
         else
         {
-            Close();
+            AudioManager.instance.PlayUIClick();
+            MenuPauseManager.instance.SetPaused(true);
+            _shopUIManager.PopulateShopItems(InventoryManager.Instance.GetInventory());
+            _equipmentUI.UpdateAllUI();
+            _shopPanel.SetActive(true);
         }
     }
 
     public void Close()
     {
-        AudioManager.instance.PlayUIClick();
-        MenuPauseManager.instance.SetPaused(true);
-        _shopUIManager.PopulateShopItems(InventoryManager.Instance.GetInventory());
-        _equipmentUI.UpdateAllUI();
-        _shopPanel.SetActive(true);
+        MenuPauseManager.instance.SetPaused(false);
+        _shopPanel.SetActive(false);
+        _shopUIManager.ClearBuyback();
     }
 }

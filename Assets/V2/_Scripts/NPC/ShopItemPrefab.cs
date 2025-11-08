@@ -66,5 +66,6 @@ public class ShopItemPrefab : MonoBehaviour
 
         // Update UI in ShopUIManager (also use SO)
         _shopUIManager.UpdateItemQuantity(_itemSO, _itemQuantity);
+        _shopUIManager.AddToBuyback(_itemSO);
     }
 }

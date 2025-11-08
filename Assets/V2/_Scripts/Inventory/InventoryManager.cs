@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class InventoryManager : MonoBehaviour
 
     private ItemDictionary _itemDictionary;
     private InventoryUIManager _invUI;
+    
+    [Header("Inventory Full UI")]
+    [SerializeField] private TMP_Text _inventoryFullText;
+    [SerializeField] private float inventoryFullDisplayDuration = 0.5f;
+    [SerializeField] private float inventoryFullFadeDuration = 1.5f;
+    private Coroutine _inventoryFullCoroutine;
 
     private List<ItemStack> _inventory = new();
     public event Action onInvChanged;
@@ -74,8 +81,48 @@ public class InventoryManager : MonoBehaviour
 
         // There are no available slots
         Debug.Log("Inventory Full!");
+        AudioManager.instance.PlayInvFull();
+        if (_inventoryFullCoroutine != null) StopCoroutine(_inventoryFullCoroutine);
+        _inventoryFullCoroutine = StartCoroutine(ShowInventoryFullText());
         onInvChanged?.Invoke();
         return false;
+    }
+
+    [ContextMenu("Test Full Inventory Text")]
+    public void TestFullInventoryText()
+    {
+        if (_inventoryFullCoroutine != null) StopCoroutine(_inventoryFullCoroutine);
+        _inventoryFullCoroutine = StartCoroutine(ShowInventoryFullText());
+    }
+
+    IEnumerator ShowInventoryFullText()
+    {
+        if (_inventoryFullText == null)
+            yield break;
+
+        _inventoryFullText.gameObject.SetActive(true);
+        Color c = _inventoryFullText.color;
+        c.a = 1f;
+        _inventoryFullText.color = c;
+
+        // Wait while fully visible
+        yield return new WaitForSeconds(inventoryFullDisplayDuration);
+
+        // Fade out
+        float t = 0f;
+        while (t < inventoryFullFadeDuration)
+        {
+            t += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, t / inventoryFullFadeDuration);
+            c.a = alpha;
+            _inventoryFullText.color = c;
+            yield return null;
+        }
+
+        c.a = 0f;
+        _inventoryFullText.color = c;
+        _inventoryFullText.gameObject.SetActive(false);
+        _inventoryFullCoroutine = null;
     }
 
     public void RemoveItem(ItemsSO itemSO, int amountToRemove)

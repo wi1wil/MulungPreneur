@@ -56,9 +56,9 @@ MonoBehaviour:
   _walkDefault: {fileID: 8300000, guid: 218f9a70fd7b6274487144237bd275ce, type: 3}
   _sellingItem: {fileID: 8300000, guid: 7a6909896d437b846ba0e1d7e308160f, type: 3}
   _questCompleted: {fileID: 8300000, guid: 92361c688a9f3df4f86b8c099e69a1c1, type: 3}
+  _invFull: {fileID: 8300000, guid: a826ceeed4f56f646bc1cb180dcd751f, type: 3}
   _dayNightCycle: {fileID: 0}
   _fadeDuration: 2
-  _walkCooldown: 0.3
 --- !u!1 &5802039326589081768
 GameObject:
   m_ObjectHideFlags: 0
